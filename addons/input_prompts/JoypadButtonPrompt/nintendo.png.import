@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/nintendo.png-4a4bd90f1c5d7d74acc28e5baaa06a3a.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://addons/input_prompts/JoypadButtonPrompt/nintendo.png"
+dest_files=[ "res://.import/nintendo.png-4a4bd90f1c5d7d74acc28e5baaa06a3a.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
