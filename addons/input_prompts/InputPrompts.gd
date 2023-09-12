@@ -282,6 +282,9 @@ func get_joypad_button_atlas(icons : int):
 			return preload("res://addons/input_prompts/JoypadButtonPrompt/sony.png")
 		Icons.NINTENDO:
 			return preload("res://addons/input_prompts/JoypadButtonPrompt/nintendo.png")
+		Icons.KEYBOARD:
+			push_warning("No Joypad atlas for Icons.KEYBOARD; defaulting to Xbox.")
+			return preload("res://addons/input_prompts/JoypadButtonPrompt/xbox.png")
 
 func get_joypad_button_region(button : int):
 	var x = button % 16
