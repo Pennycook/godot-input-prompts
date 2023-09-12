@@ -3,11 +3,9 @@
 @tool
 extends "res://addons/input_prompts/BasePrompt.gd"
 
-var button = 1:
-	set(value): _set_button(value)
+var button = 1: set = _set_button
 
 func _ready():
-	self.button = button
 	_update_icon()
 
 func _set_button(index : int):

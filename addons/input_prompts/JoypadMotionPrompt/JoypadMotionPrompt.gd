@@ -3,14 +3,10 @@
 @tool
 extends "res://addons/input_prompts/BasePrompt.gd"
 
-var axis = 0:
-	set(value): _set_axis(value)
-var axis_value = -1:
-	set(value): _set_axis_value(value)
+var axis = 0: set = _set_axis
+var axis_value = -1: set = _set_axis_value
 
 func _ready():
-	self.axis = axis
-	self.axis_value = axis_value
 	_update_icon()
 
 func _set_axis(new_axis : int):

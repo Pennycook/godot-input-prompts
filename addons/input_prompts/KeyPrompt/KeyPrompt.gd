@@ -3,11 +3,9 @@
 @tool
 extends "res://addons/input_prompts/BasePrompt.gd"
 
-var key = KEY_EXCLAM:
-	set(value): _set_key(value)
+var key = KEY_EXCLAM: set = _set_key
 
 func _ready():
-	self.key = key
 	_update_icon()
 
 func _set_key(scancode : int):

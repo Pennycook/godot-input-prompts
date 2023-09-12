@@ -3,15 +3,11 @@
 @tool
 extends "res://addons/input_prompts/BasePrompt.gd"
 
-var action = "ui_accept":
-	set(value): _set_action(value)
-var icon = InputPrompts.Icons.AUTOMATIC:
-	set(value): _set_icon(value)
+var action = "ui_accept": set = _set_action
+var icon = InputPrompts.Icons.AUTOMATIC: set = _set_icon
 var _events : Array = []
 
 func _ready():
-	self.action = action
-	self.icon = icon
 	_update_icon()
 
 func _set_action(new_action : String):
