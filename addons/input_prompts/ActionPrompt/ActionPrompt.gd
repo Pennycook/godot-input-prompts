@@ -1,10 +1,12 @@
 # Copyright (C) 2022 John Pennycook
 # SPDX-License-Identifier: MIT
-tool
+@tool
 extends "res://addons/input_prompts/BasePrompt.gd"
 
-var action = "ui_accept" setget _set_action
-var icon = InputPrompts.Icons.AUTOMATIC setget _set_icon
+var action = "ui_accept":
+	set(value): _set_action(value)
+var icon = InputPrompts.Icons.AUTOMATIC:
+	set(value): _set_icon(value)
 var _events : Array = []
 
 func _ready():
@@ -16,10 +18,10 @@ func _set_action(new_action : String):
 	action = new_action
 	# In the Editor, InputMap reflects Editor settings
 	# Read the list of actions from ProjectSettings instead
-	if Engine.editor_hint:
+	if Engine.is_editor_hint():
 		_events = ProjectSettings.get_setting("input/" + action)["events"]
 	else:
-		_events = InputMap.get_action_list(action)
+		_events = InputMap.action_get_events(action)
 	_update_icon()
 
 func _set_icon(new_icon):
@@ -29,7 +31,7 @@ func _set_icon(new_icon):
 func _find_event(list : Array, types : Array):
 	for candidate in list:
 		for type in types:
-			if candidate is type:
+			if is_instance_of(candidate, type):
 				return candidate
 	return null
 
@@ -47,7 +49,7 @@ func _update_icon():
 		if not (ev is InputEventKey or ev is InputEventMouseButton):
 			push_error("No Key/Mouse input for " + action + " in InputMap")
 		if ev is InputEventKey:
-			var scancode = ev.get_scancode()
+			var scancode = ev.get_keycode()
 			texture.atlas = InputPrompts.get_key_atlas()
 			texture.region = InputPrompts.get_key_region(scancode)
 		elif ev is InputEventMouseButton:
@@ -68,7 +70,7 @@ func _update_icon():
 			var value = ev.get_axis_value()
 			texture.atlas = InputPrompts.get_joypad_motion_atlas()
 			texture.region = InputPrompts.get_joypad_motion_region(axis, value)
-	update()
+	queue_redraw()
 
 func _input(event : InputEvent):
 	if not event.is_action_pressed(action):

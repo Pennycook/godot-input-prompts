@@ -1,10 +1,12 @@
 # Copyright (C) 2022 John Pennycook
 # SPDX-License-Identifier: MIT
-tool
+@tool
 extends "res://addons/input_prompts/BasePrompt.gd"
 
-var axis = 0 setget _set_axis
-var axis_value = -1 setget _set_axis_value
+var axis = 0:
+	set(value): _set_axis(value)
+var axis_value = -1:
+	set(value): _set_axis_value(value)
 
 func _ready():
 	self.axis = axis
@@ -22,7 +24,7 @@ func _set_axis_value(new_value : int):
 func _update_icon():
 	texture.atlas = InputPrompts.get_joypad_motion_atlas()
 	texture.region = InputPrompts.get_joypad_motion_region(axis, axis_value)
-	update()
+	queue_redraw()
 
 func _input(event : InputEvent):
 	if not event is InputEventJoypadMotion:

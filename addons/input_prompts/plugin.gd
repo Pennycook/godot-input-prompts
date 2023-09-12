@@ -1,6 +1,6 @@
 # Copyright (C) 2022 John Pennycook
 # SPDX-License-Identifier: MIT
-tool
+@tool
 extends EditorPlugin
 
 var inspector_plugin = preload("res://addons/input_prompts/InspectorPlugin.gd").new()

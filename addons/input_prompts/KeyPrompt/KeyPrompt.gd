@@ -1,9 +1,10 @@
 # Copyright (C) 2022 John Pennycook
 # SPDX-License-Identifier: MIT
-tool
+@tool
 extends "res://addons/input_prompts/BasePrompt.gd"
 
-var key = KEY_EXCLAM setget _set_key
+var key = KEY_EXCLAM:
+	set(value): _set_key(value)
 
 func _ready():
 	self.key = key
@@ -16,12 +17,12 @@ func _set_key(scancode : int):
 func _update_icon():
 	texture.atlas = InputPrompts.get_key_atlas()
 	texture.region = InputPrompts.get_key_region(key)
-	update()
+	queue_redraw()
 
 func _input(event : InputEvent):
 	if not event is InputEventKey:
 		return
-	if not event.get_scancode() == key:
+	if not event.get_keycode() == key:
 		return
 	if not event.is_pressed():
 		return

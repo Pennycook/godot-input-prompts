@@ -1,10 +1,12 @@
 # Copyright (C) 2022 John Pennycook
 # SPDX-License-Identifier: MIT
-tool
+@tool
 extends "res://addons/input_prompts/BasePrompt.gd"
 
-var button = 0 setget _set_button
-var icon = InputPrompts.Icons.AUTOMATIC setget _set_icon
+var button = 0:
+	set(value): _set_button(value)
+var icon = InputPrompts.Icons.AUTOMATIC:
+	set(value): _set_icon(value)
 
 func _ready():
 	self.button = button
@@ -22,7 +24,7 @@ func _set_icon(new_icon):
 func _update_icon():
 	texture.atlas = InputPrompts.get_joypad_button_atlas(icon)
 	texture.region = InputPrompts.get_joypad_button_region(button)
-	update()
+	queue_redraw()
 
 func _input(event : InputEvent):
 	if not event is InputEventJoypadButton:

@@ -1,6 +1,6 @@
 # Copyright (C) 2022 John Pennycook
 # SPDX-License-Identifier: MIT
-tool
+@tool
 extends TextureRect
 
 signal pressed()
@@ -15,7 +15,7 @@ func _update_icon():
 	pass
 
 func _enter_tree():
-	InputPrompts.connect("icons_changed", self, "_update_icon")
+	InputPrompts.icons_changed.connect(_update_icon)
 
 func _exit_tree():
-	InputPrompts.disconnect("icons_changed", self, "_update_icon")
+	InputPrompts.icons_changed.disconnect(_update_icon)

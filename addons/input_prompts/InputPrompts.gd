@@ -1,6 +1,6 @@
 # Copyright (C) 2022 John Pennycook
 # SPDX-License-Identifier: MIT
-tool
+@tool
 extends Node
 
 signal icons_changed
@@ -77,7 +77,6 @@ const KeyPromptMap = {
 	KEY_COLON : Rect2(192, 48, 16, 16),
 	KEY_SEMICOLON : Rect2(208, 48, 16, 16),
 	KEY_ASTERISK : Rect2(224, 48, 16, 16),
-	KEY_NOBREAKSPACE : Rect2(0, 64, 16, 16),
 	KEY_META : Rect2(16, 64, 16, 16),
 	KEY_Z : Rect2(32, 64, 16, 16),
 	KEY_X : Rect2(48, 64, 16, 16),
@@ -103,10 +102,9 @@ const KeyPromptMap = {
 	KEY_DOLLAR : Rect2(176, 80, 16, 16),
 	KEY_PERCENT : Rect2(192, 80, 16, 16),
 	KEY_ASCIICIRCUM : Rect2(208, 80, 16, 16),
-	KEY_CENT : Rect2(224, 80, 16, 16),
 	KEY_PARENLEFT : Rect2(240, 80, 16, 16),
 	KEY_PARENRIGHT : Rect2(256, 80, 16, 16),
-	KEY_CONTROL : Rect2(0, 96, 32, 16),
+	KEY_CTRL : Rect2(0, 96, 32, 16),
 	KEY_CAPSLOCK : Rect2(32, 96, 32, 16),
 	KEY_HOME : Rect2(64, 96, 32, 16),
 	KEY_PAGEUP : Rect2(96, 96, 32, 16),
@@ -191,7 +189,6 @@ const KeyPromptNames = {
 	KEY_COLON : "Colon",
 	KEY_SEMICOLON : "Semi-colon",
 	KEY_ASTERISK : "*",
-	KEY_NOBREAKSPACE : "Non-Breaking Space",
 	KEY_META : "Meta",
 	KEY_Z : "Z",
 	KEY_X : "X",
@@ -217,10 +214,9 @@ const KeyPromptNames = {
 	KEY_DOLLAR : "$",
 	KEY_PERCENT : "%",
 	KEY_ASCIICIRCUM : "^",
-	KEY_CENT : "Cent",
 	KEY_PARENLEFT : "(",
 	KEY_PARENRIGHT : ")",
-	KEY_CONTROL : "Control",
+	KEY_CTRL : "Control",
 	KEY_CAPSLOCK : "Caps Lock",
 	KEY_HOME : "Home",
 	KEY_PAGEUP : "Page Up",
@@ -258,7 +254,7 @@ func set_preferred_icons(icons):
 func get_icons():
 	# In the Editor, InputMap reflects Editor settings
 	# Pick a default so there's something to render
-	if Engine.editor_hint:
+	if Engine.is_editor_hint():
 		return Icons.XBOX
 	else:
 		return _icons

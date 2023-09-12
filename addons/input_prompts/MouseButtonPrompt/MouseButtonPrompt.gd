@@ -1,9 +1,10 @@
 # Copyright (C) 2022 John Pennycook
 # SPDX-License-Identifier: MIT
-tool
+@tool
 extends "res://addons/input_prompts/BasePrompt.gd"
 
-var button = 1 setget _set_button
+var button = 1:
+	set(value): _set_button(value)
 
 func _ready():
 	self.button = button
@@ -16,7 +17,7 @@ func _set_button(index : int):
 func _update_icon():
 	texture.atlas = InputPrompts.get_mouse_atlas()
 	texture.region = InputPrompts.get_mouse_region(button)
-	update()
+	queue_redraw()
 
 func _input(event : InputEvent):
 	if not event is InputEventMouseButton:
