@@ -38,7 +38,7 @@ value.
 
 ## KeyPrompt
 
-![KeyPrompt](./screenshots/joypad_motion_prompt.png)
+![KeyPrompt](./screenshots/key_prompt.png)
 
 KeyPrompt nodes display prompts corresponding to a key scancode.
 
