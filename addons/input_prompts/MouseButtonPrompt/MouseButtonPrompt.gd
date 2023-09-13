@@ -1,4 +1,4 @@
-# Copyright (C) 2022 John Pennycook
+# Copyright (C) 2022-2023 John Pennycook
 # SPDX-License-Identifier: MIT
 @tool
 extends "res://addons/input_prompts/BasePrompt.gd"
