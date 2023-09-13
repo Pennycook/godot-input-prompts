@@ -1,0 +1,388 @@
+[gd_scene load_steps=33 format=3 uid="uid://c8qg5tevuwe3c"]
+
+[ext_resource type="FontFile" uid="uid://b7fn516ji5c5s" path="res://demo/monogram-extended.ttf" id="1_gbm7q"]
+[ext_resource type="Script" path="res://addons/input_prompts/ActionPrompt/ActionPrompt.gd" id="3_m33nw"]
+[ext_resource type="Texture2D" uid="uid://dn7owd5dxkwfb" path="res://addons/input_prompts/JoypadButtonPrompt/xbox.png" id="4_pl6wp"]
+[ext_resource type="Texture2D" uid="uid://bgvutnsn627ed" path="res://addons/input_prompts/JoypadMotionPrompt/axis.png" id="4_qrup7"]
+[ext_resource type="Script" path="res://addons/input_prompts/JoypadMotionPrompt/JoypadMotionPrompt.gd" id="5_dyjlc"]
+[ext_resource type="Texture2D" uid="uid://d4k11sjwj6tet" path="res://addons/input_prompts/KeyPrompt/keys.png" id="5_oah83"]
+[ext_resource type="Script" path="res://addons/input_prompts/JoypadButtonPrompt/JoypadButtonPrompt.gd" id="5_u2ush"]
+[ext_resource type="Script" path="res://addons/input_prompts/KeyPrompt/KeyPrompt.gd" id="6_u6tgr"]
+[ext_resource type="Texture2D" uid="uid://cwheixygfphrq" path="res://addons/input_prompts/MouseButtonPrompt/buttons.png" id="7_ky50x"]
+[ext_resource type="Script" path="res://addons/input_prompts/MouseButtonPrompt/MouseButtonPrompt.gd" id="8_rlfy8"]
+[ext_resource type="Script" path="res://demo/option_button.gd" id="11_87wem"]
+
+[sub_resource type="FontVariation" id="FontVariation_py8b3"]
+base_font = ExtResource("1_gbm7q")
+spacing_space = -2
+spacing_top = -2
+spacing_bottom = -2
+
+[sub_resource type="Theme" id="Theme_2j0l8"]
+default_font = SubResource("FontVariation_py8b3")
+default_font_size = 16
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2n5q"]
+atlas = ExtResource("4_pl6wp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w512q"]
+atlas = ExtResource("4_pl6wp")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wh6no"]
+atlas = ExtResource("4_qrup7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p060v"]
+atlas = ExtResource("4_qrup7")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkplh"]
+atlas = ExtResource("5_oah83")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7027m"]
+atlas = ExtResource("5_oah83")
+region = Rect2(240, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0enlv"]
+atlas = ExtResource("7_ky50x")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bt114"]
+atlas = ExtResource("7_ky50x")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qinso"]
+atlas = ExtResource("4_pl6wp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s33cn"]
+atlas = ExtResource("4_pl6wp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t2hd"]
+atlas = ExtResource("4_pl6wp")
+region = Rect2(176, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cda5m"]
+atlas = ExtResource("4_pl6wp")
+region = Rect2(208, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qq6xc"]
+atlas = ExtResource("4_pl6wp")
+region = Rect2(192, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ismud"]
+atlas = ExtResource("4_pl6wp")
+region = Rect2(224, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxitw"]
+atlas = ExtResource("4_qrup7")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8vlk"]
+atlas = ExtResource("4_qrup7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcw2q"]
+atlas = ExtResource("4_qrup7")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m01fk"]
+atlas = ExtResource("4_qrup7")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q02su"]
+atlas = ExtResource("4_pl6wp")
+region = Rect2(0, 0, 16, 16)
+
+[node name="Demo" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = SubResource("Theme_2j0l8")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="InputEvent" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEvent"]
+layout_mode = 2
+text = "Most nodes display prompts based on an InputEvent:"
+
+[node name="JoypadButtonPrompts" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEvent"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEvent/JoypadButtonPrompts"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "JoypadButtonPrompt: "
+horizontal_alignment = 2
+
+[node name="JoypadButtonPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/JoypadButtonPrompts"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_k2n5q")
+stretch_mode = 5
+script = ExtResource("5_u2ush")
+button = 0
+icon = 0
+
+[node name="JoypadButtonPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/JoypadButtonPrompts"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_w512q")
+stretch_mode = 5
+script = ExtResource("5_u2ush")
+button = 2
+icon = 0
+
+[node name="JoypadMotionPrompts" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEvent"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEvent/JoypadMotionPrompts"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "JoypadMotionPrompt: "
+horizontal_alignment = 2
+
+[node name="JoypadMotionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/JoypadMotionPrompts"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_wh6no")
+stretch_mode = 5
+script = ExtResource("5_dyjlc")
+axis = 0
+axis_value = -1
+
+[node name="JoypadMotionPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/JoypadMotionPrompts"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_p060v")
+stretch_mode = 5
+script = ExtResource("5_dyjlc")
+axis = 2
+axis_value = 1
+
+[node name="KeyPrompts" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEvent"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEvent/KeyPrompts"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "KeyPrompt: "
+horizontal_alignment = 2
+
+[node name="KeyPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/KeyPrompts"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_jkplh")
+stretch_mode = 5
+script = ExtResource("6_u6tgr")
+key = 4194305
+
+[node name="KeyPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/KeyPrompts"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_7027m")
+stretch_mode = 5
+script = ExtResource("6_u6tgr")
+key = 4194308
+
+[node name="MouseButtonPrompts" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEvent"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEvent/MouseButtonPrompts"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "MouseButtonPrompt: "
+horizontal_alignment = 2
+
+[node name="MouseButtonPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/MouseButtonPrompts"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_0enlv")
+stretch_mode = 5
+script = ExtResource("8_rlfy8")
+button = 1
+
+[node name="MouseButtonPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/MouseButtonPrompts"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_bt114")
+stretch_mode = 5
+script = ExtResource("8_rlfy8")
+button = 4
+
+[node name="ActionPrompt" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActionPrompt"]
+layout_mode = 2
+text = "ActionPrompt nodes display prompts based on the InputMap and an icon preference. When set to \"Automatic\", the prompts update to match the input device."
+autowrap_mode = 3
+
+[node name="ui_accept" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ActionPrompt"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_accept"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "ui_accept:"
+horizontal_alignment = 2
+
+[node name="ActionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_accept"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_qinso")
+stretch_mode = 5
+script = ExtResource("3_m33nw")
+action = "ui_accept"
+icon = 0
+
+[node name="ui_cancel" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ActionPrompt"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_cancel"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "ui_cancel:"
+horizontal_alignment = 2
+
+[node name="ActionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_cancel"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_s33cn")
+stretch_mode = 5
+script = ExtResource("3_m33nw")
+action = "ui_cancel"
+icon = 0
+
+[node name="ui_directions" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ActionPrompt"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_directions"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "ui_up (and others):"
+horizontal_alignment = 2
+
+[node name="ActionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_directions"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_2t2hd")
+stretch_mode = 5
+script = ExtResource("3_m33nw")
+action = "ui_up"
+icon = 0
+
+[node name="ActionPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_directions"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_cda5m")
+stretch_mode = 5
+script = ExtResource("3_m33nw")
+action = "ui_left"
+icon = 0
+
+[node name="ActionPrompt3" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_directions"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_qq6xc")
+stretch_mode = 5
+script = ExtResource("3_m33nw")
+action = "ui_down"
+icon = 0
+
+[node name="ActionPrompt4" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_directions"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_ismud")
+stretch_mode = 5
+script = ExtResource("3_m33nw")
+action = "ui_right"
+icon = 0
+
+[node name="move" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ActionPrompt"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActionPrompt/move"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "move_up (and others):"
+horizontal_alignment = 2
+
+[node name="ActionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/move"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_sxitw")
+stretch_mode = 5
+script = ExtResource("3_m33nw")
+action = "move_up"
+icon = 0
+
+[node name="ActionPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/move"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_x8vlk")
+stretch_mode = 5
+script = ExtResource("3_m33nw")
+action = "move_left"
+icon = 0
+
+[node name="ActionPrompt3" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/move"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_qcw2q")
+stretch_mode = 5
+script = ExtResource("3_m33nw")
+action = "move_down"
+icon = 0
+
+[node name="ActionPrompt4" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/move"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_m01fk")
+stretch_mode = 5
+script = ExtResource("3_m33nw")
+action = "move_right"
+icon = 0
+
+[node name="interact" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ActionPrompt"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActionPrompt/interact"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "interact:"
+horizontal_alignment = 2
+
+[node name="ActionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/interact"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_q02su")
+stretch_mode = 5
+script = ExtResource("3_m33nw")
+action = "interact"
+icon = 0
+
+[node name="Options" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ActionPrompt"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActionPrompt/Options"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "Preferred Icons:"
+horizontal_alignment = 2
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/ActionPrompt/Options"]
+layout_mode = 2
+item_count = 5
+selected = 0
+popup/item_0/text = "Automatic"
+popup/item_0/id = 0
+popup/item_1/text = "Xbox"
+popup/item_1/id = 1
+popup/item_2/text = "Sony"
+popup/item_2/id = 2
+popup/item_3/text = "Nintendo"
+popup/item_3/id = 3
+popup/item_4/text = "Keyboard"
+popup/item_4/id = 4
+script = ExtResource("11_87wem")
+
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/ActionPrompt/Options/OptionButton" to="MarginContainer/VBoxContainer/ActionPrompt/Options/OptionButton" method="_on_item_selected"]
