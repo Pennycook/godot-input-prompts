@@ -17,7 +17,7 @@ Please note that the PlayStation icons must be completed manually in an editor.
 
 ## ActionPrompt
 
-![ActionPrompt](./addons/input_prompts/ActionPrompt/screenshot.png)
+![ActionPrompt](./screenshots/action_prompt.png)
 
 ActionPrompt nodes display prompts based on the InputMap and an icon
 preference. When set to "Automatic", the prompts update to match the input
@@ -25,26 +25,26 @@ device.
 
 ## JoypadButtonPrompt
 
-![JoypadButtonPrompt](./addons/input_prompts/JoypadButtonPrompt/screenshot.png)
+![JoypadButtonPrompt](./screenshots/joypad_button_prompt.png)
 
 JoypadButtonPrompt nodes display prompts corresponding to a button index.
 
 ## JoypadMotionPrompt
 
-![JoypadMotionPrompt](./addons/input_prompts/JoypadMotionPrompt/screenshot.png)
+![JoypadMotionPrompt](./screenshots/joypad_motion_prompt.png)
 
 JoypadMotionPrompt nodes display prompts corresponding to an axis and an axis
 value.
 
 ## KeyPrompt
 
-![KeyPrompt](./addons/input_prompts/KeyPrompt/screenshot.png)
+![KeyPrompt](./screenshots/joypad_motion_prompt.png)
 
 KeyPrompt nodes display prompts corresponding to a key scancode.
 
 ## MousePrompt
 
-![MouseButtonPrompt](./addons/input_prompts/MouseButtonPrompt/screenshot.png)
+![MouseButtonPrompt](./screenshots/mouse_button_prompt.png)
 
 MouseButtonPrompt nodes display prompts corresponding to a button index.
 
