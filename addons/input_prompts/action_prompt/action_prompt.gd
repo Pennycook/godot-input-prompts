@@ -5,26 +5,33 @@
 class_name ActionPrompt
 extends "res://addons/input_prompts/base_prompt.gd"
 
-var action = "ui_accept": set = _set_action
-var icon = InputPrompts.Icons.AUTOMATIC: set = _set_icon
+var action = "ui_accept":
+	set = _set_action
+var icon = InputPrompts.Icons.AUTOMATIC:
+	set = _set_icon
+
 
 func _ready():
 	_update_icon()
 
-func _set_action(new_action : String):
+
+func _set_action(new_action: String):
 	action = new_action
 	_update_icon()
+
 
 func _set_icon(new_icon):
 	icon = new_icon
 	_update_icon()
 
-func _find_event(list : Array, types : Array):
+
+func _find_event(list: Array, types: Array):
 	for candidate in list:
 		for type in types:
 			if is_instance_of(candidate, type):
 				return candidate
 	return null
+
 
 func _update_icon():
 	# In the Editor, InputMap reflects Editor settings
@@ -36,7 +43,7 @@ func _update_icon():
 		events = InputMap.action_get_events(action)
 
 	# If icon is set to AUTOMATIC, first determine which icon to display
-	var display_icon : int = icon
+	var display_icon: int = icon
 	if icon == InputPrompts.Icons.AUTOMATIC:
 		display_icon = InputPrompts.get_icons()
 
@@ -71,37 +78,40 @@ func _update_icon():
 			texture = textures.get_texture(axis, value)
 	queue_redraw()
 
-func _input(event : InputEvent):
+
+func _input(event: InputEvent):
 	if not event.is_action_pressed(action):
 		return
 	emit_signal("pressed")
 
+
 func _get_property_list():
 	var properties = []
-	properties.append({
-		name = "ActionPrompt",
-		type = TYPE_NIL,
-		usage = PROPERTY_USAGE_CATEGORY | PROPERTY_USAGE_SCRIPT_VARIABLE
-	})
+	properties.append(
+		{
+			name = "ActionPrompt",
+			type = TYPE_NIL,
+			usage = PROPERTY_USAGE_CATEGORY | PROPERTY_USAGE_SCRIPT_VARIABLE
+		}
+	)
 	# In the Editor, InputMap reflects Editor settings
 	# Read the list of actions from ProjectSettings instead
-	var actions : String = ""
+	var actions: String = ""
 	for property in ProjectSettings.get_property_list():
 		var name = property["name"]
 		if name.begins_with("input/"):
 			if actions != "":
 				actions += ","
 			actions += name.trim_prefix("input/")
-	properties.append({
-		name = "action",
-		type = TYPE_STRING,
-		hint = PROPERTY_HINT_ENUM,
-		hint_string = actions
-	})
-	properties.append({
-		name = "icon",
-		type = TYPE_INT,
-		hint = PROPERTY_HINT_ENUM,
-		hint_string = "Automatic,Xbox,Sony,Nintendo,Keyboard"
-	})
+	properties.append(
+		{name = "action", type = TYPE_STRING, hint = PROPERTY_HINT_ENUM, hint_string = actions}
+	)
+	properties.append(
+		{
+			name = "icon",
+			type = TYPE_INT,
+			hint = PROPERTY_HINT_ENUM,
+			hint_string = "Automatic,Xbox,Sony,Nintendo,Keyboard"
+		}
+	)
 	return properties

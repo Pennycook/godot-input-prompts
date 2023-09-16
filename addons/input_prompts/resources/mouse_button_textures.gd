@@ -14,5 +14,6 @@ extends Resource
 @export var button_8: Texture2D = null
 @export var button_9: Texture2D = null
 
+
 func get_texture(button: int) -> Texture2D:
 	return get("button_" + str(button))

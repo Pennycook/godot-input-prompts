@@ -131,8 +131,10 @@ var _preferred_icons = Icons.AUTOMATIC
 var _icons = Icons.XBOX
 var _joy_icons = Icons.XBOX
 
+
 func get_preferred_icons():
 	return _preferred_icons
+
 
 func set_preferred_icons(icons):
 	_preferred_icons = icons
@@ -142,6 +144,7 @@ func set_preferred_icons(icons):
 		_icons = icons
 	emit_signal("icons_changed")
 
+
 func get_icons():
 	# In the Editor, InputMap reflects Editor settings
 	# Pick a default so there's something to render
@@ -149,6 +152,7 @@ func get_icons():
 		return Icons.XBOX
 	else:
 		return _icons
+
 
 func get_joy_icons():
 	# In the Editor, InputMap reflects Editor settings
@@ -158,11 +162,14 @@ func get_joy_icons():
 	else:
 		return _joy_icons
 
+
 func get_keyboard_textures() -> KeyboardTextures:
 	return preload("res://addons/input_prompts/key_prompt/keys.tres")
 
+
 func get_mouse_textures() -> MouseButtonTextures:
 	return preload("res://addons/input_prompts/mouse_button_prompt/buttons.tres")
+
 
 func get_joypad_button_textures(icons: int) -> JoypadButtonTextures:
 	match icons:
@@ -178,6 +185,7 @@ func get_joypad_button_textures(icons: int) -> JoypadButtonTextures:
 			push_warning("No JoypadButtonTextures for Icons.KEYBOARD; defaulting to Xbox.")
 	return preload("res://addons/input_prompts/joypad_button_prompt/xbox.tres")
 
+
 func get_joypad_motion_textures(icons: int) -> JoypadMotionTextures:
 	match icons:
 		Icons.AUTOMATIC:
@@ -192,10 +200,11 @@ func get_joypad_motion_textures(icons: int) -> JoypadMotionTextures:
 			push_warning("No JoypadMotionTextures for Icons.KEYBOARD; defaulting to Xbox.")
 	return preload("res://addons/input_prompts/joypad_motion_prompt/xbox.tres")
 
+
 # Monitor InputEvents and emit icons_changed if:
 # 1) The user has not expressed an icon preference
 # 2) The type of InputEvent is different to last time
-func _input(event : InputEvent):
+func _input(event: InputEvent):
 	if not (_preferred_icons == null or _preferred_icons == Icons.AUTOMATIC):
 		return
 	if event is InputEventKey or event is InputEventMouse:
