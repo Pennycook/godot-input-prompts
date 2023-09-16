@@ -34,41 +34,35 @@ spacing_bottom = -2
 default_font = SubResource("FontVariation_py8b3")
 default_font_size = 16
 
-[node name="Demo" type="Control"]
-layout_mode = 3
-anchors_preset = 0
+[node name="Demo" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = SubResource("Theme_2j0l8")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="InputEvent" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="InputEvent" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEvent"]
+[node name="Label" type="Label" parent="VBoxContainer/InputEvent"]
 layout_mode = 2
 text = "Most nodes display prompts based on an InputEvent:"
 
-[node name="JoypadButtonPrompts" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEvent"]
+[node name="JoypadButtonPrompts" type="HBoxContainer" parent="VBoxContainer/InputEvent"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEvent/JoypadButtonPrompts"]
+[node name="Label" type="Label" parent="VBoxContainer/InputEvent/JoypadButtonPrompts"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 text = "JoypadButtonPrompt: "
 horizontal_alignment = 2
 
-[node name="JoypadButtonPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/JoypadButtonPrompts"]
+[node name="JoypadButtonPrompt" type="TextureRect" parent="VBoxContainer/InputEvent/JoypadButtonPrompts"]
 layout_mode = 2
 texture = ExtResource("2_bykxj")
 stretch_mode = 5
@@ -76,7 +70,7 @@ script = ExtResource("5_u2ush")
 button = 0
 icon = 0
 
-[node name="JoypadButtonPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/JoypadButtonPrompts"]
+[node name="JoypadButtonPrompt2" type="TextureRect" parent="VBoxContainer/InputEvent/JoypadButtonPrompts"]
 layout_mode = 2
 texture = ExtResource("4_0xav8")
 stretch_mode = 5
@@ -84,16 +78,16 @@ script = ExtResource("5_u2ush")
 button = 2
 icon = 0
 
-[node name="JoypadMotionPrompts" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEvent"]
+[node name="JoypadMotionPrompts" type="HBoxContainer" parent="VBoxContainer/InputEvent"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEvent/JoypadMotionPrompts"]
+[node name="Label" type="Label" parent="VBoxContainer/InputEvent/JoypadMotionPrompts"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 text = "JoypadMotionPrompt: "
 horizontal_alignment = 2
 
-[node name="JoypadMotionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/JoypadMotionPrompts"]
+[node name="JoypadMotionPrompt" type="TextureRect" parent="VBoxContainer/InputEvent/JoypadMotionPrompts"]
 layout_mode = 2
 texture = ExtResource("5_lvfro")
 stretch_mode = 5
@@ -102,7 +96,7 @@ axis = 0
 axis_value = -1
 icon = 0
 
-[node name="JoypadMotionPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/JoypadMotionPrompts"]
+[node name="JoypadMotionPrompt2" type="TextureRect" parent="VBoxContainer/InputEvent/JoypadMotionPrompts"]
 layout_mode = 2
 texture = ExtResource("7_gtgme")
 stretch_mode = 5
@@ -111,70 +105,70 @@ axis = 2
 axis_value = 1
 icon = 0
 
-[node name="KeyPrompts" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEvent"]
+[node name="KeyPrompts" type="HBoxContainer" parent="VBoxContainer/InputEvent"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEvent/KeyPrompts"]
+[node name="Label" type="Label" parent="VBoxContainer/InputEvent/KeyPrompts"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 text = "KeyPrompt: "
 horizontal_alignment = 2
 
-[node name="KeyPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/KeyPrompts"]
+[node name="KeyPrompt" type="TextureRect" parent="VBoxContainer/InputEvent/KeyPrompts"]
 layout_mode = 2
 texture = ExtResource("8_xbspm")
 stretch_mode = 5
 script = ExtResource("6_u6tgr")
 key = 4194305
 
-[node name="KeyPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/KeyPrompts"]
+[node name="KeyPrompt2" type="TextureRect" parent="VBoxContainer/InputEvent/KeyPrompts"]
 layout_mode = 2
 texture = ExtResource("10_nvluf")
 stretch_mode = 5
 script = ExtResource("6_u6tgr")
 key = 4194308
 
-[node name="MouseButtonPrompts" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEvent"]
+[node name="MouseButtonPrompts" type="HBoxContainer" parent="VBoxContainer/InputEvent"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/InputEvent/MouseButtonPrompts"]
+[node name="Label" type="Label" parent="VBoxContainer/InputEvent/MouseButtonPrompts"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 text = "MouseButtonPrompt: "
 horizontal_alignment = 2
 
-[node name="MouseButtonPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/MouseButtonPrompts"]
+[node name="MouseButtonPrompt" type="TextureRect" parent="VBoxContainer/InputEvent/MouseButtonPrompts"]
 layout_mode = 2
 texture = ExtResource("11_3twym")
 stretch_mode = 5
 script = ExtResource("8_rlfy8")
 button = 1
 
-[node name="MouseButtonPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/MouseButtonPrompts"]
+[node name="MouseButtonPrompt2" type="TextureRect" parent="VBoxContainer/InputEvent/MouseButtonPrompts"]
 layout_mode = 2
 texture = ExtResource("13_wuk6u")
 stretch_mode = 5
 script = ExtResource("8_rlfy8")
 button = 5
 
-[node name="ActionPrompt" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="ActionPrompt" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActionPrompt"]
+[node name="Label" type="Label" parent="VBoxContainer/ActionPrompt"]
 layout_mode = 2
 text = "ActionPrompt nodes display prompts based on the InputMap and an icon preference. When set to \"Automatic\", the prompts update to match the input device."
 autowrap_mode = 3
 
-[node name="ui_accept" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ActionPrompt"]
+[node name="ui_accept" type="HBoxContainer" parent="VBoxContainer/ActionPrompt"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_accept"]
+[node name="Label" type="Label" parent="VBoxContainer/ActionPrompt/ui_accept"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 text = "ui_accept:"
 horizontal_alignment = 2
 
-[node name="ActionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_accept"]
+[node name="ActionPrompt" type="TextureRect" parent="VBoxContainer/ActionPrompt/ui_accept"]
 layout_mode = 2
 texture = ExtResource("2_bykxj")
 stretch_mode = 5
@@ -182,16 +176,16 @@ script = ExtResource("3_m33nw")
 action = "ui_accept"
 icon = 0
 
-[node name="ui_cancel" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ActionPrompt"]
+[node name="ui_cancel" type="HBoxContainer" parent="VBoxContainer/ActionPrompt"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_cancel"]
+[node name="Label" type="Label" parent="VBoxContainer/ActionPrompt/ui_cancel"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 text = "ui_cancel:"
 horizontal_alignment = 2
 
-[node name="ActionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_cancel"]
+[node name="ActionPrompt" type="TextureRect" parent="VBoxContainer/ActionPrompt/ui_cancel"]
 layout_mode = 2
 texture = ExtResource("15_5uf0l")
 stretch_mode = 5
@@ -199,16 +193,16 @@ script = ExtResource("3_m33nw")
 action = "ui_cancel"
 icon = 0
 
-[node name="ui_directions" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ActionPrompt"]
+[node name="ui_directions" type="HBoxContainer" parent="VBoxContainer/ActionPrompt"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_directions"]
+[node name="Label" type="Label" parent="VBoxContainer/ActionPrompt/ui_directions"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 text = "ui_up (and others):"
 horizontal_alignment = 2
 
-[node name="ActionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_directions"]
+[node name="ActionPrompt" type="TextureRect" parent="VBoxContainer/ActionPrompt/ui_directions"]
 layout_mode = 2
 texture = ExtResource("16_6gg7p")
 stretch_mode = 5
@@ -216,7 +210,7 @@ script = ExtResource("3_m33nw")
 action = "ui_up"
 icon = 0
 
-[node name="ActionPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_directions"]
+[node name="ActionPrompt2" type="TextureRect" parent="VBoxContainer/ActionPrompt/ui_directions"]
 layout_mode = 2
 texture = ExtResource("17_rjfq7")
 stretch_mode = 5
@@ -224,7 +218,7 @@ script = ExtResource("3_m33nw")
 action = "ui_left"
 icon = 0
 
-[node name="ActionPrompt3" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_directions"]
+[node name="ActionPrompt3" type="TextureRect" parent="VBoxContainer/ActionPrompt/ui_directions"]
 layout_mode = 2
 texture = ExtResource("18_2le72")
 stretch_mode = 5
@@ -232,7 +226,7 @@ script = ExtResource("3_m33nw")
 action = "ui_down"
 icon = 0
 
-[node name="ActionPrompt4" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_directions"]
+[node name="ActionPrompt4" type="TextureRect" parent="VBoxContainer/ActionPrompt/ui_directions"]
 layout_mode = 2
 texture = ExtResource("19_ik7y4")
 stretch_mode = 5
@@ -240,16 +234,16 @@ script = ExtResource("3_m33nw")
 action = "ui_right"
 icon = 0
 
-[node name="move" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ActionPrompt"]
+[node name="move" type="HBoxContainer" parent="VBoxContainer/ActionPrompt"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActionPrompt/move"]
+[node name="Label" type="Label" parent="VBoxContainer/ActionPrompt/move"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 text = "move_up (and others):"
 horizontal_alignment = 2
 
-[node name="ActionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/move"]
+[node name="ActionPrompt" type="TextureRect" parent="VBoxContainer/ActionPrompt/move"]
 layout_mode = 2
 texture = ExtResource("20_rooa2")
 stretch_mode = 5
@@ -257,7 +251,7 @@ script = ExtResource("3_m33nw")
 action = "move_up"
 icon = 0
 
-[node name="ActionPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/move"]
+[node name="ActionPrompt2" type="TextureRect" parent="VBoxContainer/ActionPrompt/move"]
 layout_mode = 2
 texture = ExtResource("5_lvfro")
 stretch_mode = 5
@@ -265,7 +259,7 @@ script = ExtResource("3_m33nw")
 action = "move_left"
 icon = 0
 
-[node name="ActionPrompt3" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/move"]
+[node name="ActionPrompt3" type="TextureRect" parent="VBoxContainer/ActionPrompt/move"]
 layout_mode = 2
 texture = ExtResource("21_pcl4n")
 stretch_mode = 5
@@ -273,7 +267,7 @@ script = ExtResource("3_m33nw")
 action = "move_down"
 icon = 0
 
-[node name="ActionPrompt4" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/move"]
+[node name="ActionPrompt4" type="TextureRect" parent="VBoxContainer/ActionPrompt/move"]
 layout_mode = 2
 texture = ExtResource("22_lodew")
 stretch_mode = 5
@@ -281,16 +275,16 @@ script = ExtResource("3_m33nw")
 action = "move_right"
 icon = 0
 
-[node name="interact" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ActionPrompt"]
+[node name="interact" type="HBoxContainer" parent="VBoxContainer/ActionPrompt"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActionPrompt/interact"]
+[node name="Label" type="Label" parent="VBoxContainer/ActionPrompt/interact"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 text = "interact:"
 horizontal_alignment = 2
 
-[node name="ActionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/interact"]
+[node name="ActionPrompt" type="TextureRect" parent="VBoxContainer/ActionPrompt/interact"]
 layout_mode = 2
 texture = ExtResource("2_bykxj")
 stretch_mode = 5
@@ -298,16 +292,16 @@ script = ExtResource("3_m33nw")
 action = "interact"
 icon = 0
 
-[node name="Options" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ActionPrompt"]
+[node name="Options" type="HBoxContainer" parent="VBoxContainer/ActionPrompt"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActionPrompt/Options"]
+[node name="Label" type="Label" parent="VBoxContainer/ActionPrompt/Options"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 text = "Preferred Icons:"
 horizontal_alignment = 2
 
-[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/ActionPrompt/Options"]
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/ActionPrompt/Options"]
 layout_mode = 2
 item_count = 5
 selected = 0
@@ -323,4 +317,4 @@ popup/item_4/text = "Keyboard"
 popup/item_4/id = 4
 script = ExtResource("11_87wem")
 
-[connection signal="item_selected" from="MarginContainer/VBoxContainer/ActionPrompt/Options/OptionButton" to="MarginContainer/VBoxContainer/ActionPrompt/Options/OptionButton" method="_on_item_selected"]
+[connection signal="item_selected" from="VBoxContainer/ActionPrompt/Options/OptionButton" to="VBoxContainer/ActionPrompt/Options/OptionButton" method="_on_item_selected"]
