@@ -1,6 +1,8 @@
 # Copyright (C) 2022-2023 John Pennycook
 # SPDX-License-Identifier: MIT
 @tool
+@icon("res://addons/input_prompts/joypad_motion_prompt/icon.png")
+class_name JoypadMotionPrompt
 extends "res://addons/input_prompts/base_prompt.gd"
 
 var axis = 0: set = _set_axis

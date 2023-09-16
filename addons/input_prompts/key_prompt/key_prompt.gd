@@ -1,6 +1,8 @@
 # Copyright (C) 2022-2023 John Pennycook
 # SPDX-License-Identifier: MIT
 @tool
+@icon("res://addons/input_prompts/key_prompt/icon.png")
+class_name KeyPrompt
 extends "res://addons/input_prompts/base_prompt.gd"
 
 var key = KEY_EXCLAM: set = _set_key

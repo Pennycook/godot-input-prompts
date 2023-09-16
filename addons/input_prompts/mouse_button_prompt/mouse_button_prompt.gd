@@ -1,6 +1,8 @@
 # Copyright (C) 2022-2023 John Pennycook
 # SPDX-License-Identifier: MIT
 @tool
+@icon("res://addons/input_prompts/mouse_button_prompt/icon.png")
+class_name MouseButtonPrompt
 extends "res://addons/input_prompts/base_prompt.gd"
 
 var button = 1: set = _set_button
