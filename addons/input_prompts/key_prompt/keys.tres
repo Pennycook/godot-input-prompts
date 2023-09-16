@@ -42,7 +42,6 @@
 [ext_resource type="Texture2D" uid="uid://b0kuadlp4jw6j" path="res://addons/input_prompts/icons/keyboard/d.png" id="21_ch2od"]
 [ext_resource type="Texture2D" uid="uid://o6o5wyo8ce3j" path="res://addons/input_prompts/icons/keyboard/f12.png" id="22_tv5ol"]
 [ext_resource type="Texture2D" uid="uid://dxvryuhofjieh" path="res://addons/input_prompts/icons/keyboard/colon.png" id="23_edw0u"]
-[ext_resource type="Texture2D" uid="uid://eadqqakjyf5m" path="res://addons/input_prompts/icons/keyboard/enter.png" id="23_ldawu"]
 [ext_resource type="Texture2D" uid="uid://dxydr83ulipn7" path="res://addons/input_prompts/icons/keyboard/f.png" id="27_3k1sw"]
 [ext_resource type="Texture2D" uid="uid://dw4bnrd874e24" path="res://addons/input_prompts/icons/keyboard/c.png" id="27_qxebp"]
 [ext_resource type="Texture2D" uid="uid://cdgup5y6rik0q" path="res://addons/input_prompts/icons/keyboard/f7.png" id="28_35jg6"]
@@ -63,6 +62,7 @@
 [ext_resource type="Texture2D" uid="uid://gybid8440i5b" path="res://addons/input_prompts/icons/keyboard/end.png" id="37_ma2j1"]
 [ext_resource type="Texture2D" uid="uid://c65r2dyaf7vmq" path="res://addons/input_prompts/icons/keyboard/q.png" id="37_y12tf"]
 [ext_resource type="Texture2D" uid="uid://bl0h0oouf2koo" path="res://addons/input_prompts/icons/keyboard/r.png" id="38_1ibmi"]
+[ext_resource type="Texture2D" uid="uid://phpq5qt2ct30" path="res://addons/input_prompts/icons/keyboard/enter_wide.png" id="38_qpkvw"]
 [ext_resource type="Texture2D" uid="uid://6guh8jedcfc8" path="res://addons/input_prompts/icons/keyboard/t.png" id="39_26e6c"]
 [ext_resource type="Texture2D" uid="uid://brr13r75g8u2d" path="res://addons/input_prompts/icons/keyboard/u.png" id="40_kdb66"]
 [ext_resource type="Texture2D" uid="uid://jw36dq3n1wg5" path="res://addons/input_prompts/icons/keyboard/g.png" id="40_l0xvd"]
@@ -161,7 +161,7 @@ BracketRight = ExtResource("20_8hbe5")
 BraceLeft = ExtResource("17_0o1ar")
 BraceRight = ExtResource("18_e3vnc")
 BackSlash = ExtResource("14_03w57")
-Enter = ExtResource("23_ldawu")
+Enter = ExtResource("38_qpkvw")
 A = ExtResource("11_vehnw")
 S = ExtResource("53_4ai2n")
 D = ExtResource("21_ch2od")

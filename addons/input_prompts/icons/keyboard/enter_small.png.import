@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eadqqakjyf5m"
-path="res://.godot/imported/enter.png-8c2816f0947407588c89eb35727e8bf8.ctex"
+uid="uid://bd3kwm8awfqbv"
+path="res://.godot/imported/enter_small.png-f37351702f92d75a289f387ae35544c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/input_prompts/icons/keyboard/enter.png"
-dest_files=["res://.godot/imported/enter.png-8c2816f0947407588c89eb35727e8bf8.ctex"]
+source_file="res://addons/input_prompts/icons/keyboard/enter_small.png"
+dest_files=["res://.godot/imported/enter_small.png-f37351702f92d75a289f387ae35544c5.ctex"]
 
 [params]
 
