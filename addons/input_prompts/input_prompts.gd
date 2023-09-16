@@ -15,7 +15,7 @@ enum Icons {
 
 # TODO: Find a way to replace this with standard functionality.
 #       The Key enum is not accessible directly and can't be iterated over.
-const Keys = [
+const KEYS = [
 	KEY_ESCAPE,
 	KEY_F1,
 	KEY_F2,
@@ -150,8 +150,7 @@ func get_icons():
 	# Pick a default so there's something to render
 	if Engine.is_editor_hint():
 		return Icons.XBOX
-	else:
-		return _icons
+	return _icons
 
 
 func get_joy_icons():
@@ -159,8 +158,7 @@ func get_joy_icons():
 	# Pick a default so there's something to render
 	if Engine.is_editor_hint():
 		return Icons.XBOX
-	else:
-		return _joy_icons
+	return _joy_icons
 
 
 func get_keyboard_textures() -> KeyboardTextures:
@@ -182,8 +180,8 @@ func get_joypad_button_textures(icons: int) -> JoypadButtonTextures:
 		Icons.NINTENDO:
 			return preload("res://addons/input_prompts/joypad_button_prompt/nintendo.tres")
 		Icons.KEYBOARD:
-			push_warning("No JoypadButtonTextures for Icons.KEYBOARD; defaulting to Xbox.")
-	return preload("res://addons/input_prompts/joypad_button_prompt/xbox.tres")
+			push_error("No JoypadButtonTextures for Icons.KEYBOARD.")
+	return null
 
 
 func get_joypad_motion_textures(icons: int) -> JoypadMotionTextures:
@@ -197,8 +195,8 @@ func get_joypad_motion_textures(icons: int) -> JoypadMotionTextures:
 		Icons.NINTENDO:
 			return preload("res://addons/input_prompts/joypad_motion_prompt/nintendo.tres")
 		Icons.KEYBOARD:
-			push_warning("No JoypadMotionTextures for Icons.KEYBOARD; defaulting to Xbox.")
-	return preload("res://addons/input_prompts/joypad_motion_prompt/xbox.tres")
+			push_error("No JoypadMotionTextures for Icons.KEYBOARD.")
+	return null
 
 
 # Monitor InputEvents and emit icons_changed if:

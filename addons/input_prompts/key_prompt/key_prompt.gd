@@ -46,7 +46,7 @@ func _get_property_list():
 		}
 	)
 	var keys: String = ""
-	for k in InputPrompts.Keys:
+	for k in InputPrompts.KEYS:
 		if keys != "":
 			keys += ","
 		keys += "{0}:{1}".format([OS.get_keycode_string(k), k])

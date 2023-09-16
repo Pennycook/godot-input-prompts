@@ -59,17 +59,16 @@ func _get_property_list():
 			usage = PROPERTY_USAGE_CATEGORY | PROPERTY_USAGE_SCRIPT_VARIABLE
 		}
 	)
-	(
-		properties
-		. append(
-			{
-				name = "axis",
-				type = TYPE_INT,
-				hint = PROPERTY_HINT_ENUM,
-				hint_string =
-				"Left Horizontal:0,Left Vertical:1,Right Horizontal:2,Right Vertical:3,Left Trigger:4,Right Trigger:5"
-			}
-		)
+	const AXIS_HINT := (
+		"Left Horizontal:0,"
+		+ "Left Vertical:1,"
+		+ "Right Horizontal:2,"
+		+ "Right Vertical:3,"
+		+ "Left Trigger:4,"
+		+ "Right Trigger:5"
+	)
+	properties.append(
+		{name = "axis", type = TYPE_INT, hint = PROPERTY_HINT_ENUM, hint_string = AXIS_HINT}
 	)
 	properties.append(
 		{
