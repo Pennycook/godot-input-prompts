@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c3lq40m0un2vi" path="res://addons/input_prompts/icons/keyboard/backspace.png" id="10_nvluf"]
 [ext_resource type="Texture2D" uid="uid://d0bfvcxip20dc" path="res://addons/input_prompts/icons/mouse/left.png" id="11_3twym"]
 [ext_resource type="Script" path="res://demo/option_button.gd" id="11_87wem"]
-[ext_resource type="Texture2D" uid="uid://cybx1ogrrc1si" path="res://addons/input_prompts/icons/mouse/wheel_up.png" id="13_whroy"]
+[ext_resource type="Texture2D" uid="uid://bkgtieikd4hrg" path="res://addons/input_prompts/icons/mouse/wheel_down.png" id="13_wuk6u"]
 [ext_resource type="Texture2D" uid="uid://dv0r0pf7dwijj" path="res://addons/input_prompts/icons/xbox/b.png" id="15_5uf0l"]
 [ext_resource type="Texture2D" uid="uid://c6b88da2bl26p" path="res://addons/input_prompts/icons/xbox/up.png" id="16_6gg7p"]
 [ext_resource type="Texture2D" uid="uid://b381hogwff71v" path="res://addons/input_prompts/icons/xbox/left.png" id="17_rjfq7"]
@@ -148,14 +148,14 @@ layout_mode = 2
 texture = ExtResource("11_3twym")
 stretch_mode = 5
 script = ExtResource("8_rlfy8")
-button = 0
+button = 1
 
 [node name="MouseButtonPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/MouseButtonPrompts"]
 layout_mode = 2
-texture = ExtResource("13_whroy")
+texture = ExtResource("13_wuk6u")
 stretch_mode = 5
 script = ExtResource("8_rlfy8")
-button = 3
+button = 5
 
 [node name="ActionPrompt" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

@@ -11,10 +11,10 @@
 
 [resource]
 script = ExtResource("1_yejn7")
-button_0 = ExtResource("1_wtkjw")
-button_1 = ExtResource("2_wwb4y")
-button_2 = ExtResource("3_b4kwc")
-button_3 = ExtResource("4_kp7cl")
-button_4 = ExtResource("5_f36mi")
-button_5 = ExtResource("6_rrc1l")
-button_6 = ExtResource("7_wyiou")
+button_1 = ExtResource("1_wtkjw")
+button_2 = ExtResource("2_wwb4y")
+button_3 = ExtResource("3_b4kwc")
+button_4 = ExtResource("4_kp7cl")
+button_5 = ExtResource("5_f36mi")
+button_6 = ExtResource("6_rrc1l")
+button_7 = ExtResource("7_wyiou")
