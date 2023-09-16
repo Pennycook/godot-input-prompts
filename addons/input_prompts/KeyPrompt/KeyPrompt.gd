@@ -13,8 +13,8 @@ func _set_key(scancode : int):
 	_update_icon()
 	
 func _update_icon():
-	texture.atlas = InputPrompts.get_key_atlas()
-	texture.region = InputPrompts.get_key_region(key)
+	var textures := InputPrompts.get_keyboard_textures()
+	texture = textures.get_texture(key)
 	queue_redraw()
 
 func _input(event : InputEvent):
@@ -36,10 +36,10 @@ func _get_property_list():
 		usage = PROPERTY_USAGE_CATEGORY | PROPERTY_USAGE_SCRIPT_VARIABLE
 	})
 	var keys : String = ""
-	for k in InputPrompts.KeyPromptMap:
+	for k in InputPrompts.Keys:
 		if keys != "":
 			keys += ","
-		keys += "{0}:{1}".format([InputPrompts.KeyPromptNames[k], k])
+		keys += "{0}:{1}".format([OS.get_keycode_string(k), k])
 	properties.append({
 		name = "key",
 		type = TYPE_INT,

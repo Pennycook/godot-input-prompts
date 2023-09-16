@@ -9,7 +9,7 @@ func _is_input_prompt():
 	return true
 
 func _init():
-	texture = AtlasTexture.new()
+	texture = null
 	stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 
 func _update_icon():

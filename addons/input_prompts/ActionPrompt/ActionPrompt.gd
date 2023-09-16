@@ -47,12 +47,12 @@ func _update_icon():
 			push_error("No Key/Mouse input for " + action + " in InputMap")
 		if ev is InputEventKey:
 			var scancode = ev.get_keycode()
-			texture.atlas = InputPrompts.get_key_atlas()
-			texture.region = InputPrompts.get_key_region(scancode)
+			var textures := InputPrompts.get_keyboard_textures()
+			texture = textures.get_texture(scancode)
 		elif ev is InputEventMouseButton:
 			var button = ev.get_button_index()
-			texture.atlas = InputPrompts.get_mouse_atlas()
-			texture.region = InputPrompts.get_mouse_region(button)
+			var textures := InputPrompts.get_mouse_textures()
+			texture = textures.get_texture(button)
 	else:
 		var types = [InputEventJoypadButton, InputEventJoypadMotion]
 		var ev = _find_event(events, types)
@@ -60,13 +60,13 @@ func _update_icon():
 			push_error("No Joypad input for " + action + " in InputMap")
 		if ev is InputEventJoypadButton:
 			var button = ev.get_button_index()
-			texture.atlas = InputPrompts.get_joypad_button_atlas(display_icon)
-			texture.region = InputPrompts.get_joypad_button_region(button)
+			var textures := InputPrompts.get_joypad_button_textures(display_icon)
+			texture = textures.get_texture(button)
 		elif ev is InputEventJoypadMotion:
 			var axis = ev.get_axis()
 			var value = ev.get_axis_value()
-			texture.atlas = InputPrompts.get_joypad_motion_atlas()
-			texture.region = InputPrompts.get_joypad_motion_region(axis, value)
+			var textures := InputPrompts.get_joypad_motion_textures(display_icon)
+			texture = textures.get_texture(axis, value)
 	queue_redraw()
 
 func _input(event : InputEvent):

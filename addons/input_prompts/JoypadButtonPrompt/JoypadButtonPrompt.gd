@@ -18,8 +18,8 @@ func _set_icon(new_icon):
 	_update_icon()
 
 func _update_icon():
-	texture.atlas = InputPrompts.get_joypad_button_atlas(icon)
-	texture.region = InputPrompts.get_joypad_button_region(button)
+	var textures := InputPrompts.get_joypad_button_textures(icon)
+	texture = textures.get_texture(button)
 	queue_redraw()
 
 func _input(event : InputEvent):

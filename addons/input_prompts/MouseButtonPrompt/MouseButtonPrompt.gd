@@ -13,8 +13,8 @@ func _set_button(index : int):
 	_update_icon()
 
 func _update_icon():
-	texture.atlas = InputPrompts.get_mouse_atlas()
-	texture.region = InputPrompts.get_mouse_region(button)
+	var textures := InputPrompts.get_mouse_textures()
+	texture = textures.get_texture(button)
 	queue_redraw()
 
 func _input(event : InputEvent):
@@ -37,6 +37,6 @@ func _get_property_list():
 		name = "button",
 		type = TYPE_INT,
 		hint = PROPERTY_HINT_ENUM,
-		hint_string = "Left:1,Right:2,Middle:3,Wheel Up:4,Wheel Down:5,Wheel Left:6,Wheel Right:7"
+		hint_string = "Left:0,Right:1,Middle:2,Wheel Up:3,Wheel Down:4,Wheel Left:5,Wheel Right:6"
 	})
 	return properties

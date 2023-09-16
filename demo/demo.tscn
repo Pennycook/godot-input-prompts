@@ -1,16 +1,28 @@
-[gd_scene load_steps=33 format=3 uid="uid://c8qg5tevuwe3c"]
+[gd_scene load_steps=26 format=3 uid="uid://c8qg5tevuwe3c"]
 
 [ext_resource type="FontFile" uid="uid://b7fn516ji5c5s" path="res://demo/monogram-extended.ttf" id="1_gbm7q"]
+[ext_resource type="Texture2D" uid="uid://b1e23gj3k1klg" path="res://addons/input_prompts/icons/xbox/a.png" id="2_bykxj"]
 [ext_resource type="Script" path="res://addons/input_prompts/ActionPrompt/ActionPrompt.gd" id="3_m33nw"]
-[ext_resource type="Texture2D" uid="uid://dn7owd5dxkwfb" path="res://addons/input_prompts/JoypadButtonPrompt/xbox.png" id="4_pl6wp"]
-[ext_resource type="Texture2D" uid="uid://bgvutnsn627ed" path="res://addons/input_prompts/JoypadMotionPrompt/axis.png" id="4_qrup7"]
+[ext_resource type="Texture2D" uid="uid://deib2tqcg5df0" path="res://addons/input_prompts/icons/xbox/x.png" id="4_0xav8"]
 [ext_resource type="Script" path="res://addons/input_prompts/JoypadMotionPrompt/JoypadMotionPrompt.gd" id="5_dyjlc"]
-[ext_resource type="Texture2D" uid="uid://d4k11sjwj6tet" path="res://addons/input_prompts/KeyPrompt/keys.png" id="5_oah83"]
+[ext_resource type="Texture2D" uid="uid://cah6r1q5x2lte" path="res://addons/input_prompts/icons/generic/left_stick_left.png" id="5_lvfro"]
 [ext_resource type="Script" path="res://addons/input_prompts/JoypadButtonPrompt/JoypadButtonPrompt.gd" id="5_u2ush"]
 [ext_resource type="Script" path="res://addons/input_prompts/KeyPrompt/KeyPrompt.gd" id="6_u6tgr"]
-[ext_resource type="Texture2D" uid="uid://cwheixygfphrq" path="res://addons/input_prompts/MouseButtonPrompt/buttons.png" id="7_ky50x"]
+[ext_resource type="Texture2D" uid="uid://7wlwep2pflxf" path="res://addons/input_prompts/icons/generic/right_stick_right.png" id="7_gtgme"]
 [ext_resource type="Script" path="res://addons/input_prompts/MouseButtonPrompt/MouseButtonPrompt.gd" id="8_rlfy8"]
+[ext_resource type="Texture2D" uid="uid://ei5tpuh570dp" path="res://addons/input_prompts/icons/keyboard/esc.png" id="8_xbspm"]
+[ext_resource type="Texture2D" uid="uid://c3lq40m0un2vi" path="res://addons/input_prompts/icons/keyboard/backspace.png" id="10_nvluf"]
+[ext_resource type="Texture2D" uid="uid://d0bfvcxip20dc" path="res://addons/input_prompts/icons/mouse/left.png" id="11_3twym"]
 [ext_resource type="Script" path="res://demo/option_button.gd" id="11_87wem"]
+[ext_resource type="Texture2D" uid="uid://cybx1ogrrc1si" path="res://addons/input_prompts/icons/mouse/wheel_up.png" id="13_whroy"]
+[ext_resource type="Texture2D" uid="uid://dv0r0pf7dwijj" path="res://addons/input_prompts/icons/xbox/b.png" id="15_5uf0l"]
+[ext_resource type="Texture2D" uid="uid://c6b88da2bl26p" path="res://addons/input_prompts/icons/xbox/up.png" id="16_6gg7p"]
+[ext_resource type="Texture2D" uid="uid://b381hogwff71v" path="res://addons/input_prompts/icons/xbox/left.png" id="17_rjfq7"]
+[ext_resource type="Texture2D" uid="uid://cq20ry6lvvj3" path="res://addons/input_prompts/icons/xbox/down.png" id="18_2le72"]
+[ext_resource type="Texture2D" uid="uid://bsi68uuv6g8gg" path="res://addons/input_prompts/icons/xbox/right.png" id="19_ik7y4"]
+[ext_resource type="Texture2D" uid="uid://bntsrcd3hjcex" path="res://addons/input_prompts/icons/generic/left_stick_up.png" id="20_rooa2"]
+[ext_resource type="Texture2D" uid="uid://dreirjfpqj40a" path="res://addons/input_prompts/icons/generic/left_stick_down.png" id="21_pcl4n"]
+[ext_resource type="Texture2D" uid="uid://c03r3n0nfrjck" path="res://addons/input_prompts/icons/generic/left_stick_right.png" id="22_lodew"]
 
 [sub_resource type="FontVariation" id="FontVariation_py8b3"]
 base_font = ExtResource("1_gbm7q")
@@ -21,82 +33,6 @@ spacing_bottom = -2
 [sub_resource type="Theme" id="Theme_2j0l8"]
 default_font = SubResource("FontVariation_py8b3")
 default_font_size = 16
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k2n5q"]
-atlas = ExtResource("4_pl6wp")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w512q"]
-atlas = ExtResource("4_pl6wp")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wh6no"]
-atlas = ExtResource("4_qrup7")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p060v"]
-atlas = ExtResource("4_qrup7")
-region = Rect2(16, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jkplh"]
-atlas = ExtResource("5_oah83")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7027m"]
-atlas = ExtResource("5_oah83")
-region = Rect2(240, 16, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0enlv"]
-atlas = ExtResource("7_ky50x")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bt114"]
-atlas = ExtResource("7_ky50x")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qinso"]
-atlas = ExtResource("4_pl6wp")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s33cn"]
-atlas = ExtResource("4_pl6wp")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2t2hd"]
-atlas = ExtResource("4_pl6wp")
-region = Rect2(176, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cda5m"]
-atlas = ExtResource("4_pl6wp")
-region = Rect2(208, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qq6xc"]
-atlas = ExtResource("4_pl6wp")
-region = Rect2(192, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ismud"]
-atlas = ExtResource("4_pl6wp")
-region = Rect2(224, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sxitw"]
-atlas = ExtResource("4_qrup7")
-region = Rect2(0, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x8vlk"]
-atlas = ExtResource("4_qrup7")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qcw2q"]
-atlas = ExtResource("4_qrup7")
-region = Rect2(16, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m01fk"]
-atlas = ExtResource("4_qrup7")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q02su"]
-atlas = ExtResource("4_pl6wp")
-region = Rect2(0, 0, 16, 16)
 
 [node name="Demo" type="Control"]
 layout_mode = 3
@@ -134,7 +70,7 @@ horizontal_alignment = 2
 
 [node name="JoypadButtonPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/JoypadButtonPrompts"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_k2n5q")
+texture = ExtResource("2_bykxj")
 stretch_mode = 5
 script = ExtResource("5_u2ush")
 button = 0
@@ -142,7 +78,7 @@ icon = 0
 
 [node name="JoypadButtonPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/JoypadButtonPrompts"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_w512q")
+texture = ExtResource("4_0xav8")
 stretch_mode = 5
 script = ExtResource("5_u2ush")
 button = 2
@@ -159,19 +95,21 @@ horizontal_alignment = 2
 
 [node name="JoypadMotionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/JoypadMotionPrompts"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_wh6no")
+texture = ExtResource("5_lvfro")
 stretch_mode = 5
 script = ExtResource("5_dyjlc")
 axis = 0
 axis_value = -1
+icon = 0
 
 [node name="JoypadMotionPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/JoypadMotionPrompts"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_p060v")
+texture = ExtResource("7_gtgme")
 stretch_mode = 5
 script = ExtResource("5_dyjlc")
 axis = 2
 axis_value = 1
+icon = 0
 
 [node name="KeyPrompts" type="HBoxContainer" parent="MarginContainer/VBoxContainer/InputEvent"]
 layout_mode = 2
@@ -184,14 +122,14 @@ horizontal_alignment = 2
 
 [node name="KeyPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/KeyPrompts"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_jkplh")
+texture = ExtResource("8_xbspm")
 stretch_mode = 5
 script = ExtResource("6_u6tgr")
 key = 4194305
 
 [node name="KeyPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/KeyPrompts"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_7027m")
+texture = ExtResource("10_nvluf")
 stretch_mode = 5
 script = ExtResource("6_u6tgr")
 key = 4194308
@@ -207,17 +145,17 @@ horizontal_alignment = 2
 
 [node name="MouseButtonPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/MouseButtonPrompts"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_0enlv")
+texture = ExtResource("11_3twym")
 stretch_mode = 5
 script = ExtResource("8_rlfy8")
-button = 1
+button = 0
 
 [node name="MouseButtonPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/InputEvent/MouseButtonPrompts"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_bt114")
+texture = ExtResource("13_whroy")
 stretch_mode = 5
 script = ExtResource("8_rlfy8")
-button = 4
+button = 3
 
 [node name="ActionPrompt" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -238,7 +176,7 @@ horizontal_alignment = 2
 
 [node name="ActionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_accept"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_qinso")
+texture = ExtResource("2_bykxj")
 stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_accept"
@@ -255,7 +193,7 @@ horizontal_alignment = 2
 
 [node name="ActionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_cancel"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_s33cn")
+texture = ExtResource("15_5uf0l")
 stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_cancel"
@@ -272,7 +210,7 @@ horizontal_alignment = 2
 
 [node name="ActionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_directions"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_2t2hd")
+texture = ExtResource("16_6gg7p")
 stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_up"
@@ -280,7 +218,7 @@ icon = 0
 
 [node name="ActionPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_directions"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_cda5m")
+texture = ExtResource("17_rjfq7")
 stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_left"
@@ -288,7 +226,7 @@ icon = 0
 
 [node name="ActionPrompt3" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_directions"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_qq6xc")
+texture = ExtResource("18_2le72")
 stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_down"
@@ -296,7 +234,7 @@ icon = 0
 
 [node name="ActionPrompt4" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/ui_directions"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_ismud")
+texture = ExtResource("19_ik7y4")
 stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_right"
@@ -313,7 +251,7 @@ horizontal_alignment = 2
 
 [node name="ActionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/move"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_sxitw")
+texture = ExtResource("20_rooa2")
 stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "move_up"
@@ -321,7 +259,7 @@ icon = 0
 
 [node name="ActionPrompt2" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/move"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_x8vlk")
+texture = ExtResource("5_lvfro")
 stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "move_left"
@@ -329,7 +267,7 @@ icon = 0
 
 [node name="ActionPrompt3" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/move"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_qcw2q")
+texture = ExtResource("21_pcl4n")
 stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "move_down"
@@ -337,7 +275,7 @@ icon = 0
 
 [node name="ActionPrompt4" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/move"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_m01fk")
+texture = ExtResource("22_lodew")
 stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "move_right"
@@ -354,7 +292,7 @@ horizontal_alignment = 2
 
 [node name="ActionPrompt" type="TextureRect" parent="MarginContainer/VBoxContainer/ActionPrompt/interact"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_q02su")
+texture = ExtResource("2_bykxj")
 stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "interact"

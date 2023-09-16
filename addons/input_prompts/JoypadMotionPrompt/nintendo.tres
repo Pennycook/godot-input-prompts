@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="JoypadMotionTextures" load_steps=12 format=3 uid="uid://dtjhtsx5tiane"]
+
+[ext_resource type="Texture2D" uid="uid://cah6r1q5x2lte" path="res://addons/input_prompts/icons/generic/left_stick_left.png" id="1_hu4ly"]
+[ext_resource type="Texture2D" uid="uid://c03r3n0nfrjck" path="res://addons/input_prompts/icons/generic/left_stick_right.png" id="2_rpjo7"]
+[ext_resource type="Texture2D" uid="uid://bntsrcd3hjcex" path="res://addons/input_prompts/icons/generic/left_stick_up.png" id="3_32uay"]
+[ext_resource type="Texture2D" uid="uid://dreirjfpqj40a" path="res://addons/input_prompts/icons/generic/left_stick_down.png" id="4_jimr7"]
+[ext_resource type="Texture2D" uid="uid://dkd01upu3qdb7" path="res://addons/input_prompts/icons/generic/right_stick_left.png" id="5_y1g31"]
+[ext_resource type="Texture2D" uid="uid://7wlwep2pflxf" path="res://addons/input_prompts/icons/generic/right_stick_right.png" id="6_ny0h0"]
+[ext_resource type="Texture2D" uid="uid://tdsh1d8hbha3" path="res://addons/input_prompts/icons/generic/right_stick_up.png" id="7_tjas0"]
+[ext_resource type="Texture2D" uid="uid://c6tm6gslt2cau" path="res://addons/input_prompts/icons/generic/right_stick_down.png" id="8_8b1wu"]
+[ext_resource type="Texture2D" uid="uid://dvixi1dxdoig2" path="res://addons/input_prompts/icons/nintendo/zl.png" id="9_scud4"]
+[ext_resource type="Texture2D" uid="uid://dbykk7rrgahs3" path="res://addons/input_prompts/icons/nintendo/zr.png" id="10_f0gfq"]
+[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="11_nouuu"]
+
+[resource]
+script = ExtResource("11_nouuu")
+axis_0_minus = ExtResource("1_hu4ly")
+axis_0_plus = ExtResource("2_rpjo7")
+axis_1_minus = ExtResource("3_32uay")
+axis_1_plus = ExtResource("4_jimr7")
+axis_2_minus = ExtResource("5_y1g31")
+axis_2_plus = ExtResource("6_ny0h0")
+axis_3_minus = ExtResource("7_tjas0")
+axis_3_plus = ExtResource("8_8b1wu")
+axis_4_plus = ExtResource("9_scud4")
+axis_5_plus = ExtResource("10_f0gfq")

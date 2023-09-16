@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="JoypadButtonTextures" load_steps=18 format=3 uid="uid://kabm3n1g8bqg"]
+
+[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_button_textures.gd" id="1_25grt"]
+[ext_resource type="Texture2D" uid="uid://bdhuy2yjfgaqo" path="res://addons/input_prompts/icons/nintendo/b.png" id="1_xaja3"]
+[ext_resource type="Texture2D" uid="uid://kqpiteswedha" path="res://addons/input_prompts/icons/nintendo/a.png" id="2_fukqt"]
+[ext_resource type="Texture2D" uid="uid://t6b3hdkex5sn" path="res://addons/input_prompts/icons/nintendo/r.png" id="3_dpsw2"]
+[ext_resource type="Texture2D" uid="uid://dg3np7m1d5cgr" path="res://addons/input_prompts/icons/nintendo/up.png" id="4_nsj6d"]
+[ext_resource type="Texture2D" uid="uid://cfriumkgbsb6w" path="res://addons/input_prompts/icons/nintendo/down.png" id="5_cnjuo"]
+[ext_resource type="Texture2D" uid="uid://bfx1oiuxfvdoa" path="res://addons/input_prompts/icons/nintendo/left.png" id="6_cdqtk"]
+[ext_resource type="Texture2D" uid="uid://8udwa7p18dmn" path="res://addons/input_prompts/icons/nintendo/right.png" id="7_42sxu"]
+[ext_resource type="Texture2D" uid="uid://4pysljtin4uu" path="res://addons/input_prompts/icons/nintendo/capture.png" id="8_4ucvn"]
+[ext_resource type="Texture2D" uid="uid://dck64dw2dsjej" path="res://addons/input_prompts/icons/nintendo/y.png" id="9_skdvi"]
+[ext_resource type="Texture2D" uid="uid://4sj35y12txc1" path="res://addons/input_prompts/icons/nintendo/x.png" id="10_grh1u"]
+[ext_resource type="Texture2D" uid="uid://dm8ct1c16ybog" path="res://addons/input_prompts/icons/nintendo/minus.png" id="11_nk0we"]
+[ext_resource type="Texture2D" uid="uid://cckemm2jwovpj" path="res://addons/input_prompts/icons/nintendo/home.png" id="12_xbij3"]
+[ext_resource type="Texture2D" uid="uid://bg1nql3gmvi8f" path="res://addons/input_prompts/icons/nintendo/plus.png" id="13_10x82"]
+[ext_resource type="Texture2D" uid="uid://8ixovmgh4p5c" path="res://addons/input_prompts/icons/nintendo/left_stick.png" id="14_8wpf4"]
+[ext_resource type="Texture2D" uid="uid://ycamq7yys184" path="res://addons/input_prompts/icons/nintendo/right_stick.png" id="15_qx56o"]
+[ext_resource type="Texture2D" uid="uid://bm2ocs8hcdwaw" path="res://addons/input_prompts/icons/nintendo/l.png" id="16_ypnna"]
+
+[resource]
+script = ExtResource("1_25grt")
+button_0 = ExtResource("1_xaja3")
+button_1 = ExtResource("2_fukqt")
+button_2 = ExtResource("9_skdvi")
+button_3 = ExtResource("10_grh1u")
+button_4 = ExtResource("11_nk0we")
+button_5 = ExtResource("12_xbij3")
+button_6 = ExtResource("13_10x82")
+button_7 = ExtResource("14_8wpf4")
+button_8 = ExtResource("15_qx56o")
+button_9 = ExtResource("16_ypnna")
+button_10 = ExtResource("3_dpsw2")
+button_11 = ExtResource("4_nsj6d")
+button_12 = ExtResource("5_cnjuo")
+button_13 = ExtResource("6_cdqtk")
+button_14 = ExtResource("7_42sxu")
+button_15 = ExtResource("8_4ucvn")

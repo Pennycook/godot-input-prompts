@@ -21,7 +21,6 @@ InputPrompts="*res://addons/input_prompts/InputPrompts.gd"
 
 window/size/viewport_width=320
 window/size/viewport_height=360
-window/size/mode=3
 window/stretch/mode="viewport"
 
 [editor_plugins]

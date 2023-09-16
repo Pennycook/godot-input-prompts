@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="JoypadMotionTextures" load_steps=12 format=3 uid="uid://c3fwo2x7fe2u3"]
+
+[ext_resource type="Texture2D" uid="uid://cah6r1q5x2lte" path="res://addons/input_prompts/icons/generic/left_stick_left.png" id="1_u332s"]
+[ext_resource type="Texture2D" uid="uid://c03r3n0nfrjck" path="res://addons/input_prompts/icons/generic/left_stick_right.png" id="2_otk2y"]
+[ext_resource type="Texture2D" uid="uid://bntsrcd3hjcex" path="res://addons/input_prompts/icons/generic/left_stick_up.png" id="3_jhj8v"]
+[ext_resource type="Texture2D" uid="uid://dreirjfpqj40a" path="res://addons/input_prompts/icons/generic/left_stick_down.png" id="4_sywns"]
+[ext_resource type="Texture2D" uid="uid://dkd01upu3qdb7" path="res://addons/input_prompts/icons/generic/right_stick_left.png" id="5_msuu3"]
+[ext_resource type="Texture2D" uid="uid://7wlwep2pflxf" path="res://addons/input_prompts/icons/generic/right_stick_right.png" id="6_mifia"]
+[ext_resource type="Texture2D" uid="uid://tdsh1d8hbha3" path="res://addons/input_prompts/icons/generic/right_stick_up.png" id="7_7gygi"]
+[ext_resource type="Texture2D" uid="uid://c6tm6gslt2cau" path="res://addons/input_prompts/icons/generic/right_stick_down.png" id="8_n8vd6"]
+[ext_resource type="Texture2D" uid="uid://bxb6v2nl5ada5" path="res://addons/input_prompts/icons/sony/l2.png" id="9_tsnqk"]
+[ext_resource type="Texture2D" uid="uid://cotgbqlyecm6" path="res://addons/input_prompts/icons/sony/r2.png" id="10_ddeh3"]
+[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="11_vc1yl"]
+
+[resource]
+script = ExtResource("11_vc1yl")
+axis_0_minus = ExtResource("1_u332s")
+axis_0_plus = ExtResource("2_otk2y")
+axis_1_minus = ExtResource("3_jhj8v")
+axis_1_plus = ExtResource("4_sywns")
+axis_2_minus = ExtResource("5_msuu3")
+axis_2_plus = ExtResource("6_mifia")
+axis_3_minus = ExtResource("7_7gygi")
+axis_3_plus = ExtResource("8_n8vd6")
+axis_4_plus = ExtResource("9_tsnqk")
+axis_5_plus = ExtResource("10_ddeh3")

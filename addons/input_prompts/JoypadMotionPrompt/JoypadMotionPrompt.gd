@@ -5,6 +5,7 @@ extends "res://addons/input_prompts/BasePrompt.gd"
 
 var axis = 0: set = _set_axis
 var axis_value = -1: set = _set_axis_value
+var icon = InputPrompts.Icons.AUTOMATIC: set = _set_icon
 
 func _ready():
 	_update_icon()
@@ -16,10 +17,14 @@ func _set_axis(new_axis : int):
 func _set_axis_value(new_value : int):
 	axis_value = new_value
 	_update_icon()
+	
+func _set_icon(new_icon):
+	icon = new_icon
+	_update_icon()
 
 func _update_icon():
-	texture.atlas = InputPrompts.get_joypad_motion_atlas()
-	texture.region = InputPrompts.get_joypad_motion_region(axis, axis_value)
+	var textures := InputPrompts.get_joypad_motion_textures(icon)
+	texture = textures.get_texture(axis, axis_value)
 	queue_redraw()
 
 func _input(event : InputEvent):
@@ -44,12 +49,18 @@ func _get_property_list():
 		name = "axis",
 		type = TYPE_INT,
 		hint = PROPERTY_HINT_ENUM,
-		hint_string = "Left Horizontal:0,Left Vertical:1,Right Horizontal:2,Right Vertical:3"
+		hint_string = "Left Horizontal:0,Left Vertical:1,Right Horizontal:2,Right Vertical:3,Left Trigger:4,Right Trigger:5"
 	})
 	properties.append({
 		name = "axis_value",
 		type = TYPE_INT,
 		hint = PROPERTY_HINT_ENUM,
 		hint_string = "Negative:-1,Positive:1"
+	})
+	properties.append({
+		name = "icon",
+		type = TYPE_INT,
+		hint = PROPERTY_HINT_ENUM,
+		hint_string = "Automatic,Xbox,Sony,Nintendo"
 	})
 	return properties

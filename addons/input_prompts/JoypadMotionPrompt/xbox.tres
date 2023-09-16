@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="JoypadMotionTextures" load_steps=12 format=3 uid="uid://dhnof34diuflj"]
+
+[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="1_1t4om"]
+[ext_resource type="Texture2D" uid="uid://cah6r1q5x2lte" path="res://addons/input_prompts/icons/generic/left_stick_left.png" id="1_8xgrw"]
+[ext_resource type="Texture2D" uid="uid://c03r3n0nfrjck" path="res://addons/input_prompts/icons/generic/left_stick_right.png" id="2_h4tso"]
+[ext_resource type="Texture2D" uid="uid://bntsrcd3hjcex" path="res://addons/input_prompts/icons/generic/left_stick_up.png" id="3_1dcjl"]
+[ext_resource type="Texture2D" uid="uid://dreirjfpqj40a" path="res://addons/input_prompts/icons/generic/left_stick_down.png" id="4_fq862"]
+[ext_resource type="Texture2D" uid="uid://dkd01upu3qdb7" path="res://addons/input_prompts/icons/generic/right_stick_left.png" id="5_t2403"]
+[ext_resource type="Texture2D" uid="uid://7wlwep2pflxf" path="res://addons/input_prompts/icons/generic/right_stick_right.png" id="6_b5skw"]
+[ext_resource type="Texture2D" uid="uid://tdsh1d8hbha3" path="res://addons/input_prompts/icons/generic/right_stick_up.png" id="7_iwi3m"]
+[ext_resource type="Texture2D" uid="uid://c6tm6gslt2cau" path="res://addons/input_prompts/icons/generic/right_stick_down.png" id="8_qong4"]
+[ext_resource type="Texture2D" uid="uid://dx1u47qkx4in8" path="res://addons/input_prompts/icons/xbox/left_trigger.png" id="9_0mpc0"]
+[ext_resource type="Texture2D" uid="uid://c6cv5phl3gvvn" path="res://addons/input_prompts/icons/xbox/right_trigger.png" id="10_uujqu"]
+
+[resource]
+script = ExtResource("1_1t4om")
+axis_0_minus = ExtResource("1_8xgrw")
+axis_0_plus = ExtResource("2_h4tso")
+axis_1_minus = ExtResource("3_1dcjl")
+axis_1_plus = ExtResource("4_fq862")
+axis_2_minus = ExtResource("5_t2403")
+axis_2_plus = ExtResource("6_b5skw")
+axis_3_minus = ExtResource("7_iwi3m")
+axis_3_plus = ExtResource("8_qong4")
+axis_4_plus = ExtResource("9_0mpc0")
+axis_5_plus = ExtResource("10_uujqu")
