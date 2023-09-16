@@ -129,6 +129,7 @@ const Keys = [
 
 var _preferred_icons = Icons.AUTOMATIC
 var _icons = Icons.XBOX
+var _joy_icons = Icons.XBOX
 
 func get_preferred_icons():
 	return _preferred_icons
@@ -149,6 +150,14 @@ func get_icons():
 	else:
 		return _icons
 
+func get_joy_icons():
+	# In the Editor, InputMap reflects Editor settings
+	# Pick a default so there's something to render
+	if Engine.is_editor_hint():
+		return Icons.XBOX
+	else:
+		return _joy_icons
+
 func get_keyboard_textures() -> KeyboardTextures:
 	return preload("res://addons/input_prompts/key_prompt/keys.tres")
 
@@ -158,7 +167,7 @@ func get_mouse_textures() -> MouseButtonTextures:
 func get_joypad_button_textures(icons: int) -> JoypadButtonTextures:
 	match icons:
 		Icons.AUTOMATIC:
-			return get_joypad_button_textures(get_icons())
+			return get_joypad_button_textures(get_joy_icons())
 		Icons.XBOX:
 			return preload("res://addons/input_prompts/joypad_button_prompt/xbox.tres")
 		Icons.SONY:
@@ -172,7 +181,7 @@ func get_joypad_button_textures(icons: int) -> JoypadButtonTextures:
 func get_joypad_motion_textures(icons: int) -> JoypadMotionTextures:
 	match icons:
 		Icons.AUTOMATIC:
-			return get_joypad_motion_textures(get_icons())
+			return get_joypad_motion_textures(get_joy_icons())
 		Icons.XBOX:
 			return preload("res://addons/input_prompts/joypad_motion_prompt/xbox.tres")
 		Icons.SONY:
@@ -196,15 +205,14 @@ func _input(event : InputEvent):
 	if event is InputEventJoypadButton or event is InputEventJoypadMotion:
 		var device = event.device
 		var joy_name = Input.get_joy_name(device)
-		var joy_icons = null
 		if joy_name.find("Xbox"):
-			joy_icons = Icons.XBOX
+			_joy_icons = Icons.XBOX
 		elif joy_name.find("DualShock") or joy_name.find("PS"):
-			joy_icons = Icons.SONY
+			_joy_icons = Icons.SONY
 		elif joy_name.find("Nintendo"):
-			joy_icons = Icons.NINTENDO
+			_joy_icons = Icons.NINTENDO
 		else:
-			joy_icons = Icons.XBOX
-		if _icons != joy_icons:
-			_icons = joy_icons
+			_joy_icons = Icons.XBOX
+		if _icons != _joy_icons:
+			_icons = _joy_icons
 			emit_signal("icons_changed")
