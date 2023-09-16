@@ -1,7 +1,7 @@
 # Copyright (C) 2022-2023 John Pennycook
 # SPDX-License-Identifier: MIT
 @tool
-extends "res://addons/input_prompts/BasePrompt.gd"
+extends "res://addons/input_prompts/base_prompt.gd"
 
 var action = "ui_accept": set = _set_action
 var icon = InputPrompts.Icons.AUTOMATIC: set = _set_icon

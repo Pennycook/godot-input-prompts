@@ -15,7 +15,7 @@ config/features=PackedStringArray("4.1", "GL Compatibility")
 
 [autoload]
 
-InputPrompts="*res://addons/input_prompts/InputPrompts.gd"
+InputPrompts="*res://addons/input_prompts/input_prompts.gd"
 
 [display]
 

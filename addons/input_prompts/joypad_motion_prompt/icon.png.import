@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdeo2k8625we7"
-path="res://.godot/imported/icon.png-81530b8bad18876c36fd6be5243690a5.ctex"
+uid="uid://oottbtycj1e8"
+path="res://.godot/imported/icon.png-6de1a52d2eff5690d5d2d869c5ab6a24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/input_prompts/ActionPrompt/icon.png"
-dest_files=["res://.godot/imported/icon.png-81530b8bad18876c36fd6be5243690a5.ctex"]
+source_file="res://addons/input_prompts/joypad_motion_prompt/icon.png"
+dest_files=["res://.godot/imported/icon.png-6de1a52d2eff5690d5d2d869c5ab6a24.ctex"]
 
 [params]
 

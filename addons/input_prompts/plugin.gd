@@ -3,15 +3,15 @@
 @tool
 extends EditorPlugin
 
-var inspector_plugin = preload("res://addons/input_prompts/InspectorPlugin.gd").new()
+var inspector_plugin = preload("res://addons/input_prompts/inspector_plugin.gd").new()
 
 func _enter_tree():
-	add_autoload_singleton("InputPrompts", "res://addons/input_prompts/InputPrompts.gd")
-	add_custom_type("ActionPrompt", "TextureRect", load("res://addons/input_prompts/ActionPrompt/ActionPrompt.gd"), preload("res://addons/input_prompts/ActionPrompt/icon.png"))
-	add_custom_type("JoypadButtonPrompt", "TextureRect", load("res://addons/input_prompts/JoypadButtonPrompt/JoypadButtonPrompt.gd"), preload("res://addons/input_prompts/JoypadButtonPrompt/icon.png"))
-	add_custom_type("JoypadMotionPrompt", "TextureRect", load("res://addons/input_prompts/JoypadMotionPrompt/JoypadMotionPrompt.gd"), preload("res://addons/input_prompts/JoypadMotionPrompt/icon.png"))
-	add_custom_type("KeyPrompt", "TextureRect", load("res://addons/input_prompts/KeyPrompt/KeyPrompt.gd"), preload("res://addons/input_prompts/KeyPrompt/icon.png"))
-	add_custom_type("MouseButtonPrompt", "TextureRect", load("res://addons/input_prompts/MouseButtonPrompt/MouseButtonPrompt.gd"), preload("res://addons/input_prompts/MouseButtonPrompt/icon.png"))
+	add_autoload_singleton("InputPrompts", "res://addons/input_prompts/input_prompts.gd")
+	add_custom_type("ActionPrompt", "TextureRect", load("res://addons/input_prompts/action_prompt/action_prompt.gd"), preload("res://addons/input_prompts/action_prompt/icon.png"))
+	add_custom_type("JoypadButtonPrompt", "TextureRect", load("res://addons/input_prompts/joypad_button_prompt/joypad_button_prompt.gd"), preload("res://addons/input_prompts/joypad_button_prompt/icon.png"))
+	add_custom_type("JoypadMotionPrompt", "TextureRect", load("res://addons/input_prompts/joypad_motion_prompt/joypad_motion_prompt.gd"), preload("res://addons/input_prompts/joypad_motion_prompt/icon.png"))
+	add_custom_type("KeyPrompt", "TextureRect", load("res://addons/input_prompts/key_prompt/key_prompt.gd"), preload("res://addons/input_prompts/key_prompt/icon.png"))
+	add_custom_type("MouseButtonPrompt", "TextureRect", load("res://addons/input_prompts/mouse_button_prompt/mouse_button_prompt.gd"), preload("res://addons/input_prompts/mouse_button_prompt/icon.png"))
 	add_inspector_plugin(inspector_plugin)
 
 func _exit_tree():

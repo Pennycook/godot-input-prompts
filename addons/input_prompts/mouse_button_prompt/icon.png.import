@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0c36pdbxm0g4"
-path="res://.godot/imported/icon.png-9ccd4cfe631ac8999d06689264d1cd45.ctex"
+uid="uid://b36ec1l45tdbs"
+path="res://.godot/imported/icon.png-3f26263764ca396683090836984e1474.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/input_prompts/KeyPrompt/icon.png"
-dest_files=["res://.godot/imported/icon.png-9ccd4cfe631ac8999d06689264d1cd45.ctex"]
+source_file="res://addons/input_prompts/mouse_button_prompt/icon.png"
+dest_files=["res://.godot/imported/icon.png-3f26263764ca396683090836984e1474.ctex"]
 
 [params]
 

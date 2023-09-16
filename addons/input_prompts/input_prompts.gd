@@ -150,38 +150,38 @@ func get_icons():
 		return _icons
 
 func get_keyboard_textures() -> KeyboardTextures:
-	return preload("res://addons/input_prompts/KeyPrompt/keys.tres")
+	return preload("res://addons/input_prompts/key_prompt/keys.tres")
 
 func get_mouse_textures() -> MouseButtonTextures:
-	return preload("res://addons/input_prompts/MouseButtonPrompt/buttons.tres")
+	return preload("res://addons/input_prompts/mouse_button_prompt/buttons.tres")
 
 func get_joypad_button_textures(icons: int) -> JoypadButtonTextures:
 	match icons:
 		Icons.AUTOMATIC:
 			return get_joypad_button_textures(get_icons())
 		Icons.XBOX:
-			return preload("res://addons/input_prompts/JoypadButtonPrompt/xbox.tres")
+			return preload("res://addons/input_prompts/joypad_button_prompt/xbox.tres")
 		Icons.SONY:
-			return preload("res://addons/input_prompts/JoypadButtonPrompt/sony.tres")
+			return preload("res://addons/input_prompts/joypad_button_prompt/sony.tres")
 		Icons.NINTENDO:
-			return preload("res://addons/input_prompts/JoypadButtonPrompt/nintendo.tres")
+			return preload("res://addons/input_prompts/joypad_button_prompt/nintendo.tres")
 		Icons.KEYBOARD:
 			push_warning("No JoypadButtonTextures for Icons.KEYBOARD; defaulting to Xbox.")
-	return preload("res://addons/input_prompts/JoypadButtonPrompt/xbox.tres")
+	return preload("res://addons/input_prompts/joypad_button_prompt/xbox.tres")
 
 func get_joypad_motion_textures(icons: int) -> JoypadMotionTextures:
 	match icons:
 		Icons.AUTOMATIC:
 			return get_joypad_motion_textures(get_icons())
 		Icons.XBOX:
-			return preload("res://addons/input_prompts/JoypadMotionPrompt/xbox.tres")
+			return preload("res://addons/input_prompts/joypad_motion_prompt/xbox.tres")
 		Icons.SONY:
-			return preload("res://addons/input_prompts/JoypadMotionPrompt/sony.tres")
+			return preload("res://addons/input_prompts/joypad_motion_prompt/sony.tres")
 		Icons.NINTENDO:
-			return preload("res://addons/input_prompts/JoypadMotionPrompt/nintendo.tres")
+			return preload("res://addons/input_prompts/joypad_motion_prompt/nintendo.tres")
 		Icons.KEYBOARD:
 			push_warning("No JoypadMotionTextures for Icons.KEYBOARD; defaulting to Xbox.")
-	return preload("res://addons/input_prompts/JoypadMotionPrompt/xbox.tres")
+	return preload("res://addons/input_prompts/joypad_motion_prompt/xbox.tres")
 
 # Monitor InputEvents and emit icons_changed if:
 # 1) The user has not expressed an icon preference

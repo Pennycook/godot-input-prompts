@@ -1,7 +1,7 @@
 # Copyright (C) 2022-2023 John Pennycook
 # SPDX-License-Identifier: MIT
 @tool
-extends "res://addons/input_prompts/BasePrompt.gd"
+extends "res://addons/input_prompts/base_prompt.gd"
 
 var axis = 0: set = _set_axis
 var axis_value = -1: set = _set_axis_value
