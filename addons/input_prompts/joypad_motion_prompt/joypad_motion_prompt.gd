@@ -38,11 +38,19 @@ func _ready():
 
 func _set_axis(new_axis: int):
 	axis = new_axis
+	var event := InputEventJoypadMotion.new()
+	event.axis = axis
+	event.axis_value = axis_value
+	events = [event]
 	_update_icon()
 
 
 func _set_axis_value(new_value: int):
 	axis_value = new_value
+	var event := InputEventJoypadMotion.new()
+	event.axis = axis
+	event.axis_value = axis_value
+	events = [event]
 	_update_icon()
 
 
@@ -55,18 +63,6 @@ func _update_icon():
 	var textures := PromptManager.get_joypad_motion_textures(icon)
 	texture = textures.get_texture(axis, axis_value)
 	queue_redraw()
-
-
-func _input(event: InputEvent):
-	if not event is InputEventJoypadMotion:
-		return
-	if not event.get_axis() == axis:
-		return
-	if axis_value == -1 and event.get_axis_value() > 0:
-		return
-	if axis_value == 1 and event.get_axis_value() < 0:
-		return
-	emit_signal("pressed")
 
 
 func _get_property_list():
@@ -106,7 +102,3 @@ func _get_property_list():
 		}
 	)
 	return properties
-
-
-func _get_configuration_warnings():
-	return []

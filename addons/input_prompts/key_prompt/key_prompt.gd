@@ -140,6 +140,9 @@ func _ready():
 
 func _set_key(scancode: int):
 	key = scancode
+	var event := InputEventKey.new()
+	event.keycode = scancode
+	events = [event]
 	_update_icon()
 
 
@@ -147,18 +150,6 @@ func _update_icon():
 	var textures := PromptManager.get_keyboard_textures()
 	texture = textures.get_texture(key)
 	queue_redraw()
-
-
-func _input(event: InputEvent):
-	if not event is InputEventKey:
-		return
-	if not event.get_keycode() == key:
-		return
-	if not event.is_pressed():
-		return
-	if event.is_echo():
-		return
-	emit_signal("pressed")
 
 
 func _get_property_list():
@@ -179,7 +170,3 @@ func _get_property_list():
 		{name = "key", type = TYPE_INT, hint = PROPERTY_HINT_ENUM, hint_string = keys}
 	)
 	return properties
-
-
-func _get_configuration_warnings():
-	return []

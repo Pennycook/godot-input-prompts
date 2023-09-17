@@ -25,6 +25,9 @@ func _ready():
 
 func _set_button(index: int):
 	button = index
+	var event := InputEventMouseButton.new()
+	event.button_index = button
+	events = [event]
 	_update_icon()
 
 
@@ -32,16 +35,6 @@ func _update_icon():
 	var textures := PromptManager.get_mouse_textures()
 	texture = textures.get_texture(button)
 	queue_redraw()
-
-
-func _input(event: InputEvent):
-	if not event is InputEventMouseButton:
-		return
-	if not event.get_button_index() == button:
-		return
-	if not event.is_pressed():
-		return
-	emit_signal("pressed")
 
 
 func _get_property_list():
@@ -63,7 +56,4 @@ func _get_property_list():
 		}
 	)
 	return properties
-
-
-func _get_configuration_warnings():
-	return []
+	

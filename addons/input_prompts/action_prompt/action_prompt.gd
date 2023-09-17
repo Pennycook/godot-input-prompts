@@ -50,11 +50,15 @@ func _find_event(list: Array, types: Array):
 func _update_icon():
 	# In the Editor, InputMap reflects Editor settings
 	# Read the list of actions from ProjectSettings instead
-	var events: Array = []
+	# TODO: Find a cleaner way to cast these values
+	var tmp: Array = []
 	if Engine.is_editor_hint():
-		events = ProjectSettings.get_setting("input/" + action)["events"]
+		tmp = ProjectSettings.get_setting("input/" + action)["events"]
 	else:
-		events = InputMap.action_get_events(action)
+		tmp = InputMap.action_get_events(action)
+	events = []
+	for ev in tmp:
+		events.append(ev)
 
 	# If icon is set to AUTOMATIC, first determine which icon to display
 	var display_icon: int = icon
@@ -129,7 +133,3 @@ func _get_property_list():
 		}
 	)
 	return properties
-
-
-func _get_configuration_warnings():
-	return []
