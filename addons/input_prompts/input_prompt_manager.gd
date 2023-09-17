@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: MIT
 @tool
 extends Node
+class_name InputPromptManager
 
 signal icons_changed
 

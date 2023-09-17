@@ -21,7 +21,7 @@ var action := "ui_accept":
 ## Automatic (0), Xbox (1), Sony (2), Nintendo (3), Keyboard (4).
 ## When set to "Automatic", the prompt automatically adjusts to match the most
 ## recent input device.
-var icon: int = InputPrompts.Icons.AUTOMATIC:
+var icon: int = PromptManager.Icons.AUTOMATIC:
 	set = _set_icon
 
 
@@ -58,23 +58,23 @@ func _update_icon():
 
 	# If icon is set to AUTOMATIC, first determine which icon to display
 	var display_icon: int = icon
-	if icon == InputPrompts.Icons.AUTOMATIC:
-		display_icon = InputPrompts.get_icons()
+	if icon == PromptManager.Icons.AUTOMATIC:
+		display_icon = PromptManager.get_icons()
 
 	# Choose the atlas and region associated with the InputEvent
 	# If the InputMap contains multiple events, choose the first
-	if display_icon == InputPrompts.Icons.KEYBOARD:
+	if display_icon == PromptManager.Icons.KEYBOARD:
 		var types = [InputEventKey, InputEventMouseButton]
 		var ev = _find_event(events, types)
 		if not (ev is InputEventKey or ev is InputEventMouseButton):
 			push_error("No Key/Mouse input for " + action + " in InputMap")
 		if ev is InputEventKey:
 			var scancode = ev.get_keycode()
-			var textures := InputPrompts.get_keyboard_textures()
+			var textures := PromptManager.get_keyboard_textures()
 			texture = textures.get_texture(scancode)
 		elif ev is InputEventMouseButton:
 			var button = ev.get_button_index()
-			var textures := InputPrompts.get_mouse_textures()
+			var textures := PromptManager.get_mouse_textures()
 			texture = textures.get_texture(button)
 	else:
 		var types = [InputEventJoypadButton, InputEventJoypadMotion]
@@ -83,12 +83,12 @@ func _update_icon():
 			push_error("No Joypad input for " + action + " in InputMap")
 		if ev is InputEventJoypadButton:
 			var button = ev.get_button_index()
-			var textures := InputPrompts.get_joypad_button_textures(display_icon)
+			var textures := PromptManager.get_joypad_button_textures(display_icon)
 			texture = textures.get_texture(button)
 		elif ev is InputEventJoypadMotion:
 			var axis = ev.get_axis()
 			var value = ev.get_axis_value()
-			var textures := InputPrompts.get_joypad_motion_textures(display_icon)
+			var textures := PromptManager.get_joypad_motion_textures(display_icon)
 			texture = textures.get_texture(axis, value)
 	queue_redraw()
 

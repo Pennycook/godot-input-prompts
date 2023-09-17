@@ -26,11 +26,11 @@ func _update_icon():
 
 
 func _enter_tree():
-	InputPrompts.icons_changed.connect(_update_icon)
+	PromptManager.icons_changed.connect(_update_icon)
 
 
 func _exit_tree():
-	InputPrompts.icons_changed.disconnect(_update_icon)
+	PromptManager.icons_changed.disconnect(_update_icon)
 
 
 func _get_configuration_warnings():

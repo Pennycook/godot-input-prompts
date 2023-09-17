@@ -28,7 +28,7 @@ var axis_value := -1:
 ## Automatic (0), Xbox (1), Sony (2), Nintendo (3).
 ## When set to "Automatic", the prompt automatically adjusts to match the most
 ## recent joypad device.
-var icon: int = InputPrompts.Icons.AUTOMATIC:
+var icon: int = PromptManager.Icons.AUTOMATIC:
 	set = _set_icon
 
 
@@ -52,7 +52,7 @@ func _set_icon(new_icon):
 
 
 func _update_icon():
-	var textures := InputPrompts.get_joypad_motion_textures(icon)
+	var textures := PromptManager.get_joypad_motion_textures(icon)
 	texture = textures.get_texture(axis, axis_value)
 	queue_redraw()
 

@@ -29,7 +29,7 @@ func _set_key(scancode: int):
 
 
 func _update_icon():
-	var textures := InputPrompts.get_keyboard_textures()
+	var textures := PromptManager.get_keyboard_textures()
 	texture = textures.get_texture(key)
 	queue_redraw()
 
@@ -56,7 +56,7 @@ func _get_property_list():
 		}
 	)
 	var keys: String = ""
-	for k in InputPrompts.KEYS:
+	for k in PromptManager.KEYS:
 		if keys != "":
 			keys += ","
 		keys += "{0}:{1}".format([OS.get_keycode_string(k), k])

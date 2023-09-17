@@ -15,7 +15,7 @@ var textures: Dictionary = {}
 
 
 func _init():
-	for k in InputPrompts.KEYS:
+	for k in PromptManager.KEYS:
 		textures[OS.get_keycode_string(k)] = null
 
 
@@ -39,7 +39,7 @@ func _set(property, value):
 
 func _get_property_list():
 	var properties = []
-	for k in InputPrompts.KEYS:
+	for k in PromptManager.KEYS:
 		properties.append(
 			{
 				name = OS.get_keycode_string(k),
