@@ -129,3 +129,7 @@ func _get_property_list():
 		}
 	)
 	return properties
+
+
+func _get_configuration_warnings():
+	return []
