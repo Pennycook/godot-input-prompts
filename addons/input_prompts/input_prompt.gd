@@ -21,10 +21,6 @@ enum Icons {
 }
 
 
-func _is_input_prompt():
-	return true
-
-
 func _init():
 	texture = null
 	stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
