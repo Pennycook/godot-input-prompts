@@ -15,6 +15,7 @@ extends "res://addons/input_prompts/base_prompt.gd"
 ## prompts. To automatically reflect the most recent input device, use
 ## [ActionPrompt] instead.
 
+
 ## A joypad button index, such as [constant @GlobalScope.JOY_BUTTON_A].
 var button := 0:
 	set = _set_button
