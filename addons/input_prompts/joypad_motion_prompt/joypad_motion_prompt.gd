@@ -4,12 +4,31 @@
 @icon("res://addons/input_prompts/joypad_motion_prompt/icon.png")
 class_name JoypadMotionPrompt
 extends "res://addons/input_prompts/base_prompt.gd"
+## Displays a prompt based on a joypad axis and value.
+##
+## Displays a prompt based on a joypad axis and value.
+## The texture used for the prompt is determined by an icon preference. When
+## the icon preference is set to "Automatic", the prompt automatically adjusts
+## to match the most recent joypad device.
+## [br][br]
+## [b]Note[/b]: A [JoypadMotionPrompt] will never show keyboard or mouse
+## prompts. To automatically reflect the most recent input device, use
+## [ActionPrompt] instead.
 
-var axis = 0:
+
+## A joypad axis index, such as [constant @GlobalScope.JOY_AXIS_LEFT_X].
+var axis := 0:
 	set = _set_axis
-var axis_value = -1:
+
+## A joypad axis value (positive or negative).
+var axis_value := -1:
 	set = _set_axis_value
-var icon = InputPrompts.Icons.AUTOMATIC:
+
+## The icon preference for this prompt:
+## Automatic (0), Xbox (1), Sony (2), Nintendo (3).
+## When set to "Automatic", the prompt automatically adjusts to match the most
+## recent joypad device.
+var icon: int = InputPrompts.Icons.AUTOMATIC:
 	set = _set_icon
 
 
@@ -87,3 +106,7 @@ func _get_property_list():
 		}
 	)
 	return properties
+
+
+func _get_configuration_warnings():
+	return []

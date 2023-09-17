@@ -4,10 +4,24 @@
 @icon("res://addons/input_prompts/action_prompt/icon.png")
 class_name ActionPrompt
 extends "res://addons/input_prompts/base_prompt.gd"
+## Displays a prompt based on an action registered in the [InputMap].
+##
+## Displays a prompt based on an action registered in the [InputMap].
+## The texture used for the prompt is determined automatically, based on the
+## contents of the [InputMap] and an icon preference. When the icon preference
+## is set to "Automatic", the prompt automatically adjusts to match the most
+## recent input device.
 
-var action = "ui_accept":
+
+## The name of an action registered in the [InputMap].
+var action := "ui_accept":
 	set = _set_action
-var icon = InputPrompts.Icons.AUTOMATIC:
+
+## The icon preference for this prompt:
+## Automatic (0), Xbox (1), Sony (2), Nintendo (3), Keyboard (4).
+## When set to "Automatic", the prompt automatically adjusts to match the most
+## recent input device.
+var icon: int = InputPrompts.Icons.AUTOMATIC:
 	set = _set_icon
 
 

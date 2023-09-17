@@ -4,8 +4,18 @@
 @icon("res://addons/input_prompts/key_prompt/icon.png")
 class_name KeyPrompt
 extends "res://addons/input_prompts/base_prompt.gd"
+## Displays a prompt based on a keyboard scancode.
+##
+## Displays a prompt based on a keyboard scancode.
+## The texture used for the prompt is determined automatically.
+## [br][br]
+## [b]Note[/b]: A [KeyPrompt] will never show joypad or mouse
+## prompts. To automatically reflect the most recent input device, use
+## [ActionPrompt] instead.
 
-var key = KEY_EXCLAM:
+
+## A keyboard scancode, such as [constant @GlobalScope.KEY_ESCAPE].
+var key := KEY_EXCLAM:
 	set = _set_key
 
 
@@ -54,3 +64,7 @@ func _get_property_list():
 		{name = "key", type = TYPE_INT, hint = PROPERTY_HINT_ENUM, hint_string = keys}
 	)
 	return properties
+
+
+func _get_configuration_warnings():
+	return []

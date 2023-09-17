@@ -4,8 +4,18 @@
 @icon("res://addons/input_prompts/mouse_button_prompt/icon.png")
 class_name MouseButtonPrompt
 extends "res://addons/input_prompts/base_prompt.gd"
+## Displays a prompt based on a mouse button index.
+##
+## Displays a prompt based on a mouse button index.
+## The texture used for the prompt is determined automatically.
+## [br][br]
+## [b]Note[/b]: A [MouseButtonPrompt] will never show joypad or keyboard
+## prompts. To automatically reflect the most recent input device, use
+## [ActionPrompt] instead.
 
-var button = 1:
+
+## A mouse button index, such as [constant @GlobalScope.MOUSE_BUTTON_LEFT].
+var button := 1:
 	set = _set_button
 
 
@@ -53,3 +63,7 @@ func _get_property_list():
 		}
 	)
 	return properties
+
+
+func _get_configuration_warnings():
+	return []

@@ -2,7 +2,13 @@
 # SPDX-License-Identifier: MIT
 @tool
 extends TextureRect
+class_name BasePrompt
+## Base class for input prompts.
+##
+## Base class for input prompts. Should not be used directly.
 
+
+## Emitted when the input event associated with this prompt is pressed.
 signal pressed
 
 
@@ -25,3 +31,7 @@ func _enter_tree():
 
 func _exit_tree():
 	InputPrompts.icons_changed.disconnect(_update_icon)
+
+
+func _get_configuration_warnings():
+	return ["BasePrompt currently has no functionality and should not be used."]
