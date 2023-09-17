@@ -3,7 +3,14 @@
 @tool
 class_name KeyboardTextures
 extends Resource
+## Textures used by a [KeyPrompt] or [ActionPrompt].
+##
+## Textures used by a [KeyPrompt] or [ActionPrompt]. Stores a texture for each
+## keyboard scancode.
 
+
+## A mapping from keyboard strings (as returned by
+## [method OS.get_keycode_string]) to textures.
 var textures: Dictionary = {}
 
 
@@ -12,6 +19,7 @@ func _init():
 		textures[OS.get_keycode_string(k)] = null
 
 
+## Return the [Texture2D] associated with the specified keyboard scancode.
 func get_texture(scancode: int) -> Texture2D:
 	return textures[OS.get_keycode_string(scancode)]
 
