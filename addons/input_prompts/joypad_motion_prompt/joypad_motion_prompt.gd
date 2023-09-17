@@ -1,7 +1,7 @@
 # Copyright (C) 2022-2023 John Pennycook
 # SPDX-License-Identifier: MIT
 @tool
-@icon("res://addons/input_prompts/joypad_motion_prompt/icon.png")
+@icon("res://addons/input_prompts/joypad_motion_prompt/icon.svg")
 class_name JoypadMotionPrompt
 extends "res://addons/input_prompts/input_prompt.gd"
 ## Displays a prompt based on a joypad axis and value.

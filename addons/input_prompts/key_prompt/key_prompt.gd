@@ -1,7 +1,7 @@
 # Copyright (C) 2022-2023 John Pennycook
 # SPDX-License-Identifier: MIT
 @tool
-@icon("res://addons/input_prompts/key_prompt/icon.png")
+@icon("res://addons/input_prompts/key_prompt/icon.svg")
 class_name KeyPrompt
 extends "res://addons/input_prompts/input_prompt.gd"
 ## Displays a prompt based on a keyboard scancode.

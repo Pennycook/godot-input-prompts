@@ -1,6 +1,7 @@
 # Copyright (C) 2022-2023 John Pennycook
 # SPDX-License-Identifier: MIT
 @tool
+@icon("res://addons/input_prompts/icon.svg")
 extends TextureRect
 class_name InputPrompt
 ## Base class for input prompts.

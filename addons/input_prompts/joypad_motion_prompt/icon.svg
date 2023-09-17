@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="16"
+   viewBox="0 0 16 16"
+   width="16"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="InputEventJoypadMotion.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="50.125"
+     inkscape:cx="8"
+     inkscape:cy="6.40399"
+     inkscape:window-width="1920"
+     inkscape:window-height="997"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <linearGradient
+     id="a"
+     gradientUnits="userSpaceOnUse"
+     x1="2"
+     x2="9">
+    <stop
+       offset="0"
+       stop-color="#69c4d4"
+       stop-opacity="0"
+       id="stop1"
+       style="stop-color:#8fef99;stop-opacity:0;" />
+    <stop
+       offset="0.60000002"
+       stop-color="#69c4d4"
+       id="stop2"
+       style="stop-color:#8fef99;stop-opacity:1;" />
+  </linearGradient>
+  <path
+     d="M11.5 16v-1.5a1 1 0 0 0-1-1H10l1.6-4a4 4 0 1 0-3.5-1.4l-2.2 5.4h-.7a1 1 0 0 0-1 1V16z"
+     fill="#e0e0e0"
+     id="path2"
+     style="fill:#90ef98;fill-opacity:1" />
+  <path
+     d="M5.25 12.2 2 4a8 8 0 0 1 7-3 5 5 0 0 0-2.1 7.2z"
+     fill="url(#a)"
+     id="path3" />
+</svg>
