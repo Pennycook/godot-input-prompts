@@ -3,7 +3,7 @@
 @tool
 @icon("res://addons/input_prompts/joypad_motion_prompt/icon.png")
 class_name JoypadMotionPrompt
-extends "res://addons/input_prompts/base_prompt.gd"
+extends "res://addons/input_prompts/input_prompt.gd"
 ## Displays a prompt based on a joypad axis and value.
 ##
 ## Displays a prompt based on a joypad axis and value.

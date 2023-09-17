@@ -3,7 +3,7 @@
 @tool
 @icon("res://addons/input_prompts/action_prompt/icon.png")
 class_name ActionPrompt
-extends "res://addons/input_prompts/base_prompt.gd"
+extends "res://addons/input_prompts/input_prompt.gd"
 ## Displays a prompt based on an action registered in the [InputMap].
 ##
 ## Displays a prompt based on an action registered in the [InputMap].

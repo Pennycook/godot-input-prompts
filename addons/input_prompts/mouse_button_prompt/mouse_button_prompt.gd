@@ -3,7 +3,7 @@
 @tool
 @icon("res://addons/input_prompts/mouse_button_prompt/icon.png")
 class_name MouseButtonPrompt
-extends "res://addons/input_prompts/base_prompt.gd"
+extends "res://addons/input_prompts/input_prompt.gd"
 ## Displays a prompt based on a mouse button index.
 ##
 ## Displays a prompt based on a mouse button index.

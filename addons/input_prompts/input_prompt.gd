@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 @tool
 extends TextureRect
-class_name BasePrompt
+class_name InputPrompt
 ## Base class for input prompts.
 ##
 ## Base class for input prompts. Should not be used directly.
@@ -34,4 +34,4 @@ func _exit_tree():
 
 
 func _get_configuration_warnings():
-	return ["BasePrompt currently has no functionality and should not be used."]
+	return ["InputPrompt currently has no functionality and should not be used."]
