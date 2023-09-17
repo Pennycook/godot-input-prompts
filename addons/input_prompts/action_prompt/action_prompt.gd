@@ -59,7 +59,7 @@ func _update_icon():
 	# If icon is set to AUTOMATIC, first determine which icon to display
 	var display_icon: int = icon
 	if icon == Icons.AUTOMATIC:
-		display_icon = PromptManager.get_icons()
+		display_icon = PromptManager.icons
 
 	# Choose the atlas and region associated with the InputEvent
 	# If the InputMap contains multiple events, choose the first

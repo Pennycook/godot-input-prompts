@@ -4,4 +4,4 @@ extends OptionButton
 
 
 func _on_item_selected(index: int) -> void:
-	PromptManager.set_preferred_icons(index)
+	PromptManager.preferred_icons = index as InputPrompt.Icons
