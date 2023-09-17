@@ -12,6 +12,15 @@ class_name InputPrompt
 signal pressed
 
 
+enum Icons {
+	AUTOMATIC,
+	XBOX,
+	SONY,
+	NINTENDO,
+	KEYBOARD,
+}
+
+
 func _is_input_prompt():
 	return true
 

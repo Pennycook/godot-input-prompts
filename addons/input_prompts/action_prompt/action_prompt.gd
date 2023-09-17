@@ -21,7 +21,7 @@ var action := "ui_accept":
 ## Automatic (0), Xbox (1), Sony (2), Nintendo (3), Keyboard (4).
 ## When set to "Automatic", the prompt automatically adjusts to match the most
 ## recent input device.
-var icon: int = PromptManager.Icons.AUTOMATIC:
+var icon: int = Icons.AUTOMATIC:
 	set = _set_icon
 
 
@@ -58,12 +58,12 @@ func _update_icon():
 
 	# If icon is set to AUTOMATIC, first determine which icon to display
 	var display_icon: int = icon
-	if icon == PromptManager.Icons.AUTOMATIC:
+	if icon == Icons.AUTOMATIC:
 		display_icon = PromptManager.get_icons()
 
 	# Choose the atlas and region associated with the InputEvent
 	# If the InputMap contains multiple events, choose the first
-	if display_icon == PromptManager.Icons.KEYBOARD:
+	if display_icon == Icons.KEYBOARD:
 		var types = [InputEventKey, InputEventMouseButton]
 		var ev = _find_event(events, types)
 		if not (ev is InputEventKey or ev is InputEventMouseButton):

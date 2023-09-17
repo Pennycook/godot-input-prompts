@@ -24,7 +24,7 @@ var button := 0:
 ## Automatic (0), Xbox (1), Sony (2), Nintendo (3).
 ## When set to "Automatic", the prompt automatically adjusts to match the most
 ## recent joypad device.
-var icon: int = PromptManager.Icons.AUTOMATIC:
+var icon: int = Icons.AUTOMATIC:
 	set = _set_icon
 
 
