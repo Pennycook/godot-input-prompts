@@ -19,6 +19,7 @@ enum Icons {
 	KEYBOARD,
 }
 
+## The set of [InputEvent]s that should satisfy this input prompt.
 @export var events: Array[InputEvent] = []
 
 
