@@ -73,6 +73,10 @@ extends Resource
 @export var button_20: Texture2D = null
 
 
-## Return the [Texture2D] associated with the specified button index.
-func get_texture(button: int) -> Texture2D:
+## Return the [Texture2D] associated with the specified [InputEvent], or null.
+func get_texture(event: InputEvent) -> Texture2D:
+	if not event is InputEventJoypadButton:
+		return null
+	var joypad_event := event as InputEventJoypadButton
+	var button := joypad_event.button_index
 	return get("button_" + str(button))

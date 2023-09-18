@@ -37,6 +37,10 @@ extends Resource
 @export var button_9: Texture2D = null
 
 
-## Return the [Texture2D] associated with the specified mouse button index.
-func get_texture(button: int) -> Texture2D:
+## Return the [Texture2D] associated with the specified [InputEvent], or null.
+func get_texture(event: InputEvent) -> Texture2D:
+	if not event is InputEventMouseButton:
+		return null
+	var mouse_event := event as InputEventMouseButton
+	var button := mouse_event.button_index
 	return get("button_" + str(button))

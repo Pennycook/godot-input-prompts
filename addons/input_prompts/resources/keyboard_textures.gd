@@ -19,8 +19,12 @@ func _init():
 		textures[OS.get_keycode_string(k)] = null
 
 
-## Return the [Texture2D] associated with the specified keyboard scancode.
-func get_texture(scancode: int) -> Texture2D:
+## Return the [Texture2D] associated with the specified [InputEvent], or null.
+func get_texture(event: InputEvent) -> Texture2D:
+	if not event is InputEventKey:
+		return null
+	var key_event := event as InputEventKey
+	var scancode := key_event.keycode
 	return textures[OS.get_keycode_string(scancode)]
 
 

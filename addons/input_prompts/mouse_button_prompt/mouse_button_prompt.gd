@@ -33,7 +33,7 @@ func _set_button(index: int):
 
 func _update_icon():
 	var textures := PromptManager.get_mouse_textures()
-	texture = textures.get_texture(button)
+	texture = textures.get_texture(events[0])
 	queue_redraw()
 
 

@@ -47,7 +47,7 @@ func _set_icon(new_icon):
 
 func _update_icon():
 	var textures := PromptManager.get_joypad_button_textures(icon)
-	texture = textures.get_texture(button)
+	texture = textures.get_texture(events[0])
 	queue_redraw()
 
 

@@ -73,27 +73,22 @@ func _update_icon():
 		if not (ev is InputEventKey or ev is InputEventMouseButton):
 			push_error("No Key/Mouse input for " + action + " in InputMap")
 		if ev is InputEventKey:
-			var scancode = ev.get_keycode()
 			var textures := PromptManager.get_keyboard_textures()
-			texture = textures.get_texture(scancode)
+			texture = textures.get_texture(ev)
 		elif ev is InputEventMouseButton:
-			var button = ev.get_button_index()
 			var textures := PromptManager.get_mouse_textures()
-			texture = textures.get_texture(button)
+			texture = textures.get_texture(ev)
 	else:
 		var types = [InputEventJoypadButton, InputEventJoypadMotion]
 		var ev = _find_event(events, types)
 		if not (ev is InputEventJoypadButton or ev is InputEventJoypadMotion):
 			push_error("No Joypad input for " + action + " in InputMap")
 		if ev is InputEventJoypadButton:
-			var button = ev.get_button_index()
 			var textures := PromptManager.get_joypad_button_textures(display_icon)
-			texture = textures.get_texture(button)
+			texture = textures.get_texture(ev)
 		elif ev is InputEventJoypadMotion:
-			var axis = ev.get_axis()
-			var value = ev.get_axis_value()
 			var textures := PromptManager.get_joypad_motion_textures(display_icon)
-			texture = textures.get_texture(axis, value)
+			texture = textures.get_texture(ev)
 	queue_redraw()
 
 

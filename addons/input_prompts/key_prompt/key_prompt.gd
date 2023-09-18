@@ -148,7 +148,7 @@ func _set_key(scancode: int):
 
 func _update_icon():
 	var textures := PromptManager.get_keyboard_textures()
-	texture = textures.get_texture(key)
+	texture = textures.get_texture(events[0])
 	queue_redraw()
 
 

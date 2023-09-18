@@ -46,7 +46,12 @@ extends Resource
 @export var axis_5_plus: Texture2D = null
 
 
-## Return the [Texture2D] associated with the specified axis and value.
-func get_texture(axis: int, axis_value: int) -> Texture2D:
+## Return the [Texture2D] associated with the specified [InputEvent], or null.
+func get_texture(event: InputEvent) -> Texture2D:
+	if not event is InputEventJoypadMotion:
+		return null
+	var motion_event := event as InputEventJoypadMotion
+	var axis = motion_event.axis
+	var axis_value = motion_event.axis_value
 	var suffix := "_minus" if axis_value == -1 else "_plus"
 	return get("axis_" + str(axis) + suffix)
