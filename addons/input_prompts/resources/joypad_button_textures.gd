@@ -8,7 +8,6 @@ extends Resource
 ## Textures used by a [JoypadButtonPrompt] or [ActionPrompt]. Stores a texture
 ## for each joypad button index.
 
-
 ## Texture for Joypad Button 0 (Bottom Action, Sony Cross, Xbox A, Nintendo B)
 @export var button_0: Texture2D = null
 

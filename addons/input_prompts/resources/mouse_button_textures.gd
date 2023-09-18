@@ -8,7 +8,6 @@ extends Resource
 ## Textures used by a [MouseButtonPrompt] or [ActionPrompt]. Stores a texture
 ## for each mouse button index.
 
-
 ## Texture for Left Mouse Button.
 @export var button_1: Texture2D = null
 

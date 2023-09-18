@@ -8,7 +8,6 @@ extends Resource
 ## Textures used by a [JoypadMotionPrompt] or [ActionPrompt]. Stores a texture
 ## for each joypad axis and value.
 
-
 ## Texture for Axis 0 - (Left Stick Left, Joystick 0 Left)
 @export var axis_0_minus: Texture2D = null
 

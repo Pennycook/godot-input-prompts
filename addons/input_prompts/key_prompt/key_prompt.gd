@@ -13,7 +13,6 @@ extends "res://addons/input_prompts/input_prompt.gd"
 ## prompts. To automatically reflect the most recent input device, use
 ## [ActionPrompt] instead.
 
-
 # TODO: Find a way to replace this with standard functionality.
 #       The Key enum is not accessible directly and can't be iterated over.
 const _KEYS = [
@@ -127,7 +126,6 @@ const _KEYS = [
 	KEY_MEDIAPREVIOUS,
 	KEY_MEDIANEXT,
 ]
-
 
 ## A keyboard scancode, such as [constant @GlobalScope.KEY_ESCAPE].
 var key := KEY_EXCLAM:

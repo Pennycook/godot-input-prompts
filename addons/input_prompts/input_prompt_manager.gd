@@ -1,8 +1,8 @@
 # Copyright (C) 2022-2023 John Pennycook
 # SPDX-License-Identifier: MIT
 @tool
-extends Node
 class_name InputPromptManager
+extends Node
 ## Singleton class for managing [InputPrompt]s.
 ##
 ## Singleton class for managing [InputPrompt]s.
@@ -10,11 +10,9 @@ class_name InputPromptManager
 ## [b]Note[/b]: An instance of [InputPromptManager] is autoloaded under the name
 ## PromptManager.
 
-
 ## Emitted when the preferred icons change. If the preferred icons are set to
 ## "Automatic", emitted whenever the input device changes.
 signal icons_changed
-
 
 ## The icons currently used by [ActionPrompt] nodes.
 var icons := InputPrompt.Icons.XBOX:
@@ -25,7 +23,6 @@ var icons := InputPrompt.Icons.XBOX:
 			return InputPrompt.Icons.XBOX
 		return icons
 
-
 ## The icons currently used by [JoypadButtonPrompt] and [JoypadMotionPrompt] nodes.
 var joy_icons = InputPrompt.Icons.XBOX:
 	get:
@@ -34,7 +31,6 @@ var joy_icons = InputPrompt.Icons.XBOX:
 		if Engine.is_editor_hint():
 			return InputPrompt.Icons.XBOX
 		return joy_icons
-
 
 ## The preferred icons to be used by [ActionPrompt], [JoypadButtonPrompt] and [JoypadMotionPrompt]
 ## nodes. When set to a specific value, all nodes with "Automatic" icons will be overridden to use

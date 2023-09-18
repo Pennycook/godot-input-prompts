@@ -12,7 +12,6 @@ extends "res://addons/input_prompts/input_prompt.gd"
 ## is set to "Automatic", the prompt automatically adjusts to match the most
 ## recent input device.
 
-
 ## The name of an action registered in the [InputMap].
 var action := "ui_accept":
 	set = _set_action

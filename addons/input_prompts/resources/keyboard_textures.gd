@@ -8,7 +8,6 @@ extends Resource
 ## Textures used by a [KeyPrompt] or [ActionPrompt]. Stores a texture for each
 ## keyboard scancode.
 
-
 ## A mapping from keyboard strings (as returned by
 ## [method OS.get_keycode_string]) to textures.
 var textures: Dictionary = {}

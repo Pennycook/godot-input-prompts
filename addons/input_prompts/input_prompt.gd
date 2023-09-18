@@ -2,16 +2,14 @@
 # SPDX-License-Identifier: MIT
 @tool
 @icon("res://addons/input_prompts/icon.svg")
-extends TextureRect
 class_name InputPrompt
+extends TextureRect
 ## Base class for input prompts.
 ##
 ## Base class for input prompts.
 
-
 ## Emitted when one of the [InputEvent]s associated with this prompt is pressed.
 signal pressed
-
 
 enum Icons {
 	AUTOMATIC,
@@ -21,9 +19,7 @@ enum Icons {
 	KEYBOARD,
 }
 
-
-@export
-var events: Array[InputEvent] = []
+@export var events: Array[InputEvent] = []
 
 
 func _init():

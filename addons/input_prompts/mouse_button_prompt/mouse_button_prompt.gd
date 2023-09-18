@@ -13,7 +13,6 @@ extends "res://addons/input_prompts/input_prompt.gd"
 ## prompts. To automatically reflect the most recent input device, use
 ## [ActionPrompt] instead.
 
-
 ## A mouse button index, such as [constant @GlobalScope.MOUSE_BUTTON_LEFT].
 var button := 1:
 	set = _set_button
@@ -56,4 +55,3 @@ func _get_property_list():
 		}
 	)
 	return properties
-	

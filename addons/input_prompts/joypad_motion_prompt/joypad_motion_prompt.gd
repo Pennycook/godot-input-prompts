@@ -15,7 +15,6 @@ extends "res://addons/input_prompts/input_prompt.gd"
 ## prompts. To automatically reflect the most recent input device, use
 ## [ActionPrompt] instead.
 
-
 ## A joypad axis index, such as [constant @GlobalScope.JOY_AXIS_LEFT_X].
 var axis := 0:
 	set = _set_axis

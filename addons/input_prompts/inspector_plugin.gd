@@ -5,7 +5,9 @@ extends EditorInspectorPlugin
 
 
 func _can_handle(object):
-	var types := [ActionPrompt, JoypadButtonPrompt, JoypadMotionPrompt, KeyPrompt, MouseButtonPrompt]
+	var types := [
+		ActionPrompt, JoypadButtonPrompt, JoypadMotionPrompt, KeyPrompt, MouseButtonPrompt
+	]
 	return types.any(func(t): return is_instance_of(object, t))
 
 
