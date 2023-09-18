@@ -31,6 +31,18 @@ func _ready():
 
 func _set_action(new_action: String):
 	action = new_action
+
+	# In the Editor, InputMap reflects Editor settings
+	# Read the list of actions from ProjectSettings instead
+	# TODO: Find a cleaner way to cast these values
+	var tmp: Array = []
+	if Engine.is_editor_hint():
+		tmp = ProjectSettings.get_setting("input/" + action)["events"]
+	else:
+		tmp = InputMap.action_get_events(action)
+	events = []
+	for ev in tmp:
+		events.append(ev)
 	_update_icon()
 
 
@@ -48,18 +60,6 @@ func _find_event(list: Array, types: Array):
 
 
 func _update_icon():
-	# In the Editor, InputMap reflects Editor settings
-	# Read the list of actions from ProjectSettings instead
-	# TODO: Find a cleaner way to cast these values
-	var tmp: Array = []
-	if Engine.is_editor_hint():
-		tmp = ProjectSettings.get_setting("input/" + action)["events"]
-	else:
-		tmp = InputMap.action_get_events(action)
-	events = []
-	for ev in tmp:
-		events.append(ev)
-
 	# If icon is set to AUTOMATIC, first determine which icon to display
 	var display_icon: int = icon
 	if icon == Icons.AUTOMATIC:
