@@ -25,7 +25,7 @@ func get_texture(event: InputEvent) -> Texture2D:
 	var key_event := event as InputEventKey
 	var scancode := key_event.keycode
 	if scancode == 0:
-		scancode = key_event.physical_keycode;
+		scancode = key_event.physical_keycode
 	return textures[OS.get_keycode_string(scancode)]
 
 
