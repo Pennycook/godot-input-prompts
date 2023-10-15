@@ -106,6 +106,8 @@ func _input(event: InputEvent):
 			icons = InputPrompt.Icons.KEYBOARD
 			emit_signal("icons_changed")
 	if event is InputEventJoypadButton or event is InputEventJoypadMotion:
+		if event is InputEventJoypadMotion and event.axis_value < 0.05:
+			return
 		var device = event.device
 		var joy_name = Input.get_joy_name(device)
 		if joy_name.find("Xbox"):
