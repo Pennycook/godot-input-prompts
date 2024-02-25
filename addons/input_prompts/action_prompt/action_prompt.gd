@@ -25,12 +25,23 @@ var icon: int = Icons.AUTOMATIC:
 
 
 func _ready():
+	ProjectSettings.settings_changed.connect(_update_events)
+	_update_events()
 	_update_icon()
 
 
 func _set_action(new_action: String):
 	action = new_action
+	_update_events()
+	_update_icon()
 
+
+func _set_icon(new_icon):
+	icon = new_icon
+	_update_icon()
+
+
+func _update_events():
 	# In the Editor, InputMap reflects Editor settings
 	# Read the list of actions from ProjectSettings instead
 	# TODO: Find a cleaner way to cast these values
@@ -42,14 +53,7 @@ func _set_action(new_action: String):
 	events = []
 	for ev in tmp:
 		events.append(ev)
-	_update_icon()
-
 	update_configuration_warnings()
-
-
-func _set_icon(new_icon):
-	icon = new_icon
-	_update_icon()
 
 
 func _find_event(list: Array, types: Array):
