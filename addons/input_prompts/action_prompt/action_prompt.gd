@@ -25,12 +25,23 @@ var icon: int = Icons.AUTOMATIC:
 
 
 func _ready():
+	ProjectSettings.settings_changed.connect(_update_events)
+	_update_events()
 	_update_icon()
 
 
 func _set_action(new_action: String):
 	action = new_action
+	_update_events()
+	_update_icon()
 
+
+func _set_icon(new_icon):
+	icon = new_icon
+	_update_icon()
+
+
+func _update_events():
 	# In the Editor, InputMap reflects Editor settings
 	# Read the list of actions from ProjectSettings instead
 	# TODO: Find a cleaner way to cast these values
@@ -42,12 +53,7 @@ func _set_action(new_action: String):
 	events = []
 	for ev in tmp:
 		events.append(ev)
-	_update_icon()
-
-
-func _set_icon(new_icon):
-	icon = new_icon
-	_update_icon()
+	update_configuration_warnings()
 
 
 func _find_event(list: Array, types: Array):
@@ -69,8 +75,6 @@ func _update_icon():
 	if display_icon == Icons.KEYBOARD:
 		var types = [InputEventKey, InputEventMouseButton]
 		var ev = _find_event(events, types)
-		if not (ev is InputEventKey or ev is InputEventMouseButton):
-			push_error("No Key/Mouse input for " + action + " in InputMap")
 		if ev is InputEventKey:
 			var textures := PromptManager.get_keyboard_textures()
 			texture = textures.get_texture(ev)
@@ -80,8 +84,6 @@ func _update_icon():
 	else:
 		var types = [InputEventJoypadButton, InputEventJoypadMotion]
 		var ev = _find_event(events, types)
-		if not (ev is InputEventJoypadButton or ev is InputEventJoypadMotion):
-			push_error("No Joypad input for " + action + " in InputMap")
 		if ev is InputEventJoypadButton:
 			var textures := PromptManager.get_joypad_button_textures(display_icon)
 			texture = textures.get_texture(ev)
@@ -127,3 +129,23 @@ func _get_property_list():
 		}
 	)
 	return properties
+
+
+func _get_configuration_warnings() -> PackedStringArray:
+	var warnings: PackedStringArray = []
+
+	# Check that the action is associated with Keyboard/Mouse in the InputMap
+	if icon == Icons.AUTOMATIC or icon == Icons.KEYBOARD:
+		var types = [InputEventKey, InputEventMouseButton]
+		var ev = _find_event(events, types)
+		if not (ev is InputEventKey or ev is InputEventMouseButton):
+			warnings.append("No Key/Mouse input for " + action + " in InputMap.")
+
+	# Check that the action is associated with Joypad in the InputMap
+	if icon == Icons.AUTOMATIC or icon != Icons.KEYBOARD:
+		var types = [InputEventJoypadButton, InputEventJoypadMotion]
+		var ev = _find_event(events, types)
+		if not (ev is InputEventJoypadButton or ev is InputEventJoypadMotion):
+			warnings.append("No Joypad input for " + action + " in InputMap.")
+
+	return warnings
