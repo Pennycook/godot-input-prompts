@@ -20,8 +20,8 @@ body:
       description: |
         Would you be willing to help with the development of this feature?
       options:
-        - No
-        - Yes
+        - "No"
+        - "Yes"
       default: 0
     validations:
       required: true
