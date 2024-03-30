@@ -16,18 +16,18 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: plugin-version
     attributes:
       label: Plugin Version
       description: What version of the plugin are you using?
       options:
         - 2.0.0
         - 2.1.0
-      default: 2.1.0
+      default: 1
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: godot-version
     attributes:
       label: Godot Version
       description: What version of Godot are you using?
@@ -36,7 +36,7 @@ body:
         - 4.1
         - 4.2
         - 4.3
-      default: 4.2
+      default: 2
     validations:
       required: true
   - type: textarea
