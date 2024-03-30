@@ -93,6 +93,11 @@ func _update_icon():
 	queue_redraw()
 
 
+func _refresh():
+	_update_events()
+	_update_icon()
+
+
 func _input(event: InputEvent):
 	if not event.is_action_pressed(action):
 		return

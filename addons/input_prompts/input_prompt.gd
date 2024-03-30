@@ -32,6 +32,10 @@ func _update_icon():
 	pass
 
 
+func _refresh():
+	_update_icon()
+
+
 func _input(event: InputEvent):
 	if not events.any(func(e): return event.is_match(e)):
 		return
@@ -44,7 +48,17 @@ func _input(event: InputEvent):
 
 func _enter_tree():
 	PromptManager.icons_changed.connect(_update_icon)
+	add_to_group("_input_prompts")
 
 
 func _exit_tree():
+	remove_from_group("_input_prompts")
 	PromptManager.icons_changed.disconnect(_update_icon)
+
+
+## Force this [InputPrompt] node to refresh its icons and events.
+## Must be called if the [InputMap] is changed.
+## [br][br]
+## [b]Note[/b]: Use [InputPromptManager] to refresh all nodes at once.
+func refresh():
+	_refresh()

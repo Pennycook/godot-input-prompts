@@ -45,6 +45,14 @@ var preferred_icons := InputPrompt.Icons.AUTOMATIC:
 		emit_signal("icons_changed")
 
 
+## Force all [InputPrompt] nodes to refresh their icons and events.
+## Must be called if the [InputMap] is changed.
+func refresh() -> void:
+	var prompts := get_tree().get_nodes_in_group("_input_prompts")
+	for prompt in prompts:
+		prompt.call_deferred("refresh")
+
+
 ## Return the [KeyboardTextures] used by [KeyPrompt] nodes.
 func get_keyboard_textures() -> KeyboardTextures:
 	return preload("res://addons/input_prompts/key_prompt/keys.tres")
