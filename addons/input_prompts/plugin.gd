@@ -15,6 +15,7 @@ func _enter_tree():
 		if not ProjectSettings.has_setting(deadzone_setting):
 			ProjectSettings.set_setting(deadzone_setting, 0.5)
 			ProjectSettings.set_initial_value(deadzone_setting, 0.5)
+			ProjectSettings.set_as_basic(deadzone_setting, true)
 			var property_info = {
 				"name": deadzone_setting,
 				"type": TYPE_FLOAT,
