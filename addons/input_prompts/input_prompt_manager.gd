@@ -46,7 +46,9 @@ var preferred_icons := InputPrompt.Icons.AUTOMATIC:
 
 ## The deadzone value used to detect joypad activity. The default value is determined by the
 ## "addons/input_prompts/joypad_detection_deadzone" setting in [ProjectSettings].
-var joypad_detection_deadzone := ProjectSettings.get_setting("addons/input_prompts/joypad_detection_deadzone", 0.5)
+var joypad_detection_deadzone := ProjectSettings.get_setting(
+	"addons/input_prompts/joypad_detection_deadzone", 0.5
+)
 
 
 ## Force all [InputPrompt] nodes to refresh their icons and events.
