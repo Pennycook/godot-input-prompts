@@ -16,12 +16,15 @@ func _enter_tree():
 			ProjectSettings.set_setting(deadzone_setting, 0.5)
 			ProjectSettings.set_initial_value(deadzone_setting, 0.5)
 			ProjectSettings.set_as_basic(deadzone_setting, true)
-			var property_info = {
-				"name": deadzone_setting,
-				"type": TYPE_FLOAT,
-				"hint": PROPERTY_HINT_RANGE,
-				"hint_string": "0,1"
-			}
+			ProjectSettings.add_property_info(
+				{
+					"name": deadzone_setting,
+					"type": TYPE_FLOAT,
+					"hint": PROPERTY_HINT_RANGE,
+					"hint_string": "0,1"
+				}
+			)
+
 		ProjectSettings.save()
 
 
