@@ -50,6 +50,54 @@ var joypad_detection_deadzone := ProjectSettings.get_setting(
 	"addons/input_prompts/joypad_detection_deadzone", 0.5
 )
 
+var _keyboard_textures: KeyboardTextures = load(
+	ProjectSettings.get_setting(
+		"addons/input_prompts/icons/keyboard", "res://addons/input_prompts/key_prompt/keys.tres"
+	)
+)
+var _mouse_button_textures: MouseButtonTextures = load(
+	ProjectSettings.get_setting(
+		"addons/input_prompts/icons/mouse_buttons",
+		"res://addons/input_prompts/mouse_button_prompt/buttons.tres"
+	)
+)
+var _nintendo_button_textures: JoypadButtonTextures = load(
+	ProjectSettings.get_setting(
+		"addons/input_prompts/icons/joypad_buttons/nintendo",
+		"res://addons/input_prompts/joypad_button_prompt/nintendo.tres"
+	)
+)
+var _sony_button_textures: JoypadButtonTextures = load(
+	ProjectSettings.get_setting(
+		"addons/input_prompts/icons/joypad_buttons/sony",
+		"res://addons/input_prompts/joypad_button_prompt/sony.tres"
+	)
+)
+var _xbox_button_textures: JoypadButtonTextures = load(
+	ProjectSettings.get_setting(
+		"addons/input_prompts/icons/joypad_buttons/xbox",
+		"res://addons/input_prompts/joypad_button_prompt/xbox.tres"
+	)
+)
+var _nintendo_motion_textures: JoypadMotionTextures = load(
+	ProjectSettings.get_setting(
+		"addons/input_prompts/icons/joypad_motion/nintendo",
+		"res://addons/input_prompts/joypad_motion_prompt/nintendo.tres"
+	)
+)
+var _sony_motion_textures: JoypadMotionTextures = load(
+	ProjectSettings.get_setting(
+		"addons/input_prompts/icons/joypad_motion/sony",
+		"res://addons/input_prompts/joypad_motion_prompt/sony.tres"
+	)
+)
+var _xbox_motion_textures: JoypadMotionTextures = load(
+	ProjectSettings.get_setting(
+		"addons/input_prompts/icons/joypad_motion/xbox",
+		"res://addons/input_prompts/joypad_motion_prompt/xbox.tres"
+	)
+)
+
 
 ## Force all [InputPrompt] nodes to refresh their icons and events.
 ## Must be called if the [InputMap] is changed.
@@ -61,12 +109,12 @@ func refresh() -> void:
 
 ## Return the [KeyboardTextures] used by [KeyPrompt] nodes.
 func get_keyboard_textures() -> KeyboardTextures:
-	return preload("res://addons/input_prompts/key_prompt/keys.tres")
+	return _keyboard_textures
 
 
 ## Return the [MouseButtonTextures] used by [MouseButtonPrompt] nodes.
 func get_mouse_textures() -> MouseButtonTextures:
-	return preload("res://addons/input_prompts/mouse_button_prompt/buttons.tres")
+	return _mouse_button_textures
 
 
 ## Return the [JoypadButtonTextures] used by [JoypadButtonPrompt] nodes.
@@ -75,11 +123,11 @@ func get_joypad_button_textures(icons: int) -> JoypadButtonTextures:
 		InputPrompt.Icons.AUTOMATIC:
 			return get_joypad_button_textures(joy_icons)
 		InputPrompt.Icons.XBOX:
-			return preload("res://addons/input_prompts/joypad_button_prompt/xbox.tres")
+			return _xbox_button_textures
 		InputPrompt.Icons.SONY:
-			return preload("res://addons/input_prompts/joypad_button_prompt/sony.tres")
+			return _sony_button_textures
 		InputPrompt.Icons.NINTENDO:
-			return preload("res://addons/input_prompts/joypad_button_prompt/nintendo.tres")
+			return _nintendo_button_textures
 		InputPrompt.Icons.KEYBOARD:
 			push_error("No JoypadButtonTextures for InputPrompt.Icons.KEYBOARD.")
 	return null
@@ -91,11 +139,11 @@ func get_joypad_motion_textures(icons: int) -> JoypadMotionTextures:
 		InputPrompt.Icons.AUTOMATIC:
 			return get_joypad_motion_textures(joy_icons)
 		InputPrompt.Icons.XBOX:
-			return preload("res://addons/input_prompts/joypad_motion_prompt/xbox.tres")
+			return _xbox_motion_textures
 		InputPrompt.Icons.SONY:
-			return preload("res://addons/input_prompts/joypad_motion_prompt/sony.tres")
+			return _sony_motion_textures
 		InputPrompt.Icons.NINTENDO:
-			return preload("res://addons/input_prompts/joypad_motion_prompt/nintendo.tres")
+			return _nintendo_motion_textures
 		InputPrompt.Icons.KEYBOARD:
 			push_error("No JoypadMotionTextures for InputPrompt.Icons.KEYBOARD.")
 	return null

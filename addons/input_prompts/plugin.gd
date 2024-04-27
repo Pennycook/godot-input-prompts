@@ -25,6 +25,38 @@ func _enter_tree():
 				}
 			)
 
+		var icon_settings = {
+			"addons/input_prompts/icons/keyboard":
+			"res://addons/input_prompts/key_prompt/keys.tres",
+			"addons/input_prompts/icons/mouse_buttons":
+			"res://addons/input_prompts/mouse_button_prompt/buttons.tres",
+			"addons/input_prompts/icons/joypad_buttons/nintendo":
+			"res://addons/input_prompts/joypad_button_prompt/nintendo.tres",
+			"addons/input_prompts/icons/joypad_buttons/sony":
+			"res://addons/input_prompts/joypad_button_prompt/sony.tres",
+			"addons/input_prompts/icons/joypad_buttons/xbox":
+			"res://addons/input_prompts/joypad_button_prompt/xbox.tres",
+			"addons/input_prompts/icons/joypad_motion/nintendo":
+			"res://addons/input_prompts/joypad_motion_prompt/nintendo.tres",
+			"addons/input_prompts/icons/joypad_motion/sony":
+			"res://addons/input_prompts/joypad_motion_prompt/sony.tres",
+			"addons/input_prompts/icons/joypad_motion/xbox":
+			"res://addons/input_prompts/joypad_motion_prompt/xbox.tres",
+		}
+		for setting in icon_settings.keys():
+			var value = icon_settings[setting]
+			if not ProjectSettings.has_setting(setting):
+				ProjectSettings.set_setting(setting, value)
+				ProjectSettings.set_initial_value(setting, value)
+				ProjectSettings.add_property_info(
+					{
+						"name": setting,
+						"type": TYPE_STRING,
+						"hint": PROPERTY_HINT_FILE,
+						"hint_string": "*.tres,*.res"
+					}
+				)
+
 		ProjectSettings.save()
 
 
