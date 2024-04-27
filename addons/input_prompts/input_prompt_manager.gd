@@ -44,6 +44,12 @@ var preferred_icons := InputPrompt.Icons.AUTOMATIC:
 			icons = value
 		emit_signal("icons_changed")
 
+## The deadzone value used to detect joypad activity. The default value is determined by the
+## "addons/input_prompts/joypad_detection_deadzone" setting in [ProjectSettings].
+var joypad_detection_deadzone := ProjectSettings.get_setting(
+	"addons/input_prompts/joypad_detection_deadzone", 0.5
+)
+
 
 ## Force all [InputPrompt] nodes to refresh their icons and events.
 ## Must be called if the [InputMap] is changed.
@@ -106,6 +112,10 @@ func _input(event: InputEvent):
 			icons = InputPrompt.Icons.KEYBOARD
 			emit_signal("icons_changed")
 	if event is InputEventJoypadButton or event is InputEventJoypadMotion:
+		# Do not detect Joypad unless value exceeds deadzone
+		if event is InputEventJoypadMotion and absf(event.axis_value) < joypad_detection_deadzone:
+			return
+
 		var device = event.device
 		var joy_name = Input.get_joy_name(device)
 		if joy_name.find("Xbox"):
