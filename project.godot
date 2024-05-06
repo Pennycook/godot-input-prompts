@@ -8,6 +8,17 @@
 
 config_version=5
 
+[addons]
+
+input_prompts/icons/keyboard="res://addons/input_prompts/icons/pixel/keyboard/keys.tres"
+input_prompts/icons/mouse_buttons="res://addons/input_prompts/icons/pixel/mouse/buttons.tres"
+input_prompts/icons/joypad_buttons/nintendo="res://addons/input_prompts/icons/pixel/nintendo/buttons.tres"
+input_prompts/icons/joypad_buttons/sony="res://addons/input_prompts/icons/pixel/sony/buttons.tres"
+input_prompts/icons/joypad_buttons/xbox="res://addons/input_prompts/icons/pixel/xbox/buttons.tres"
+input_prompts/icons/joypad_motion/nintendo="res://addons/input_prompts/icons/pixel/nintendo/motion.tres"
+input_prompts/icons/joypad_motion/sony="res://addons/input_prompts/icons/pixel/sony/motion.tres"
+input_prompts/icons/joypad_motion/xbox="res://addons/input_prompts/icons/pixel/xbox/motion.tres"
+
 [application]
 
 config/name="godot-input-prompts"
