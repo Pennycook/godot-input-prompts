@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkd01upu3qdb7"
-path="res://.godot/imported/right_stick_left.png-22e5e174bd0d447e24f8bb0b7e97132a.ctex"
+uid="uid://ds23t13yymn8a"
+path="res://.godot/imported/left_stick_down.png-bf39b26722c2ff6ef058df7094769181.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/input_prompts/icons/generic/right_stick_left.png"
-dest_files=["res://.godot/imported/right_stick_left.png-22e5e174bd0d447e24f8bb0b7e97132a.ctex"]
+source_file="res://addons/input_prompts/icons/pixel/sony/left_stick_down.png"
+dest_files=["res://.godot/imported/left_stick_down.png-bf39b26722c2ff6ef058df7094769181.ctex"]
 
 [params]
 
