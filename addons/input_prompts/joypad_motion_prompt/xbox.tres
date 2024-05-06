@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://7wlwep2pflxf" path="res://addons/input_prompts/icons/generic/right_stick_right.png" id="6_b5skw"]
 [ext_resource type="Texture2D" uid="uid://tdsh1d8hbha3" path="res://addons/input_prompts/icons/generic/right_stick_up.png" id="7_iwi3m"]
 [ext_resource type="Texture2D" uid="uid://c6tm6gslt2cau" path="res://addons/input_prompts/icons/generic/right_stick_down.png" id="8_qong4"]
-[ext_resource type="Texture2D" uid="uid://dx1u47qkx4in8" path="res://addons/input_prompts/icons/xbox/left_trigger.png" id="9_0mpc0"]
-[ext_resource type="Texture2D" uid="uid://c6cv5phl3gvvn" path="res://addons/input_prompts/icons/xbox/right_trigger.png" id="10_uujqu"]
+[ext_resource type="Texture2D" uid="uid://dx1u47qkx4in8" path="res://addons/input_prompts/icons/pixel/xbox/left_trigger.png" id="9_0mpc0"]
+[ext_resource type="Texture2D" uid="uid://c6cv5phl3gvvn" path="res://addons/input_prompts/icons/pixel/xbox/right_trigger.png" id="10_uujqu"]
 
 [resource]
 script = ExtResource("1_1t4om")

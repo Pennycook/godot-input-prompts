@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://7wlwep2pflxf" path="res://addons/input_prompts/icons/generic/right_stick_right.png" id="6_mifia"]
 [ext_resource type="Texture2D" uid="uid://tdsh1d8hbha3" path="res://addons/input_prompts/icons/generic/right_stick_up.png" id="7_7gygi"]
 [ext_resource type="Texture2D" uid="uid://c6tm6gslt2cau" path="res://addons/input_prompts/icons/generic/right_stick_down.png" id="8_n8vd6"]
-[ext_resource type="Texture2D" uid="uid://bxb6v2nl5ada5" path="res://addons/input_prompts/icons/sony/l2.png" id="9_tsnqk"]
-[ext_resource type="Texture2D" uid="uid://cotgbqlyecm6" path="res://addons/input_prompts/icons/sony/r2.png" id="10_ddeh3"]
+[ext_resource type="Texture2D" uid="uid://bxb6v2nl5ada5" path="res://addons/input_prompts/icons/pixel/sony/l2.png" id="9_tsnqk"]
+[ext_resource type="Texture2D" uid="uid://cotgbqlyecm6" path="res://addons/input_prompts/icons/pixel/sony/r2.png" id="10_ddeh3"]
 [ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="11_vc1yl"]
 
 [resource]

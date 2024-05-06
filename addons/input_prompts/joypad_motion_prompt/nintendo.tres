@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://7wlwep2pflxf" path="res://addons/input_prompts/icons/generic/right_stick_right.png" id="6_ny0h0"]
 [ext_resource type="Texture2D" uid="uid://tdsh1d8hbha3" path="res://addons/input_prompts/icons/generic/right_stick_up.png" id="7_tjas0"]
 [ext_resource type="Texture2D" uid="uid://c6tm6gslt2cau" path="res://addons/input_prompts/icons/generic/right_stick_down.png" id="8_8b1wu"]
-[ext_resource type="Texture2D" uid="uid://dvixi1dxdoig2" path="res://addons/input_prompts/icons/nintendo/zl.png" id="9_scud4"]
-[ext_resource type="Texture2D" uid="uid://dbykk7rrgahs3" path="res://addons/input_prompts/icons/nintendo/zr.png" id="10_f0gfq"]
+[ext_resource type="Texture2D" uid="uid://dvixi1dxdoig2" path="res://addons/input_prompts/icons/pixel/nintendo/zl.png" id="9_scud4"]
+[ext_resource type="Texture2D" uid="uid://dbykk7rrgahs3" path="res://addons/input_prompts/icons/pixel/nintendo/zr.png" id="10_f0gfq"]
 [ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="11_nouuu"]
 
 [resource]

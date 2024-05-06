@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="MouseButtonTextures" load_steps=9 format=3 uid="uid://bt25mebuyicjf"]
 
-[ext_resource type="Texture2D" uid="uid://d0bfvcxip20dc" path="res://addons/input_prompts/icons/mouse/left.png" id="1_wtkjw"]
+[ext_resource type="Texture2D" uid="uid://d0bfvcxip20dc" path="res://addons/input_prompts/icons/pixel/mouse/left.png" id="1_wtkjw"]
 [ext_resource type="Script" path="res://addons/input_prompts/resources/mouse_button_textures.gd" id="1_yejn7"]
-[ext_resource type="Texture2D" uid="uid://dtq7m7h8im036" path="res://addons/input_prompts/icons/mouse/right.png" id="2_wwb4y"]
-[ext_resource type="Texture2D" uid="uid://b4ih2kvt8mit0" path="res://addons/input_prompts/icons/mouse/middle.png" id="3_b4kwc"]
-[ext_resource type="Texture2D" uid="uid://cybx1ogrrc1si" path="res://addons/input_prompts/icons/mouse/wheel_up.png" id="4_kp7cl"]
-[ext_resource type="Texture2D" uid="uid://bkgtieikd4hrg" path="res://addons/input_prompts/icons/mouse/wheel_down.png" id="5_f36mi"]
-[ext_resource type="Texture2D" uid="uid://1gb8h0fmwu6h" path="res://addons/input_prompts/icons/mouse/wheel_left.png" id="6_rrc1l"]
-[ext_resource type="Texture2D" uid="uid://dmblfllnnkgou" path="res://addons/input_prompts/icons/mouse/wheel_right.png" id="7_wyiou"]
+[ext_resource type="Texture2D" uid="uid://dtq7m7h8im036" path="res://addons/input_prompts/icons/pixel/mouse/right.png" id="2_wwb4y"]
+[ext_resource type="Texture2D" uid="uid://b4ih2kvt8mit0" path="res://addons/input_prompts/icons/pixel/mouse/middle.png" id="3_b4kwc"]
+[ext_resource type="Texture2D" uid="uid://cybx1ogrrc1si" path="res://addons/input_prompts/icons/pixel/mouse/wheel_up.png" id="4_kp7cl"]
+[ext_resource type="Texture2D" uid="uid://bkgtieikd4hrg" path="res://addons/input_prompts/icons/pixel/mouse/wheel_down.png" id="5_f36mi"]
+[ext_resource type="Texture2D" uid="uid://1gb8h0fmwu6h" path="res://addons/input_prompts/icons/pixel/mouse/wheel_left.png" id="6_rrc1l"]
+[ext_resource type="Texture2D" uid="uid://dmblfllnnkgou" path="res://addons/input_prompts/icons/pixel/mouse/wheel_right.png" id="7_wyiou"]
 
 [resource]
 script = ExtResource("1_yejn7")
