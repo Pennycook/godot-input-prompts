@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="JoypadButtonTextures" load_steps=19 format=3 uid="uid://d075bpmykagap"]
+
+[ext_resource type="Texture2D" uid="uid://b3jty2xdsw23p" path="res://addons/input_prompts/icons/1-bit/sony/cross.png" id="1_fstgk"]
+[ext_resource type="Texture2D" uid="uid://cenrgtexhpu6n" path="res://addons/input_prompts/icons/1-bit/sony/circle.png" id="2_qqr74"]
+[ext_resource type="Texture2D" uid="uid://b0luoa1f1gpeo" path="res://addons/input_prompts/icons/1-bit/sony/r1.png" id="3_0w0aa"]
+[ext_resource type="Texture2D" uid="uid://cbky00xdg3q8p" path="res://addons/input_prompts/icons/1-bit/sony/up.png" id="4_81c8o"]
+[ext_resource type="Texture2D" uid="uid://cqsjyyt4x6ky5" path="res://addons/input_prompts/icons/1-bit/sony/down.png" id="5_oo284"]
+[ext_resource type="Texture2D" uid="uid://cff3nible4qy1" path="res://addons/input_prompts/icons/1-bit/sony/left.png" id="6_u5s8j"]
+[ext_resource type="Texture2D" uid="uid://ctntb6wc2jj08" path="res://addons/input_prompts/icons/1-bit/sony/right.png" id="7_j5tnk"]
+[ext_resource type="Texture2D" uid="uid://dxpsb00p0pmw8" path="res://addons/input_prompts/icons/1-bit/sony/microphone.png" id="8_e6s6e"]
+[ext_resource type="Texture2D" uid="uid://gyf3jur6fke1" path="res://addons/input_prompts/icons/1-bit/sony/square.png" id="9_0rgjo"]
+[ext_resource type="Texture2D" uid="uid://djp3pdop7vqtp" path="res://addons/input_prompts/icons/1-bit/sony/touchpad.png" id="10_5d3nw"]
+[ext_resource type="Texture2D" uid="uid://dewj3tp3pp3cs" path="res://addons/input_prompts/icons/1-bit/sony/triangle.png" id="11_5fn3x"]
+[ext_resource type="Texture2D" uid="uid://bp2bfkjacifju" path="res://addons/input_prompts/icons/1-bit/sony/select.png" id="12_c3m3q"]
+[ext_resource type="Texture2D" uid="uid://damaqombk7pae" path="res://addons/input_prompts/icons/1-bit/sony/ps.png" id="13_ycw3m"]
+[ext_resource type="Texture2D" uid="uid://cw322f4568yke" path="res://addons/input_prompts/icons/1-bit/sony/start.png" id="14_48ivj"]
+[ext_resource type="Texture2D" uid="uid://bbrw7hh0hydxw" path="res://addons/input_prompts/icons/1-bit/sony/left_stick.png" id="15_njd6f"]
+[ext_resource type="Texture2D" uid="uid://b5pal5r4foxe" path="res://addons/input_prompts/icons/1-bit/sony/right_stick.png" id="16_l8ic6"]
+[ext_resource type="Texture2D" uid="uid://n48eq7v32gyd" path="res://addons/input_prompts/icons/1-bit/sony/l1.png" id="17_23xiy"]
+[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_button_textures.gd" id="18_kiy40"]
+
+[resource]
+script = ExtResource("18_kiy40")
+button_0 = ExtResource("1_fstgk")
+button_1 = ExtResource("2_qqr74")
+button_2 = ExtResource("9_0rgjo")
+button_3 = ExtResource("11_5fn3x")
+button_4 = ExtResource("12_c3m3q")
+button_5 = ExtResource("13_ycw3m")
+button_6 = ExtResource("14_48ivj")
+button_7 = ExtResource("15_njd6f")
+button_8 = ExtResource("16_l8ic6")
+button_9 = ExtResource("17_23xiy")
+button_10 = ExtResource("3_0w0aa")
+button_11 = ExtResource("4_81c8o")
+button_12 = ExtResource("5_oo284")
+button_13 = ExtResource("6_u5s8j")
+button_14 = ExtResource("7_j5tnk")
+button_15 = ExtResource("8_e6s6e")
+button_20 = ExtResource("10_5d3nw")

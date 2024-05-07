@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MouseButtonTextures" load_steps=9 format=3 uid="uid://dwltpr7darrug"]
+
+[ext_resource type="Texture2D" uid="uid://d156fuom756er" path="res://addons/input_prompts/icons/1-bit/mouse/left.png" id="1_xdrkd"]
+[ext_resource type="Texture2D" uid="uid://1rqphct15b6q" path="res://addons/input_prompts/icons/1-bit/mouse/right.png" id="2_d2eab"]
+[ext_resource type="Texture2D" uid="uid://c40eeo153w5t4" path="res://addons/input_prompts/icons/1-bit/mouse/middle.png" id="3_qvqup"]
+[ext_resource type="Texture2D" uid="uid://clgx1b657uk83" path="res://addons/input_prompts/icons/1-bit/mouse/wheel_up.png" id="4_4k6l8"]
+[ext_resource type="Texture2D" uid="uid://yy8cxdfivmej" path="res://addons/input_prompts/icons/1-bit/mouse/wheel_down.png" id="5_ovvul"]
+[ext_resource type="Texture2D" uid="uid://5uwocwsbyvku" path="res://addons/input_prompts/icons/1-bit/mouse/wheel_left.png" id="6_8bckg"]
+[ext_resource type="Texture2D" uid="uid://cwjlmty8mfqpr" path="res://addons/input_prompts/icons/1-bit/mouse/wheel_right.png" id="7_su6g4"]
+[ext_resource type="Script" path="res://addons/input_prompts/resources/mouse_button_textures.gd" id="8_bt618"]
+
+[resource]
+script = ExtResource("8_bt618")
+button_1 = ExtResource("1_xdrkd")
+button_2 = ExtResource("2_d2eab")
+button_3 = ExtResource("3_qvqup")
+button_4 = ExtResource("4_4k6l8")
+button_5 = ExtResource("5_ovvul")
+button_6 = ExtResource("6_8bckg")
+button_7 = ExtResource("7_su6g4")

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="JoypadMotionTextures" load_steps=12 format=3 uid="uid://lef8e200645"]
+
+[ext_resource type="Texture2D" uid="uid://bw4s848dxmwaw" path="res://addons/input_prompts/icons/1-bit/sony/left_stick_left.png" id="1_14x5u"]
+[ext_resource type="Texture2D" uid="uid://dfrgbom3x1oj2" path="res://addons/input_prompts/icons/1-bit/sony/left_stick_right.png" id="2_mx17k"]
+[ext_resource type="Texture2D" uid="uid://cvx7lmviubly3" path="res://addons/input_prompts/icons/1-bit/sony/left_stick_up.png" id="3_ls7qt"]
+[ext_resource type="Texture2D" uid="uid://bh2fem0n3y0ua" path="res://addons/input_prompts/icons/1-bit/sony/left_stick_down.png" id="4_hamas"]
+[ext_resource type="Texture2D" uid="uid://chnhqt4fhg4yk" path="res://addons/input_prompts/icons/1-bit/sony/right_stick_left.png" id="5_o1yth"]
+[ext_resource type="Texture2D" uid="uid://c2q2hiedigy2c" path="res://addons/input_prompts/icons/1-bit/sony/right_stick_right.png" id="6_xhli0"]
+[ext_resource type="Texture2D" uid="uid://ddfaw6d46irvr" path="res://addons/input_prompts/icons/1-bit/sony/right_stick_up.png" id="7_cdfqm"]
+[ext_resource type="Texture2D" uid="uid://c627d5cr3vpcs" path="res://addons/input_prompts/icons/1-bit/sony/right_stick_down.png" id="8_n5mat"]
+[ext_resource type="Texture2D" uid="uid://c5145wnnpon8g" path="res://addons/input_prompts/icons/1-bit/sony/l2.png" id="9_y0h7w"]
+[ext_resource type="Texture2D" uid="uid://drkwatctxg70m" path="res://addons/input_prompts/icons/1-bit/sony/r2.png" id="10_rj5d0"]
+[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="11_08c6i"]
+
+[resource]
+script = ExtResource("11_08c6i")
+axis_0_minus = ExtResource("1_14x5u")
+axis_0_plus = ExtResource("2_mx17k")
+axis_1_minus = ExtResource("3_ls7qt")
+axis_1_plus = ExtResource("4_hamas")
+axis_2_minus = ExtResource("5_o1yth")
+axis_2_plus = ExtResource("6_xhli0")
+axis_3_minus = ExtResource("7_cdfqm")
+axis_3_plus = ExtResource("8_n5mat")
+axis_4_plus = ExtResource("9_y0h7w")
+axis_5_plus = ExtResource("10_rj5d0")
