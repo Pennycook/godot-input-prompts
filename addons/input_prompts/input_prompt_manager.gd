@@ -50,52 +50,53 @@ var joypad_detection_deadzone := ProjectSettings.get_setting(
 	"addons/input_prompts/joypad_detection_deadzone", 0.5
 )
 
-var _keyboard_textures: KeyboardTextures = load(
-	ProjectSettings.get_setting(
-		"addons/input_prompts/icons/keyboard", "res://addons/input_prompts/icons/pixel/keyboard/keys.tres"
+var _icon_style := ProjectSettings.get_setting("addons/input_prompts/icons/style", "Pixel")
+
+func _get_textures(setting: StringName, resource: StringName) -> Resource:
+	if ProjectSettings.get_setting(setting):
+		return load(ProjectSettings.get_setting(setting))
+	else:
+		var path: String = "res://addons/input_prompts/icons/" + _icon_style.to_lower() + "/" + resource
+		return load(path)
+
+func _get_joypad_textures(icons: StringName, kind: StringName) -> Resource:
+	return _get_textures(
+		"addons/input_prompts/icons/joypad_" + kind + "/" + icons,
+		icons + "/" + kind + ".tres"
 	)
+
+var _keyboard_textures: KeyboardTextures = _get_textures(
+	"addons/input_prompts/icons/keyboard",
+	"keyboard/keys.tres"
 )
-var _mouse_button_textures: MouseButtonTextures = load(
-	ProjectSettings.get_setting(
-		"addons/input_prompts/icons/mouse_buttons",
-		"res://addons/input_prompts/icons/pixel/mouse/buttons.tres"
-	)
+
+var _mouse_button_textures: MouseButtonTextures = _get_textures(
+	"addons/input_prompts/icons/mouse_buttons",
+	"mouse/buttons.tres"
 )
-var _nintendo_button_textures: JoypadButtonTextures = load(
-	ProjectSettings.get_setting(
-		"addons/input_prompts/icons/joypad_buttons/nintendo",
-		"res://addons/input_prompts/icons/pixel/nintendo/buttons.tres"
-	)
+
+var _nintendo_button_textures: JoypadButtonTextures = _get_joypad_textures(
+	"nintendo", "buttons"
 )
-var _sony_button_textures: JoypadButtonTextures = load(
-	ProjectSettings.get_setting(
-		"addons/input_prompts/icons/joypad_buttons/sony",
-		"res://addons/input_prompts/icons/pixel/sony/buttons.tres"
-	)
+
+var _sony_button_textures: JoypadButtonTextures = _get_joypad_textures(
+	"sony", "buttons"
 )
-var _xbox_button_textures: JoypadButtonTextures = load(
-	ProjectSettings.get_setting(
-		"addons/input_prompts/icons/joypad_buttons/xbox",
-		"res://addons/input_prompts/icons/pixel/xbox/buttons.tres"
-	)
+
+var _xbox_button_textures: JoypadButtonTextures = _get_joypad_textures(
+	"xbox", "buttons"
 )
-var _nintendo_motion_textures: JoypadMotionTextures = load(
-	ProjectSettings.get_setting(
-		"addons/input_prompts/icons/joypad_motion/nintendo",
-		"res://addons/input_prompts/icons/pixel/nintendo/motion.tres"
-	)
+
+var _nintendo_motion_textures: JoypadMotionTextures = _get_joypad_textures(
+	"nintendo", "motion"
 )
-var _sony_motion_textures: JoypadMotionTextures = load(
-	ProjectSettings.get_setting(
-		"addons/input_prompts/icons/joypad_motion/sony",
-		"res://addons/input_prompts/icons/pixel/sony/motion.tres"
-	)
+
+var _sony_motion_textures: JoypadMotionTextures = _get_joypad_textures(
+	"sony", "motion"
 )
-var _xbox_motion_textures: JoypadMotionTextures = load(
-	ProjectSettings.get_setting(
-		"addons/input_prompts/icons/joypad_motion/xbox",
-		"res://addons/input_prompts/icons/pixel/xbox/motion.tres"
-	)
+
+var _xbox_motion_textures: JoypadMotionTextures = _get_joypad_textures(
+	"xbox", "motion"
 )
 
 
