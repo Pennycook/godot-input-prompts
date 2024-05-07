@@ -31,7 +31,7 @@ func _enter_tree():
 			"addons/input_prompts/icons/joypad_buttons/nintendo",
 			"addons/input_prompts/icons/joypad_buttons/sony",
 			"addons/input_prompts/icons/joypad_buttons/xbox",
-			"addons/input_prompts/icons/joypad_motion/nintento",
+			"addons/input_prompts/icons/joypad_motion/nintendo",
 			"addons/input_prompts/icons/joypad_motion/sony",
 			"addons/input_prompts/icons/joypad_motion/xbox",
 		]
