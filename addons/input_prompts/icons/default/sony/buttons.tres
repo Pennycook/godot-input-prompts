@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="JoypadButtonTextures" load_steps=19 format=3 uid="uid://b57x02xy6fqyt"]
+
+[ext_resource type="Texture2D" uid="uid://cswsytxlhp8pl" path="res://addons/input_prompts/icons/default/sony/playstation_button_color_cross.png" id="1_nljo0"]
+[ext_resource type="Texture2D" uid="uid://gxk37kxerorl" path="res://addons/input_prompts/icons/default/sony/playstation_button_color_circle.png" id="2_u38q7"]
+[ext_resource type="Texture2D" uid="uid://dujypog5ehtoc" path="res://addons/input_prompts/icons/default/sony/playstation_trigger_r1.png" id="3_aydq5"]
+[ext_resource type="Texture2D" uid="uid://ci1w3f4dhuar8" path="res://addons/input_prompts/icons/default/sony/playstation_dpad_up.png" id="4_j4tt3"]
+[ext_resource type="Texture2D" uid="uid://oou0iodl0rnu" path="res://addons/input_prompts/icons/default/sony/playstation_dpad_down.png" id="5_to4lq"]
+[ext_resource type="Texture2D" uid="uid://bbjpw6ai84rs0" path="res://addons/input_prompts/icons/default/sony/playstation_dpad_left.png" id="6_b8ri3"]
+[ext_resource type="Texture2D" uid="uid://1j4xh0gybpli" path="res://addons/input_prompts/icons/default/sony/playstation_dpad_right.png" id="7_qhi0i"]
+[ext_resource type="Texture2D" uid="uid://b2va7rsvjtmjp" path="res://addons/input_prompts/icons/default/sony/playstation5_button_mute.png" id="8_4cbaw"]
+[ext_resource type="Texture2D" uid="uid://3nt6s0tj1wrd" path="res://addons/input_prompts/icons/default/sony/playstation_button_color_square.png" id="9_xao86"]
+[ext_resource type="Texture2D" uid="uid://djp3pdop7vqtp" path="res://addons/input_prompts/icons/1-bit/sony/touchpad.png" id="10_a6wxl"]
+[ext_resource type="Texture2D" uid="uid://c5k4e2rqia857" path="res://addons/input_prompts/icons/default/sony/playstation_button_color_triangle.png" id="11_s2rco"]
+[ext_resource type="Texture2D" uid="uid://cq4welkwya0h" path="res://addons/input_prompts/icons/default/sony/playstation3_button_select.png" id="12_sa8hw"]
+[ext_resource type="Texture2D" uid="uid://cmvlmwydl31cc" path="res://addons/input_prompts/icons/default/sony/playstation.png" id="13_8t24b"]
+[ext_resource type="Texture2D" uid="uid://dmvaq7h3ud6kr" path="res://addons/input_prompts/icons/default/sony/playstation3_button_start.png" id="14_ka0r0"]
+[ext_resource type="Texture2D" uid="uid://5yrn064g7krw" path="res://addons/input_prompts/icons/default/sony/playstation_stick_side_l.png" id="15_jg8nb"]
+[ext_resource type="Texture2D" uid="uid://rpfex13h2hks" path="res://addons/input_prompts/icons/default/sony/playstation_stick_side_r.png" id="16_xu4rl"]
+[ext_resource type="Texture2D" uid="uid://var4hq8mpj7g" path="res://addons/input_prompts/icons/default/sony/playstation_trigger_l1.png" id="17_8v454"]
+[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_button_textures.gd" id="18_3eum3"]
+
+[resource]
+script = ExtResource("18_3eum3")
+button_0 = ExtResource("1_nljo0")
+button_1 = ExtResource("2_u38q7")
+button_2 = ExtResource("9_xao86")
+button_3 = ExtResource("11_s2rco")
+button_4 = ExtResource("12_sa8hw")
+button_5 = ExtResource("13_8t24b")
+button_6 = ExtResource("14_ka0r0")
+button_7 = ExtResource("15_jg8nb")
+button_8 = ExtResource("16_xu4rl")
+button_9 = ExtResource("17_8v454")
+button_10 = ExtResource("3_aydq5")
+button_11 = ExtResource("4_j4tt3")
+button_12 = ExtResource("5_to4lq")
+button_13 = ExtResource("6_b8ri3")
+button_14 = ExtResource("7_qhi0i")
+button_15 = ExtResource("8_4cbaw")
+button_20 = ExtResource("10_a6wxl")

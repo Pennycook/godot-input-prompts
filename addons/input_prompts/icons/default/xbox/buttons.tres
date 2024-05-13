@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="JoypadButtonTextures" load_steps=18 format=3 uid="uid://cdnqi1hxn2tk0"]
+
+[ext_resource type="Texture2D" uid="uid://ii56ok10ulew" path="res://addons/input_prompts/icons/default/xbox/xbox_button_color_a.png" id="1_msk7w"]
+[ext_resource type="Texture2D" uid="uid://pe75urt01tsd" path="res://addons/input_prompts/icons/default/xbox/xbox_button_color_b.png" id="2_o5a2b"]
+[ext_resource type="Texture2D" uid="uid://c6g6e3o1nvdr" path="res://addons/input_prompts/icons/default/xbox/xbox_rb.png" id="3_a1df5"]
+[ext_resource type="Texture2D" uid="uid://byjdw3lckjgu1" path="res://addons/input_prompts/icons/default/xbox/xbox_dpad_up.png" id="4_kvi0q"]
+[ext_resource type="Texture2D" uid="uid://yor21k4g7fy8" path="res://addons/input_prompts/icons/default/xbox/xbox_dpad_down.png" id="5_i4j0n"]
+[ext_resource type="Texture2D" uid="uid://cj0gf7dlg8ohq" path="res://addons/input_prompts/icons/default/xbox/xbox_dpad_left.png" id="6_kils4"]
+[ext_resource type="Texture2D" uid="uid://7dikv3l0oig7" path="res://addons/input_prompts/icons/default/xbox/xbox_dpad_right.png" id="7_yhfhp"]
+[ext_resource type="Texture2D" uid="uid://8qpy1pv2f4t0" path="res://addons/input_prompts/icons/default/xbox/xbox_button_share.png" id="8_0hjgb"]
+[ext_resource type="Texture2D" uid="uid://bg2udsdqdetbd" path="res://addons/input_prompts/icons/default/xbox/xbox_button_color_x.png" id="9_8cejc"]
+[ext_resource type="Texture2D" uid="uid://cb0jocx6q3ise" path="res://addons/input_prompts/icons/default/xbox/xbox_button_color_y.png" id="10_q0whg"]
+[ext_resource type="Texture2D" uid="uid://b5fcvo1a1xyd8" path="res://addons/input_prompts/icons/default/xbox/xbox_button_view.png" id="11_asolr"]
+[ext_resource type="Texture2D" uid="uid://lhkp4rduvkmd" path="res://addons/input_prompts/icons/default/xbox/xbox_guide.png" id="12_xthsy"]
+[ext_resource type="Texture2D" uid="uid://hxetmxum6sgb" path="res://addons/input_prompts/icons/default/xbox/xbox_button_menu.png" id="13_4gyk0"]
+[ext_resource type="Texture2D" uid="uid://cqorf6qpp3uik" path="res://addons/input_prompts/icons/default/xbox/xbox_stick_side_l.png" id="14_huim2"]
+[ext_resource type="Texture2D" uid="uid://bl445i85l8pjt" path="res://addons/input_prompts/icons/default/xbox/xbox_stick_side_r.png" id="15_8akvy"]
+[ext_resource type="Texture2D" uid="uid://dqg1dld1jibfg" path="res://addons/input_prompts/icons/default/xbox/xbox_lb.png" id="16_sqxqx"]
+[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_button_textures.gd" id="17_lbp44"]
+
+[resource]
+script = ExtResource("17_lbp44")
+button_0 = ExtResource("1_msk7w")
+button_1 = ExtResource("2_o5a2b")
+button_2 = ExtResource("9_8cejc")
+button_3 = ExtResource("10_q0whg")
+button_4 = ExtResource("11_asolr")
+button_5 = ExtResource("12_xthsy")
+button_6 = ExtResource("13_4gyk0")
+button_7 = ExtResource("14_huim2")
+button_8 = ExtResource("15_8akvy")
+button_9 = ExtResource("16_sqxqx")
+button_10 = ExtResource("3_a1df5")
+button_11 = ExtResource("4_kvi0q")
+button_12 = ExtResource("5_i4j0n")
+button_13 = ExtResource("6_kils4")
+button_14 = ExtResource("7_yhfhp")
+button_15 = ExtResource("8_0hjgb")
