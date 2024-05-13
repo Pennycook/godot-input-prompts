@@ -100,6 +100,51 @@ var _xbox_motion_textures: JoypadMotionTextures = _get_joypad_textures(
 )
 
 
+func _reload_textures() -> void:
+	_icon_style = ProjectSettings.get_setting("addons/input_prompts/icons/style", "Default")
+
+	_keyboard_textures = _get_textures(
+		"addons/input_prompts/icons/keyboard",
+		"keyboard/keys.tres"
+	)
+
+	_mouse_button_textures = _get_textures(
+		"addons/input_prompts/icons/mouse_buttons",
+		"mouse/buttons.tres"
+	)
+
+	_nintendo_button_textures = _get_joypad_textures(
+		"nintendo", "buttons"
+	)
+
+	_sony_button_textures = _get_joypad_textures(
+		"sony", "buttons"
+	)
+
+	_xbox_button_textures = _get_joypad_textures(
+		"xbox", "buttons"
+	)
+
+	_nintendo_motion_textures = _get_joypad_textures(
+		"nintendo", "motion"
+	)
+
+	_sony_motion_textures = _get_joypad_textures(
+		"sony", "motion"
+	)
+
+	_xbox_motion_textures = _get_joypad_textures(
+		"xbox", "motion"
+	)
+
+	refresh()
+
+
+func _ready():
+	if Engine.is_editor_hint():
+		ProjectSettings.settings_changed.connect(_reload_textures)
+
+
 ## Force all [InputPrompt] nodes to refresh their icons and events.
 ## Must be called if the [InputMap] is changed.
 func refresh() -> void:
