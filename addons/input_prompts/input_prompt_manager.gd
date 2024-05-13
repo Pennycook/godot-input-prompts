@@ -50,7 +50,7 @@ var joypad_detection_deadzone := ProjectSettings.get_setting(
 	"addons/input_prompts/joypad_detection_deadzone", 0.5
 )
 
-var _icon_style := ProjectSettings.get_setting("addons/input_prompts/icons/style", "Pixel")
+var _icon_style := ProjectSettings.get_setting("addons/input_prompts/icons/style", "Default")
 
 func _get_textures(setting: StringName, resource: StringName) -> Resource:
 	if ProjectSettings.get_setting(setting):

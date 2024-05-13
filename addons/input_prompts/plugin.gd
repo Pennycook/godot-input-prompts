@@ -27,15 +27,15 @@ func _enter_tree():
 
 		var style_setting := "addons/input_prompts/icons/style"
 		if not ProjectSettings.has_setting(style_setting):
-			ProjectSettings.set_setting(style_setting, "Pixel")
-			ProjectSettings.set_initial_value(style_setting, "Pixel")
+			ProjectSettings.set_setting(style_setting, "Default")
+			ProjectSettings.set_initial_value(style_setting, "Default")
 			ProjectSettings.set_as_basic(style_setting, true)
 			ProjectSettings.add_property_info(
 				{
 					"name": style_setting,
 					"type": TYPE_STRING,
 					"hint": PROPERTY_HINT_ENUM,
-					"hint_string": "1-bit,Pixel"
+					"hint_string": "Default,1-bit,Pixel"
 				}
 			)
 
