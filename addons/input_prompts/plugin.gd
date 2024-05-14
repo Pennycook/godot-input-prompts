@@ -7,7 +7,6 @@ var inspector_plugin = preload("res://addons/input_prompts/inspector_plugin.gd")
 
 
 func _enter_tree():
-
 	if Engine.is_editor_hint():
 		var deadzone_setting := "addons/input_prompts/joypad_detection_deadzone"
 		if not ProjectSettings.has_setting(deadzone_setting):
