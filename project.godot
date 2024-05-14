@@ -21,8 +21,8 @@ PromptManager="*res://addons/input_prompts/input_prompt_manager.gd"
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=320
+window/size/viewport_width=1080
+window/size/viewport_height=768
 window/stretch/mode="viewport"
 
 [editor_plugins]
