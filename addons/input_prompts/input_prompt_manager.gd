@@ -166,11 +166,11 @@ func _input(event: InputEvent):
 
 		var device = event.device
 		var joy_name = Input.get_joy_name(device)
-		if joy_name.find("Xbox"):
+		if joy_name.find("Xbox") != -1:
 			joy_icons = InputPrompt.Icons.XBOX
-		elif joy_name.find("DualShock") or joy_name.find("PS"):
+		elif joy_name.find("DualShock") != -1 or joy_name.find("PS") != -1:
 			joy_icons = InputPrompt.Icons.SONY
-		elif joy_name.find("Nintendo"):
+		elif joy_name.find("Nintendo") != -1:
 			joy_icons = InputPrompt.Icons.NINTENDO
 		else:
 			joy_icons = InputPrompt.Icons.XBOX
