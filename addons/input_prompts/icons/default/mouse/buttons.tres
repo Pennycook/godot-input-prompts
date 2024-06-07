@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MouseButtonTextures" load_steps=9 format=3 uid="uid://ba6wpilfyoyos"]
+
+[ext_resource type="Texture2D" uid="uid://bcnibf8l1yo4s" path="res://addons/input_prompts/icons/default/mouse/mouse_left.png" id="1_6ije0"]
+[ext_resource type="Script" path="res://addons/input_prompts/resources/mouse_button_textures.gd" id="1_n1vb8"]
+[ext_resource type="Texture2D" uid="uid://ddnuqvq0qdsvf" path="res://addons/input_prompts/icons/default/mouse/mouse_right.png" id="2_ihn4e"]
+[ext_resource type="Texture2D" uid="uid://b4uu07rk3n0l3" path="res://addons/input_prompts/icons/default/mouse/mouse_scroll.png" id="3_waibx"]
+[ext_resource type="Texture2D" uid="uid://ci87lq46d8wcm" path="res://addons/input_prompts/icons/default/mouse/mouse_scroll_up.png" id="4_k2lnp"]
+[ext_resource type="Texture2D" uid="uid://dgqd68w67ckwm" path="res://addons/input_prompts/icons/default/mouse/mouse_scroll_down.png" id="5_c6xl7"]
+[ext_resource type="Texture2D" uid="uid://chrngedc3m28u" path="res://addons/input_prompts/icons/default/mouse/mouse_scroll_left.png" id="6_axpir"]
+[ext_resource type="Texture2D" uid="uid://dtebnvkwr2h1m" path="res://addons/input_prompts/icons/default/mouse/mouse_scroll_right.png" id="7_7ke4q"]
+
+[resource]
+script = ExtResource("1_n1vb8")
+button_1 = ExtResource("1_6ije0")
+button_2 = ExtResource("2_ihn4e")
+button_3 = ExtResource("3_waibx")
+button_4 = ExtResource("4_k2lnp")
+button_5 = ExtResource("5_c6xl7")
+button_6 = ExtResource("6_axpir")
+button_7 = ExtResource("7_7ke4q")

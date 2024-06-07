@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="JoypadMotionTextures" load_steps=12 format=3 uid="uid://2ahy3vht2i47"]
+
+[ext_resource type="Texture2D" uid="uid://db7tnung15n4r" path="res://addons/input_prompts/icons/default/sony/playstation_stick_l_left.png" id="1_1pm0n"]
+[ext_resource type="Texture2D" uid="uid://5cikok7p2hpg" path="res://addons/input_prompts/icons/default/sony/playstation_stick_l_right.png" id="2_weinp"]
+[ext_resource type="Texture2D" uid="uid://yoqvswvu456y" path="res://addons/input_prompts/icons/default/sony/playstation_stick_l_up.png" id="3_llwqm"]
+[ext_resource type="Texture2D" uid="uid://cmcmbhgfl1bmo" path="res://addons/input_prompts/icons/default/sony/playstation_stick_l_down.png" id="4_4vdsr"]
+[ext_resource type="Texture2D" uid="uid://dddtola3pyosp" path="res://addons/input_prompts/icons/default/sony/playstation_stick_r_left.png" id="5_5hfn8"]
+[ext_resource type="Texture2D" uid="uid://dv0qfxnjynm6j" path="res://addons/input_prompts/icons/default/sony/playstation_stick_r_right.png" id="6_usrmt"]
+[ext_resource type="Texture2D" uid="uid://oct8x4v1neyn" path="res://addons/input_prompts/icons/default/sony/playstation_stick_r_up.png" id="7_mahdl"]
+[ext_resource type="Texture2D" uid="uid://bol3kdtc8my73" path="res://addons/input_prompts/icons/default/sony/playstation_stick_r_down.png" id="8_66fr2"]
+[ext_resource type="Texture2D" uid="uid://bujoy2waose5i" path="res://addons/input_prompts/icons/default/sony/playstation_trigger_l2.png" id="9_0375w"]
+[ext_resource type="Texture2D" uid="uid://bmks8ekbt1fhd" path="res://addons/input_prompts/icons/default/sony/playstation_trigger_r2.png" id="10_ovtdt"]
+[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="11_qrhjk"]
+
+[resource]
+script = ExtResource("11_qrhjk")
+axis_0_minus = ExtResource("1_1pm0n")
+axis_0_plus = ExtResource("2_weinp")
+axis_1_minus = ExtResource("3_llwqm")
+axis_1_plus = ExtResource("4_4vdsr")
+axis_2_minus = ExtResource("5_5hfn8")
+axis_2_plus = ExtResource("6_usrmt")
+axis_3_minus = ExtResource("7_mahdl")
+axis_3_plus = ExtResource("8_66fr2")
+axis_4_plus = ExtResource("9_0375w")
+axis_5_plus = ExtResource("10_ovtdt")

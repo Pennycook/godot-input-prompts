@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="JoypadMotionTextures" load_steps=12 format=3 uid="uid://dueprnvbgh2gb"]
+
+[ext_resource type="Texture2D" uid="uid://cw41o8o1a14cn" path="res://addons/input_prompts/icons/default/nintendo/switch_stick_l_left.png" id="1_3d7h5"]
+[ext_resource type="Texture2D" uid="uid://y6ng2ykq05ev" path="res://addons/input_prompts/icons/default/nintendo/switch_stick_l_right.png" id="2_63644"]
+[ext_resource type="Texture2D" uid="uid://cp22fj2i43w71" path="res://addons/input_prompts/icons/default/nintendo/switch_stick_l_up.png" id="3_875he"]
+[ext_resource type="Texture2D" uid="uid://cmfp5o1yhljxr" path="res://addons/input_prompts/icons/default/nintendo/switch_stick_l_down.png" id="4_x2d00"]
+[ext_resource type="Texture2D" uid="uid://cnoyxvuu2bner" path="res://addons/input_prompts/icons/default/nintendo/switch_stick_r_left.png" id="5_3dris"]
+[ext_resource type="Texture2D" uid="uid://n68aifxovadq" path="res://addons/input_prompts/icons/default/nintendo/switch_stick_r_right.png" id="6_rrukx"]
+[ext_resource type="Texture2D" uid="uid://0syhr15t7hq6" path="res://addons/input_prompts/icons/default/nintendo/switch_stick_r_up.png" id="7_ty2r5"]
+[ext_resource type="Texture2D" uid="uid://nulj2up82d5" path="res://addons/input_prompts/icons/default/nintendo/switch_stick_r_down.png" id="8_7327f"]
+[ext_resource type="Texture2D" uid="uid://go44vicp553f" path="res://addons/input_prompts/icons/default/nintendo/switch_button_zl.png" id="9_c6pau"]
+[ext_resource type="Texture2D" uid="uid://cqtuny6qwy43s" path="res://addons/input_prompts/icons/default/nintendo/switch_button_zr.png" id="10_tma6r"]
+[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="11_ookh4"]
+
+[resource]
+script = ExtResource("11_ookh4")
+axis_0_minus = ExtResource("1_3d7h5")
+axis_0_plus = ExtResource("2_63644")
+axis_1_minus = ExtResource("3_875he")
+axis_1_plus = ExtResource("4_x2d00")
+axis_2_minus = ExtResource("5_3dris")
+axis_2_plus = ExtResource("6_rrukx")
+axis_3_minus = ExtResource("7_ty2r5")
+axis_3_plus = ExtResource("8_7327f")
+axis_4_plus = ExtResource("9_c6pau")
+axis_5_plus = ExtResource("10_tma6r")

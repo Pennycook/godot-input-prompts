@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="JoypadMotionTextures" load_steps=12 format=3 uid="uid://b5n6plioxgg60"]
+
+[ext_resource type="Texture2D" uid="uid://jyfbajiun5mm" path="res://addons/input_prompts/icons/1-bit/xbox/left_stick_left.png" id="1_8g0ik"]
+[ext_resource type="Texture2D" uid="uid://do8x2w1ub0rip" path="res://addons/input_prompts/icons/1-bit/xbox/left_stick_right.png" id="2_bko66"]
+[ext_resource type="Texture2D" uid="uid://bkdg2n6a5luwr" path="res://addons/input_prompts/icons/1-bit/xbox/left_stick_up.png" id="3_3ntkk"]
+[ext_resource type="Texture2D" uid="uid://dy54w5673eoga" path="res://addons/input_prompts/icons/1-bit/xbox/left_stick_down.png" id="4_r8l86"]
+[ext_resource type="Texture2D" uid="uid://t5nhtptkmx33" path="res://addons/input_prompts/icons/1-bit/xbox/right_stick_left.png" id="5_6hctq"]
+[ext_resource type="Texture2D" uid="uid://dck8vqke1p6ul" path="res://addons/input_prompts/icons/1-bit/xbox/right_stick_right.png" id="6_80eef"]
+[ext_resource type="Texture2D" uid="uid://b2hlfhxprjwys" path="res://addons/input_prompts/icons/1-bit/xbox/right_stick_up.png" id="7_1shxx"]
+[ext_resource type="Texture2D" uid="uid://cgqjs5uqhxsnl" path="res://addons/input_prompts/icons/1-bit/xbox/right_stick_down.png" id="8_cx6u2"]
+[ext_resource type="Texture2D" uid="uid://d2d85y5m7kboh" path="res://addons/input_prompts/icons/1-bit/xbox/left_trigger.png" id="9_xgvtp"]
+[ext_resource type="Texture2D" uid="uid://jwg2s1bh5itw" path="res://addons/input_prompts/icons/1-bit/xbox/right_trigger.png" id="10_qnwsf"]
+[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="11_8bkpt"]
+
+[resource]
+script = ExtResource("11_8bkpt")
+axis_0_minus = ExtResource("1_8g0ik")
+axis_0_plus = ExtResource("2_bko66")
+axis_1_minus = ExtResource("3_3ntkk")
+axis_1_plus = ExtResource("4_r8l86")
+axis_2_minus = ExtResource("5_6hctq")
+axis_2_plus = ExtResource("6_80eef")
+axis_3_minus = ExtResource("7_1shxx")
+axis_3_plus = ExtResource("8_cx6u2")
+axis_4_plus = ExtResource("9_xgvtp")
+axis_5_plus = ExtResource("10_qnwsf")

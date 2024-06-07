@@ -53,7 +53,6 @@ func _enter_tree():
 
 func _exit_tree():
 	remove_from_group("_input_prompts")
-	PromptManager.icons_changed.disconnect(_update_icon)
 
 
 ## Force this [InputPrompt] node to refresh its icons and events.

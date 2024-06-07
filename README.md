@@ -8,8 +8,6 @@ The current version supports the following icons:
 - PlayStation
 - Nintendo Switch
 
-Please note that the PlayStation icons must be completed manually in an editor.
-
 ## Installation
 
 To install, follow the latest instructions for [installing
