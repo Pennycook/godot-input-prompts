@@ -1,0 +1,224 @@
+[gd_resource type="Resource" script_class="KeyboardTextures" load_steps=111 format=3 uid="uid://bvmmypualchk2"]
+
+[ext_resource type="Texture2D" uid="uid://7x0y2x3e3c5g" path="res://addons/input_prompts/icons/default/keyboard/keyboard_0.png" id="1_ac3f1"]
+[ext_resource type="Texture2D" uid="uid://csmtkxvd1dnq8" path="res://addons/input_prompts/icons/default/keyboard/keyboard_1.png" id="2_x2jpn"]
+[ext_resource type="Texture2D" uid="uid://cdqqinm6adxvm" path="res://addons/input_prompts/icons/default/keyboard/keyboard_2.png" id="3_1u8mf"]
+[ext_resource type="Texture2D" uid="uid://dg2iitwqo80ee" path="res://addons/input_prompts/icons/default/keyboard/keyboard_3.png" id="4_sj82a"]
+[ext_resource type="Texture2D" uid="uid://dgfx2kv5yfl16" path="res://addons/input_prompts/icons/default/keyboard/keyboard_4.png" id="5_412a7"]
+[ext_resource type="Texture2D" uid="uid://boceo0fo5rmiq" path="res://addons/input_prompts/icons/default/keyboard/keyboard_5.png" id="6_puoat"]
+[ext_resource type="Texture2D" uid="uid://bscxit604cliy" path="res://addons/input_prompts/icons/default/keyboard/keyboard_6.png" id="7_vswn6"]
+[ext_resource type="Texture2D" uid="uid://cu08hkf0uwseh" path="res://addons/input_prompts/icons/default/keyboard/keyboard_7.png" id="8_ywf40"]
+[ext_resource type="Texture2D" uid="uid://dw136ccftkaxw" path="res://addons/input_prompts/icons/default/keyboard/keyboard_8.png" id="9_mr0wg"]
+[ext_resource type="Texture2D" uid="uid://ob7fdo4u26ns" path="res://addons/input_prompts/icons/default/keyboard/keyboard_9.png" id="10_jepbb"]
+[ext_resource type="Texture2D" uid="uid://bqjcyupruiang" path="res://addons/input_prompts/icons/default/keyboard/keyboard_a.png" id="11_x0m5r"]
+[ext_resource type="Texture2D" uid="uid://cms3gmj3rovd8" path="res://addons/input_prompts/icons/default/keyboard/keyboard_alt.png" id="12_tq6iy"]
+[ext_resource type="Texture2D" uid="uid://buqmfnfk4p2ku" path="res://addons/input_prompts/icons/default/keyboard/keyboard_apostrophe.png" id="13_rt0n0"]
+[ext_resource type="Texture2D" uid="uid://b8m32g4qarnq8" path="res://addons/input_prompts/icons/default/keyboard/keyboard_caret.png" id="14_pcbwr"]
+[ext_resource type="Texture2D" uid="uid://b08p5bxl0u4lk" path="res://addons/input_prompts/icons/default/keyboard/keyboard_tilde.png" id="15_tanqn"]
+[ext_resource type="Texture2D" uid="uid://l0vd1p4mbi7y" path="res://addons/input_prompts/icons/default/keyboard/keyboard_asterisk.png" id="16_queft"]
+[ext_resource type="Texture2D" uid="uid://bj2d73gd5gtn2" path="res://addons/input_prompts/icons/default/keyboard/keyboard_at.png" id="17_7ff1i"]
+[ext_resource type="Texture2D" uid="uid://df75vpx00tvuq" path="res://addons/input_prompts/icons/default/keyboard/keyboard_b.png" id="18_6t4mw"]
+[ext_resource type="Texture2D" uid="uid://wh0q646b7lat" path="res://addons/input_prompts/icons/default/keyboard/keyboard_media_back.png" id="18_x7m35"]
+[ext_resource type="Texture2D" uid="uid://cjnp4wujudcmp" path="res://addons/input_prompts/icons/default/keyboard/keyboard_slash_back.png" id="20_2br7e"]
+[ext_resource type="Texture2D" uid="uid://b0l5ald57h2sv" path="res://addons/input_prompts/icons/default/keyboard/keyboard_backspace_icon.png" id="20_c0mr7"]
+[ext_resource type="Texture2D" uid="uid://c548lvjp0h54j" path="res://addons/input_prompts/icons/default/keyboard/keyboard_pipe.png" id="22_qaqie"]
+[ext_resource type="Texture2D" uid="uid://dfs0ln4sw0pl5" path="res://addons/input_prompts/icons/default/keyboard/keyboard_bracket_open.png" id="23_1ncrh"]
+[ext_resource type="Texture2D" uid="uid://55mopdk88j2f" path="res://addons/input_prompts/icons/default/keyboard/keyboard_bracket_close.png" id="24_fexg3"]
+[ext_resource type="Texture2D" uid="uid://cohhwo2hh3i1d" path="res://addons/input_prompts/icons/default/keyboard/keyboard_cbracket_open.png" id="25_fmlar"]
+[ext_resource type="Texture2D" uid="uid://bs3dqp3o11oxj" path="res://addons/input_prompts/icons/default/keyboard/keyboard_cbracket_close.png" id="26_1hqgn"]
+[ext_resource type="Texture2D" uid="uid://wg8xmr2kmrta" path="res://addons/input_prompts/icons/default/keyboard/keyboard_c.png" id="27_jxsi2"]
+[ext_resource type="Texture2D" uid="uid://2blhtiarwfq7" path="res://addons/input_prompts/icons/default/keyboard/keyboard_capslock.png" id="28_ekbat"]
+[ext_resource type="Texture2D" uid="uid://ctyvbo137ca0a" path="res://addons/input_prompts/icons/default/keyboard/keyboard_colon.png" id="29_flxyv"]
+[ext_resource type="Texture2D" uid="uid://f02yvc8i5x3k" path="res://addons/input_prompts/icons/default/keyboard/keyboard_comma.png" id="30_jt63w"]
+[ext_resource type="Texture2D" uid="uid://cosjkno4v604" path="res://addons/input_prompts/icons/default/keyboard/keyboard_ctrl.png" id="31_7mcvp"]
+[ext_resource type="Texture2D" uid="uid://b4csaql52onko" path="res://addons/input_prompts/icons/default/keyboard/keyboard_delete.png" id="32_0fs5r"]
+[ext_resource type="Texture2D" uid="uid://gy6dph1uuaml" path="res://addons/input_prompts/icons/default/keyboard/keyboard_d.png" id="32_wd13h"]
+[ext_resource type="Texture2D" uid="uid://cihgksx88fpwn" path="res://addons/input_prompts/icons/default/keyboard/keyboard_dollar.png" id="34_wckrt"]
+[ext_resource type="Texture2D" uid="uid://c0w6tjjfu12vd" path="res://addons/input_prompts/icons/default/keyboard/keyboard_arrow_down.png" id="35_gbhhk"]
+[ext_resource type="Texture2D" uid="uid://desvwyv572upi" path="res://addons/input_prompts/icons/default/keyboard/keyboard_e.png" id="36_4mcnk"]
+[ext_resource type="Texture2D" uid="uid://dbxnuvqlq8boe" path="res://addons/input_prompts/icons/default/keyboard/keyboard_return.png" id="37_qw0lj"]
+[ext_resource type="Texture2D" uid="uid://cv3l00ck52v1s" path="res://addons/input_prompts/icons/default/keyboard/keyboard_end.png" id="37_ypk1x"]
+[ext_resource type="Texture2D" uid="uid://b752w3yuotnxa" path="res://addons/input_prompts/icons/default/keyboard/keyboard_equals.png" id="39_jmw7c"]
+[ext_resource type="Texture2D" uid="uid://dqc4mgiv0i5o0" path="res://addons/input_prompts/icons/default/keyboard/keyboard_escape.png" id="39_poe0k"]
+[ext_resource type="Texture2D" uid="uid://by3a4elh8j216" path="res://addons/input_prompts/icons/default/keyboard/keyboard_exclamation.png" id="41_jfdfe"]
+[ext_resource type="Texture2D" uid="uid://bi50fenle2oge" path="res://addons/input_prompts/icons/default/keyboard/keyboard_f.png" id="42_ye7ol"]
+[ext_resource type="Texture2D" uid="uid://bnp74yjbvwmyr" path="res://addons/input_prompts/icons/default/keyboard/keyboard_f1.png" id="43_d0txr"]
+[ext_resource type="Texture2D" uid="uid://cewxdvdeih7kq" path="res://addons/input_prompts/icons/default/keyboard/keyboard_f10.png" id="44_7qt2k"]
+[ext_resource type="Texture2D" uid="uid://c0k2cxmof8d0p" path="res://addons/input_prompts/icons/default/keyboard/keyboard_f11.png" id="45_w6gg2"]
+[ext_resource type="Texture2D" uid="uid://bh36sicq2401l" path="res://addons/input_prompts/icons/default/keyboard/keyboard_f12.png" id="46_nevwa"]
+[ext_resource type="Texture2D" uid="uid://cn3cduu2cf0cd" path="res://addons/input_prompts/icons/default/keyboard/keyboard_f2.png" id="47_mwm7f"]
+[ext_resource type="Texture2D" uid="uid://bn30yluq03cxx" path="res://addons/input_prompts/icons/default/keyboard/keyboard_f3.png" id="48_2dmnp"]
+[ext_resource type="Texture2D" uid="uid://cwh2m7sbap0ui" path="res://addons/input_prompts/icons/default/keyboard/keyboard_f4.png" id="49_abnpf"]
+[ext_resource type="Texture2D" uid="uid://bodqqfgiiob6i" path="res://addons/input_prompts/icons/default/keyboard/keyboard_f5.png" id="50_21rl0"]
+[ext_resource type="Texture2D" uid="uid://rvmmawhoqi5s" path="res://addons/input_prompts/icons/default/keyboard/keyboard_f6.png" id="51_px1en"]
+[ext_resource type="Texture2D" uid="uid://73wjvtwpxrn5" path="res://addons/input_prompts/icons/default/keyboard/keyboard_f7.png" id="52_m1g8o"]
+[ext_resource type="Texture2D" uid="uid://b1lt0lu5cc55u" path="res://addons/input_prompts/icons/default/keyboard/keyboard_f8.png" id="53_j2q3u"]
+[ext_resource type="Texture2D" uid="uid://nohq0bdgd7bp" path="res://addons/input_prompts/icons/default/keyboard/keyboard_f9.png" id="54_67uf8"]
+[ext_resource type="Texture2D" uid="uid://cy7qiaswayevo" path="res://addons/input_prompts/icons/default/keyboard/keyboard_media_forward.png" id="54_ps13a"]
+[ext_resource type="Texture2D" uid="uid://7273raa3xm1u" path="res://addons/input_prompts/icons/default/keyboard/keyboard_g.png" id="56_q6bwb"]
+[ext_resource type="Texture2D" uid="uid://ctw86rssup8a3" path="res://addons/input_prompts/icons/default/keyboard/keyboard_bracket_greater.png" id="57_3xl6q"]
+[ext_resource type="Texture2D" uid="uid://dai0obytd21t7" path="res://addons/input_prompts/icons/default/keyboard/keyboard_h.png" id="58_evnid"]
+[ext_resource type="Texture2D" uid="uid://o64u5m33r4kw" path="res://addons/input_prompts/icons/default/keyboard/keyboard_home.png" id="59_lo1v5"]
+[ext_resource type="Texture2D" uid="uid://cmbh526euffei" path="res://addons/input_prompts/icons/default/keyboard/keyboard_i.png" id="60_tx7bp"]
+[ext_resource type="Texture2D" uid="uid://dh20d2ggdbo6r" path="res://addons/input_prompts/icons/default/keyboard/keyboard_insert.png" id="61_hpiyq"]
+[ext_resource type="Texture2D" uid="uid://tido2vjka2p3" path="res://addons/input_prompts/icons/default/keyboard/keyboard_j.png" id="62_l2bqx"]
+[ext_resource type="Texture2D" uid="uid://b5sxkbjuo3ghj" path="res://addons/input_prompts/icons/default/keyboard/keyboard_k.png" id="63_4yvt7"]
+[ext_resource type="Texture2D" uid="uid://cgl56mqon0vc4" path="res://addons/input_prompts/icons/default/keyboard/keyboard_l.png" id="64_r26sw"]
+[ext_resource type="Texture2D" uid="uid://b2jd0yomjcuxr" path="res://addons/input_prompts/icons/default/keyboard/keyboard_arrow_left.png" id="65_52dpb"]
+[ext_resource type="Texture2D" uid="uid://c5ibi4hnds6om" path="res://addons/input_prompts/icons/default/keyboard/keyboard_bracket_less.png" id="66_1l22t"]
+[ext_resource type="Texture2D" uid="uid://bp81afmcwnliw" path="res://addons/input_prompts/icons/default/keyboard/keyboard_media_next.png" id="67_2d5f0"]
+[ext_resource type="Texture2D" uid="uid://dmufqnyl3ym20" path="res://addons/input_prompts/icons/default/keyboard/keyboard_m.png" id="67_rk80v"]
+[ext_resource type="Texture2D" uid="uid://4vtvnl06opub" path="res://addons/input_prompts/icons/default/keyboard/keyboard_media_play.png" id="68_ujfen"]
+[ext_resource type="Texture2D" uid="uid://0ckkoii2hgfv" path="res://addons/input_prompts/icons/default/keyboard/keyboard_media_previous.png" id="69_463x0"]
+[ext_resource type="Texture2D" uid="uid://cmxg4x0ww157s" path="res://addons/input_prompts/icons/default/keyboard/keyboard_media_record.png" id="70_pnemo"]
+[ext_resource type="Texture2D" uid="uid://b4gvjurle3t13" path="res://addons/input_prompts/icons/default/keyboard/keyboard_media_stop.png" id="71_2s4fw"]
+[ext_resource type="Texture2D" uid="uid://cx22mgoijbqap" path="res://addons/input_prompts/icons/default/keyboard/keyboard_win.png" id="73_kvmg4"]
+[ext_resource type="Texture2D" uid="uid://qqr5jbn80nr" path="res://addons/input_prompts/icons/default/keyboard/keyboard_minus.png" id="74_fxq7s"]
+[ext_resource type="Texture2D" uid="uid://cri07kdnjj6up" path="res://addons/input_prompts/icons/default/keyboard/keyboard_n.png" id="75_l77sx"]
+[ext_resource type="Texture2D" uid="uid://d1qcwa53d85j7" path="res://addons/input_prompts/icons/default/keyboard/keyboard_numlock.png" id="76_buu6c"]
+[ext_resource type="Texture2D" uid="uid://i7i0vaxg3vwv" path="res://addons/input_prompts/icons/default/keyboard/keyboard_hash.png" id="76_gy764"]
+[ext_resource type="Texture2D" uid="uid://s4meqyfknu7o" path="res://addons/input_prompts/icons/default/keyboard/keyboard_o.png" id="78_bkfvy"]
+[ext_resource type="Texture2D" uid="uid://dtm8yh8xmow7y" path="res://addons/input_prompts/icons/default/keyboard/keyboard_p.png" id="79_onsx1"]
+[ext_resource type="Texture2D" uid="uid://y6i6xepqb5d5" path="res://addons/input_prompts/icons/default/keyboard/keyboard_page_down.png" id="80_itp85"]
+[ext_resource type="Texture2D" uid="uid://yydoi4mrlr2a" path="res://addons/input_prompts/icons/default/keyboard/keyboard_media_pause.png" id="81_6u68u"]
+[ext_resource type="Texture2D" uid="uid://ja1rj5q2yrml" path="res://addons/input_prompts/icons/default/keyboard/keyboard_page_up.png" id="81_jpvnk"]
+[ext_resource type="Texture2D" uid="uid://ciq31g4n5ywj2" path="res://addons/input_prompts/icons/default/keyboard/keyboard_paren_open.png" id="82_is5n7"]
+[ext_resource type="Texture2D" uid="uid://h4ipefwki5ru" path="res://addons/input_prompts/icons/default/keyboard/keyboard_paren_close.png" id="83_g05um"]
+[ext_resource type="Texture2D" uid="uid://f33crg0oviu5" path="res://addons/input_prompts/icons/default/keyboard/keyboard_printscreen.png" id="84_hp788"]
+[ext_resource type="Texture2D" uid="uid://8ccfc48xg0rf" path="res://addons/input_prompts/icons/default/keyboard/keyboard_percent.png" id="85_c47ud"]
+[ext_resource type="Texture2D" uid="uid://btbpwm3p1q3xp" path="res://addons/input_prompts/icons/default/keyboard/keyboard_period.png" id="86_pamsj"]
+[ext_resource type="Texture2D" uid="uid://di3joyn88dycb" path="res://addons/input_prompts/icons/default/keyboard/keyboard_plus.png" id="87_xfdq5"]
+[ext_resource type="Texture2D" uid="uid://1gvy1jv1iih0" path="res://addons/input_prompts/icons/default/keyboard/keyboard_q.png" id="89_pc6tt"]
+[ext_resource type="Texture2D" uid="uid://bgua2rks6crt0" path="res://addons/input_prompts/icons/default/keyboard/keyboard_question.png" id="90_sb8pr"]
+[ext_resource type="Texture2D" uid="uid://bxwiw4lwbxy3w" path="res://addons/input_prompts/icons/default/keyboard/keyboard_quote.png" id="91_sl5hd"]
+[ext_resource type="Texture2D" uid="uid://4pou0letirb5" path="res://addons/input_prompts/icons/default/keyboard/keyboard_r.png" id="92_d8rkr"]
+[ext_resource type="Texture2D" uid="uid://bnyrdh3ogk640" path="res://addons/input_prompts/icons/default/keyboard/keyboard_arrow_right.png" id="93_wn6f8"]
+[ext_resource type="Texture2D" uid="uid://bkedsadu5nqn1" path="res://addons/input_prompts/icons/default/keyboard/keyboard_s.png" id="94_snub0"]
+[ext_resource type="Texture2D" uid="uid://m42wb7hf7dm7" path="res://addons/input_prompts/icons/default/keyboard/keyboard_scroll_lock.png" id="95_0prnn"]
+[ext_resource type="Texture2D" uid="uid://d1cu3htx8gyxu" path="res://addons/input_prompts/icons/default/keyboard/keyboard_tab_icon_alternative.png" id="96_8k1bg"]
+[ext_resource type="Texture2D" uid="uid://b7o5j4nhnj1mh" path="res://addons/input_prompts/icons/default/keyboard/keyboard_semicolon.png" id="96_rb0em"]
+[ext_resource type="Texture2D" uid="uid://bli7goamvgldb" path="res://addons/input_prompts/icons/default/keyboard/keyboard_shift_icon.png" id="97_0pvw5"]
+[ext_resource type="Texture2D" uid="uid://bikj0aqq8wyt2" path="res://addons/input_prompts/icons/default/keyboard/keyboard_slash_forward.png" id="98_cunpc"]
+[ext_resource type="Texture2D" uid="uid://dxxcil8wgt2ty" path="res://addons/input_prompts/icons/default/keyboard/keyboard_space.png" id="99_pi2eq"]
+[ext_resource type="Texture2D" uid="uid://6atfpjkutmls" path="res://addons/input_prompts/icons/default/keyboard/keyboard_t.png" id="100_wwc3h"]
+[ext_resource type="Texture2D" uid="uid://b0m2he5udsvv2" path="res://addons/input_prompts/icons/default/keyboard/keyboard_u.png" id="102_xn66x"]
+[ext_resource type="Texture2D" uid="uid://ch62cibljlqbu" path="res://addons/input_prompts/icons/default/keyboard/keyboard_underscore.png" id="103_2ieko"]
+[ext_resource type="Texture2D" uid="uid://beyynh77xdggs" path="res://addons/input_prompts/icons/default/keyboard/keyboard_arrow_up.png" id="104_dnkvi"]
+[ext_resource type="Texture2D" uid="uid://c5r0mminsy23l" path="res://addons/input_prompts/icons/default/keyboard/keyboard_v.png" id="105_1gp16"]
+[ext_resource type="Texture2D" uid="uid://dhglt0j45fdii" path="res://addons/input_prompts/icons/default/keyboard/keyboard_w.png" id="106_g5gy8"]
+[ext_resource type="Texture2D" uid="uid://i2qak1rohknw" path="res://addons/input_prompts/icons/default/keyboard/keyboard_x.png" id="107_4m56y"]
+[ext_resource type="Texture2D" uid="uid://vfpnovud2fv" path="res://addons/input_prompts/icons/default/keyboard/keyboard_y.png" id="108_cqsfp"]
+[ext_resource type="Texture2D" uid="uid://hx8nvq6easwq" path="res://addons/input_prompts/icons/default/keyboard/keyboard_z.png" id="109_re87w"]
+[ext_resource type="Script" path="res://addons/input_prompts/resources/keyboard_textures.gd" id="110_8rnjk"]
+
+[resource]
+script = ExtResource("110_8rnjk")
+Escape = ExtResource("39_poe0k")
+F1 = ExtResource("43_d0txr")
+F2 = ExtResource("47_mwm7f")
+F3 = ExtResource("48_2dmnp")
+F4 = ExtResource("49_abnpf")
+F5 = ExtResource("50_21rl0")
+F6 = ExtResource("51_px1en")
+F7 = ExtResource("52_m1g8o")
+F8 = ExtResource("53_j2q3u")
+F9 = ExtResource("54_67uf8")
+F10 = ExtResource("44_7qt2k")
+F11 = ExtResource("45_w6gg2")
+F12 = ExtResource("46_nevwa")
+AsciiTilde = ExtResource("15_tanqn")
+Exclam = ExtResource("41_jfdfe")
+At = ExtResource("17_7ff1i")
+NumberSign = ExtResource("76_gy764")
+1 = ExtResource("2_x2jpn")
+2 = ExtResource("3_1u8mf")
+3 = ExtResource("4_sj82a")
+4 = ExtResource("5_412a7")
+5 = ExtResource("6_puoat")
+6 = ExtResource("7_vswn6")
+7 = ExtResource("8_ywf40")
+8 = ExtResource("9_mr0wg")
+9 = ExtResource("10_jepbb")
+0 = ExtResource("1_ac3f1")
+Minus = ExtResource("74_fxq7s")
+Plus = ExtResource("87_xfdq5")
+Equal = ExtResource("39_jmw7c")
+UnderScore = ExtResource("103_2ieko")
+Bar = ExtResource("22_qaqie")
+Backspace = ExtResource("20_c0mr7")
+Q = ExtResource("89_pc6tt")
+W = ExtResource("106_g5gy8")
+E = ExtResource("36_4mcnk")
+R = ExtResource("92_d8rkr")
+T = ExtResource("100_wwc3h")
+Y = ExtResource("108_cqsfp")
+U = ExtResource("102_xn66x")
+I = ExtResource("60_tx7bp")
+O = ExtResource("78_bkfvy")
+P = ExtResource("79_onsx1")
+BracketLeft = ExtResource("25_fmlar")
+BracketRight = ExtResource("26_1hqgn")
+BraceLeft = ExtResource("23_1ncrh")
+BraceRight = ExtResource("24_fexg3")
+BackSlash = ExtResource("20_2br7e")
+Enter = ExtResource("37_qw0lj")
+A = ExtResource("11_x0m5r")
+S = ExtResource("94_snub0")
+D = ExtResource("32_wd13h")
+F = ExtResource("42_ye7ol")
+G = ExtResource("56_q6bwb")
+H = ExtResource("58_evnid")
+J = ExtResource("62_l2bqx")
+K = ExtResource("63_4yvt7")
+L = ExtResource("64_r26sw")
+Apostrophe = ExtResource("13_rt0n0")
+QuoteDbl = ExtResource("91_sl5hd")
+Colon = ExtResource("29_flxyv")
+Semicolon = ExtResource("96_rb0em")
+Asterisk = ExtResource("16_queft")
+Meta = ExtResource("73_kvmg4")
+Z = ExtResource("109_re87w")
+X = ExtResource("107_4m56y")
+C = ExtResource("27_jxsi2")
+V = ExtResource("105_1gp16")
+B = ExtResource("18_6t4mw")
+N = ExtResource("75_l77sx")
+M = ExtResource("67_rk80v")
+Less = ExtResource("66_1l22t")
+Greater = ExtResource("57_3xl6q")
+Question = ExtResource("90_sb8pr")
+Slash = ExtResource("98_cunpc")
+Up = ExtResource("104_dnkvi")
+Right = ExtResource("93_wn6f8")
+Down = ExtResource("35_gbhhk")
+Left = ExtResource("65_52dpb")
+Alt = ExtResource("12_tq6iy")
+Tab = ExtResource("96_8k1bg")
+Delete = ExtResource("32_0fs5r")
+End = ExtResource("37_ypk1x")
+NumLock = ExtResource("76_buu6c")
+Period = ExtResource("86_pamsj")
+Dollar = ExtResource("34_wckrt")
+Percent = ExtResource("85_c47ud")
+AsciiCircum = ExtResource("14_pcbwr")
+ParenLeft = ExtResource("82_is5n7")
+ParenRight = ExtResource("83_g05um")
+Ctrl = ExtResource("31_7mcvp")
+CapsLock = ExtResource("28_ekbat")
+Home = ExtResource("59_lo1v5")
+PageUp = ExtResource("81_jpvnk")
+PageDown = ExtResource("80_itp85")
+Comma = ExtResource("30_jt63w")
+MediaRecord = ExtResource("70_pnemo")
+Space = ExtResource("99_pi2eq")
+Shift = ExtResource("97_0pvw5")
+Insert = ExtResource("61_hpiyq")
+Print = ExtResource("84_hp788")
+ScrollLock = ExtResource("95_0prnn")
+Pause = ExtResource("81_6u68u")
+MediaPlay = ExtResource("68_ujfen")
+MediaStop = ExtResource("71_2s4fw")
+Back = ExtResource("18_x7m35")
+Forward = ExtResource("54_ps13a")
+MediaPrevious = ExtResource("69_463x0")
+MediaNext = ExtResource("67_2d5f0")

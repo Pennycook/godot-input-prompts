@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="JoypadMotionTextures" load_steps=12 format=3 uid="uid://drf31hkta1gi3"]
+
+[ext_resource type="Texture2D" uid="uid://cmejyacraoqrx" path="res://addons/input_prompts/icons/1-bit/nintendo/left_stick_left.png" id="1_g40js"]
+[ext_resource type="Texture2D" uid="uid://j8f20aeoicju" path="res://addons/input_prompts/icons/1-bit/nintendo/left_stick_right.png" id="2_234dm"]
+[ext_resource type="Texture2D" uid="uid://ro8jdbbasynn" path="res://addons/input_prompts/icons/1-bit/nintendo/left_stick_up.png" id="3_md2wt"]
+[ext_resource type="Texture2D" uid="uid://b88pu3p24uf5p" path="res://addons/input_prompts/icons/1-bit/nintendo/left_stick_down.png" id="4_riwu1"]
+[ext_resource type="Texture2D" uid="uid://hywcdjsgcwny" path="res://addons/input_prompts/icons/1-bit/nintendo/right_stick_left.png" id="5_7vvsc"]
+[ext_resource type="Texture2D" uid="uid://b7hrh3cf6tabe" path="res://addons/input_prompts/icons/1-bit/nintendo/right_stick_right.png" id="6_fh2wp"]
+[ext_resource type="Texture2D" uid="uid://cbjgkddvbehse" path="res://addons/input_prompts/icons/1-bit/nintendo/right_stick_up.png" id="7_2sxfk"]
+[ext_resource type="Texture2D" uid="uid://d388spk1tj805" path="res://addons/input_prompts/icons/1-bit/nintendo/right_stick_down.png" id="8_6eovd"]
+[ext_resource type="Texture2D" uid="uid://50sql8bhsuvl" path="res://addons/input_prompts/icons/1-bit/nintendo/zl.png" id="9_oard2"]
+[ext_resource type="Texture2D" uid="uid://8pfqnbwnirh1" path="res://addons/input_prompts/icons/1-bit/nintendo/zr.png" id="10_vneid"]
+[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="11_84p8n"]
+
+[resource]
+script = ExtResource("11_84p8n")
+axis_0_minus = ExtResource("1_g40js")
+axis_0_plus = ExtResource("2_234dm")
+axis_1_minus = ExtResource("3_md2wt")
+axis_1_plus = ExtResource("4_riwu1")
+axis_2_minus = ExtResource("5_7vvsc")
+axis_2_plus = ExtResource("6_fh2wp")
+axis_3_minus = ExtResource("7_2sxfk")
+axis_3_plus = ExtResource("8_6eovd")
+axis_4_plus = ExtResource("9_oard2")
+axis_5_plus = ExtResource("10_vneid")
