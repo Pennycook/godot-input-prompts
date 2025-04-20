@@ -44,15 +44,10 @@ func _set_icon(new_icon):
 func _update_events():
 	# In the Editor, InputMap reflects Editor settings
 	# Read the list of actions from ProjectSettings instead
-	# TODO: Find a cleaner way to cast these values
-	var tmp: Array = []
 	if Engine.is_editor_hint():
-		tmp = ProjectSettings.get_setting("input/" + action)["events"]
+		events.assign(ProjectSettings.get_setting("input/" + action)["events"])
 	else:
-		tmp = InputMap.action_get_events(action)
-	events = []
-	for ev in tmp:
-		events.append(ev)
+		events.assign(InputMap.action_get_events(action))
 	update_configuration_warnings()
 
 
