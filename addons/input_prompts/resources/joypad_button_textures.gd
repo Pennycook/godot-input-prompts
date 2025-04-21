@@ -78,4 +78,4 @@ func get_texture(event: InputEvent) -> Texture2D:
 		return null
 	var joypad_event := event as InputEventJoypadButton
 	var button := joypad_event.button_index
-	return get("button_" + str(button))
+	return get("button_%d" % button)

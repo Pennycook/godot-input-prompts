@@ -44,17 +44,17 @@ button_index = 1
 [sub_resource type="InputEventMouseButton" id="InputEventMouseButton_k1rqu"]
 button_index = 1
 
-[sub_resource type="InputEventKey" id="InputEventKey_onvmd"]
+[sub_resource type="InputEventKey" id="InputEventKey_1rqa4"]
 keycode = 4194309
 
-[sub_resource type="InputEventKey" id="InputEventKey_oeqrt"]
+[sub_resource type="InputEventKey" id="InputEventKey_xm42s"]
 keycode = 4194310
 
-[sub_resource type="InputEventKey" id="InputEventKey_ykvhj"]
+[sub_resource type="InputEventKey" id="InputEventKey_tdg64"]
 keycode = 32
 unicode = 32
 
-[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_1rqa4"]
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_nk31j"]
 
 [node name="Demo" type="CenterContainer"]
 anchors_preset = 15
@@ -205,7 +205,7 @@ stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_accept"
 icon = 0
-events = Array[InputEvent]([SubResource("InputEventKey_onvmd"), SubResource("InputEventKey_oeqrt"), SubResource("InputEventKey_ykvhj"), SubResource("InputEventJoypadButton_1rqa4")])
+events = Array[InputEvent]([SubResource("InputEventKey_1rqa4"), SubResource("InputEventKey_xm42s"), SubResource("InputEventKey_tdg64"), SubResource("InputEventJoypadButton_nk31j")])
 
 [node name="ui_cancel" type="HBoxContainer" parent="VBoxContainer/ActionPrompt"]
 layout_mode = 2
@@ -223,7 +223,7 @@ stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_accept"
 icon = 0
-events = Array[InputEvent]([SubResource("InputEventKey_onvmd"), SubResource("InputEventKey_oeqrt"), SubResource("InputEventKey_ykvhj"), SubResource("InputEventJoypadButton_1rqa4")])
+events = Array[InputEvent]([SubResource("InputEventKey_1rqa4"), SubResource("InputEventKey_xm42s"), SubResource("InputEventKey_tdg64"), SubResource("InputEventJoypadButton_nk31j")])
 
 [node name="ui_directions" type="HBoxContainer" parent="VBoxContainer/ActionPrompt"]
 layout_mode = 2
@@ -241,7 +241,7 @@ stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_accept"
 icon = 0
-events = Array[InputEvent]([SubResource("InputEventKey_onvmd"), SubResource("InputEventKey_oeqrt"), SubResource("InputEventKey_ykvhj"), SubResource("InputEventJoypadButton_1rqa4")])
+events = Array[InputEvent]([SubResource("InputEventKey_1rqa4"), SubResource("InputEventKey_xm42s"), SubResource("InputEventKey_tdg64"), SubResource("InputEventJoypadButton_nk31j")])
 
 [node name="ActionPrompt2" type="TextureRect" parent="VBoxContainer/ActionPrompt/ui_directions"]
 layout_mode = 2
@@ -250,7 +250,7 @@ stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_accept"
 icon = 0
-events = Array[InputEvent]([SubResource("InputEventKey_onvmd"), SubResource("InputEventKey_oeqrt"), SubResource("InputEventKey_ykvhj"), SubResource("InputEventJoypadButton_1rqa4")])
+events = Array[InputEvent]([SubResource("InputEventKey_1rqa4"), SubResource("InputEventKey_xm42s"), SubResource("InputEventKey_tdg64"), SubResource("InputEventJoypadButton_nk31j")])
 
 [node name="ActionPrompt3" type="TextureRect" parent="VBoxContainer/ActionPrompt/ui_directions"]
 layout_mode = 2
@@ -259,7 +259,7 @@ stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_accept"
 icon = 0
-events = Array[InputEvent]([SubResource("InputEventKey_onvmd"), SubResource("InputEventKey_oeqrt"), SubResource("InputEventKey_ykvhj"), SubResource("InputEventJoypadButton_1rqa4")])
+events = Array[InputEvent]([SubResource("InputEventKey_1rqa4"), SubResource("InputEventKey_xm42s"), SubResource("InputEventKey_tdg64"), SubResource("InputEventJoypadButton_nk31j")])
 
 [node name="ActionPrompt4" type="TextureRect" parent="VBoxContainer/ActionPrompt/ui_directions"]
 layout_mode = 2
@@ -268,7 +268,7 @@ stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_accept"
 icon = 0
-events = Array[InputEvent]([SubResource("InputEventKey_onvmd"), SubResource("InputEventKey_oeqrt"), SubResource("InputEventKey_ykvhj"), SubResource("InputEventJoypadButton_1rqa4")])
+events = Array[InputEvent]([SubResource("InputEventKey_1rqa4"), SubResource("InputEventKey_xm42s"), SubResource("InputEventKey_tdg64"), SubResource("InputEventJoypadButton_nk31j")])
 
 [node name="move" type="HBoxContainer" parent="VBoxContainer/ActionPrompt"]
 layout_mode = 2
@@ -286,7 +286,7 @@ stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_accept"
 icon = 0
-events = Array[InputEvent]([SubResource("InputEventKey_onvmd"), SubResource("InputEventKey_oeqrt"), SubResource("InputEventKey_ykvhj"), SubResource("InputEventJoypadButton_1rqa4")])
+events = Array[InputEvent]([SubResource("InputEventKey_1rqa4"), SubResource("InputEventKey_xm42s"), SubResource("InputEventKey_tdg64"), SubResource("InputEventJoypadButton_nk31j")])
 
 [node name="ActionPrompt2" type="TextureRect" parent="VBoxContainer/ActionPrompt/move"]
 layout_mode = 2
@@ -295,7 +295,7 @@ stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_accept"
 icon = 0
-events = Array[InputEvent]([SubResource("InputEventKey_onvmd"), SubResource("InputEventKey_oeqrt"), SubResource("InputEventKey_ykvhj"), SubResource("InputEventJoypadButton_1rqa4")])
+events = Array[InputEvent]([SubResource("InputEventKey_1rqa4"), SubResource("InputEventKey_xm42s"), SubResource("InputEventKey_tdg64"), SubResource("InputEventJoypadButton_nk31j")])
 
 [node name="ActionPrompt3" type="TextureRect" parent="VBoxContainer/ActionPrompt/move"]
 layout_mode = 2
@@ -304,7 +304,7 @@ stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_accept"
 icon = 0
-events = Array[InputEvent]([SubResource("InputEventKey_onvmd"), SubResource("InputEventKey_oeqrt"), SubResource("InputEventKey_ykvhj"), SubResource("InputEventJoypadButton_1rqa4")])
+events = Array[InputEvent]([SubResource("InputEventKey_1rqa4"), SubResource("InputEventKey_xm42s"), SubResource("InputEventKey_tdg64"), SubResource("InputEventJoypadButton_nk31j")])
 
 [node name="ActionPrompt4" type="TextureRect" parent="VBoxContainer/ActionPrompt/move"]
 layout_mode = 2
@@ -313,7 +313,7 @@ stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_accept"
 icon = 0
-events = Array[InputEvent]([SubResource("InputEventKey_onvmd"), SubResource("InputEventKey_oeqrt"), SubResource("InputEventKey_ykvhj"), SubResource("InputEventJoypadButton_1rqa4")])
+events = Array[InputEvent]([SubResource("InputEventKey_1rqa4"), SubResource("InputEventKey_xm42s"), SubResource("InputEventKey_tdg64"), SubResource("InputEventJoypadButton_nk31j")])
 
 [node name="interact" type="HBoxContainer" parent="VBoxContainer/ActionPrompt"]
 layout_mode = 2
@@ -331,7 +331,7 @@ stretch_mode = 5
 script = ExtResource("3_m33nw")
 action = "ui_accept"
 icon = 0
-events = Array[InputEvent]([SubResource("InputEventKey_onvmd"), SubResource("InputEventKey_oeqrt"), SubResource("InputEventKey_ykvhj"), SubResource("InputEventJoypadButton_1rqa4")])
+events = Array[InputEvent]([SubResource("InputEventKey_1rqa4"), SubResource("InputEventKey_xm42s"), SubResource("InputEventKey_tdg64"), SubResource("InputEventJoypadButton_nk31j")])
 
 [node name="Options" type="HBoxContainer" parent="VBoxContainer/ActionPrompt"]
 layout_mode = 2

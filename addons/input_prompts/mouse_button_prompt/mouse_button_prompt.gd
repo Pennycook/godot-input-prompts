@@ -18,11 +18,11 @@ var button := 1:
 	set = _set_button
 
 
-func _ready():
+func _ready() -> void:
 	_update_icon()
 
 
-func _set_button(index: int):
+func _set_button(index: int) -> void:
 	button = index
 	var event := InputEventMouseButton.new()
 	event.button_index = button
@@ -30,14 +30,14 @@ func _set_button(index: int):
 	_update_icon()
 
 
-func _update_icon():
+func _update_icon() -> void:
 	var textures := PromptManager.get_mouse_textures()
 	texture = textures.get_texture(events[0])
 	queue_redraw()
 
 
-func _get_property_list():
-	var properties = []
+func _get_property_list() -> Array[Dictionary]:
+	var properties: Array[Dictionary] = []
 	properties.append(
 		{
 			name = "MouseButtonPrompt",
