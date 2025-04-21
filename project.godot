@@ -8,6 +8,10 @@
 
 config_version=5
 
+[addons]
+
+input_prompts/icons/style="Pixel"
+
 [application]
 
 config/name="godot-input-prompts"
@@ -24,6 +28,7 @@ PromptManager="*res://addons/input_prompts/input_prompt_manager.gd"
 window/size/viewport_width=1080
 window/size/viewport_height=768
 window/stretch/mode="viewport"
+window/stretch/scale=2.0
 
 [editor_plugins]
 
