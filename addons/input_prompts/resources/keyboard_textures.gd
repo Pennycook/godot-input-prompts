@@ -13,11 +13,6 @@ extends Resource
 var textures: Dictionary[StringName, Texture2D] = {}
 
 
-func _init() -> void:
-	for k: int in KeyPrompt._KEYS:
-		textures[OS.get_keycode_string(k)] = null
-
-
 ## Return the [Texture2D] associated with the specified [InputEvent], or null.
 func get_texture(event: InputEvent) -> Texture2D:
 	if not event is InputEventKey:
@@ -29,22 +24,23 @@ func get_texture(event: InputEvent) -> Texture2D:
 	return textures[OS.get_keycode_string(scancode)]
 
 
-func _get(property):
-	if property in textures.keys():
-		return textures[property]
-	return null
+func _get(property: StringName):
+	return textures.get(property)
 
 
 func _set(property: StringName, value) -> bool:
-	if property in textures.keys():
+	if OS.find_keycode_from_string(property) not in KeyPrompt._KEYS:
+		return false
+	if value == null:
+		textures.erase(property)
+	else:
 		textures[property] = value
-		return true
-	return false
+	return true
 
 
 func _get_property_list() -> Array[Dictionary]:
 	var properties: Array[Dictionary] = []
-	for k in KeyPrompt._KEYS:
+	for k: int in KeyPrompt._KEYS:
 		properties.append(
 			{
 				name = OS.get_keycode_string(k),
