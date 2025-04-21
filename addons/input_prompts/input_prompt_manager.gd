@@ -42,7 +42,7 @@ var preferred_icons := InputPrompt.Icons.AUTOMATIC:
 			icons = InputPrompt.Icons.XBOX
 		else:
 			icons = value
-		emit_signal("icons_changed")
+		icons_changed.emit()
 
 ## The deadzone value used to detect joypad activity. The default value is determined by the
 ## "addons/input_prompts/joypad_detection_deadzone" setting in [ProjectSettings].
@@ -174,7 +174,7 @@ func _input(event: InputEvent):
 	if event is InputEventKey or event is InputEventMouse:
 		if icons != InputPrompt.Icons.KEYBOARD:
 			icons = InputPrompt.Icons.KEYBOARD
-			emit_signal("icons_changed")
+			icons_changed.emit()
 	if event is InputEventJoypadButton or event is InputEventJoypadMotion:
 		# Do not detect Joypad unless value exceeds deadzone
 		if event is InputEventJoypadMotion and absf(event.axis_value) < joypad_detection_deadzone:
@@ -192,4 +192,4 @@ func _input(event: InputEvent):
 			joy_icons = InputPrompt.Icons.XBOX
 		if icons != joy_icons:
 			icons = joy_icons
-			emit_signal("icons_changed")
+			icons_changed.emit()
