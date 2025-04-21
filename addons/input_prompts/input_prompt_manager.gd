@@ -110,7 +110,7 @@ func _reload_textures() -> void:
 	refresh()
 
 
-func _ready():
+func _ready() -> void:
 	if Engine.is_editor_hint():
 		ProjectSettings.settings_changed.connect(_reload_textures)
 
@@ -168,7 +168,7 @@ func get_joypad_motion_textures(icons: int) -> JoypadMotionTextures:
 # Monitor InputEvents and emit icons_changed if:
 # 1) The user has not expressed an icon preference
 # 2) The type of InputEvent is different to last time
-func _input(event: InputEvent):
+func _input(event: InputEvent) -> void:
 	if not (preferred_icons == null or preferred_icons == InputPrompt.Icons.AUTOMATIC):
 		return
 	if event is InputEventKey or event is InputEventMouse:
