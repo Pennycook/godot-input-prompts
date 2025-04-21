@@ -27,15 +27,15 @@ var axis_value := -1:
 ## Automatic (0), Xbox (1), Sony (2), Nintendo (3).
 ## When set to "Automatic", the prompt automatically adjusts to match the most
 ## recent joypad device.
-var icon: int = Icons.AUTOMATIC:
+var icon := Icons.AUTOMATIC:
 	set = _set_icon
 
 
-func _ready():
+func _ready() -> void:
 	_update_icon()
 
 
-func _set_axis(new_axis: int):
+func _set_axis(new_axis: int) -> void:
 	axis = new_axis
 	var event := InputEventJoypadMotion.new()
 	event.axis = axis
@@ -44,7 +44,7 @@ func _set_axis(new_axis: int):
 	_update_icon()
 
 
-func _set_axis_value(new_value: int):
+func _set_axis_value(new_value: int) -> void:
 	axis_value = new_value
 	var event := InputEventJoypadMotion.new()
 	event.axis = axis
@@ -53,19 +53,19 @@ func _set_axis_value(new_value: int):
 	_update_icon()
 
 
-func _set_icon(new_icon):
+func _set_icon(new_icon) -> void:
 	icon = new_icon
 	_update_icon()
 
 
-func _update_icon():
+func _update_icon() -> void:
 	var textures := PromptManager.get_joypad_motion_textures(icon)
 	texture = textures.get_texture(events[0])
 	queue_redraw()
 
 
-func _get_property_list():
-	var properties = []
+func _get_property_list() -> Array[Dictionary]:
+	var properties: Array[Dictionary] = []
 	properties.append(
 		{
 			name = "JoypadMotionPrompt",
@@ -82,7 +82,12 @@ func _get_property_list():
 		+ "Right Trigger:5"
 	)
 	properties.append(
-		{name = "axis", type = TYPE_INT, hint = PROPERTY_HINT_ENUM, hint_string = AXIS_HINT}
+		{
+			name = "axis",
+			type = TYPE_INT,
+			hint = PROPERTY_HINT_ENUM,
+			hint_string = AXIS_HINT
+		}
 	)
 	properties.append(
 		{
