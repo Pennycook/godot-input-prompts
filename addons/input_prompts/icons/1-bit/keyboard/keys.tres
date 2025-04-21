@@ -109,7 +109,7 @@
 [ext_resource type="Texture2D" uid="uid://lup4fef11bb8" path="res://addons/input_prompts/icons/1-bit/keyboard/x.png" id="107_lveyv"]
 [ext_resource type="Texture2D" uid="uid://c4p6bl34y17h4" path="res://addons/input_prompts/icons/1-bit/keyboard/y.png" id="108_3yn21"]
 [ext_resource type="Texture2D" uid="uid://c1tc3ei6r05a4" path="res://addons/input_prompts/icons/1-bit/keyboard/z.png" id="109_v6wmh"]
-[ext_resource type="Script" path="res://addons/input_prompts/resources/keyboard_textures.gd" id="110_5t8ur"]
+[ext_resource type="Script" uid="uid://fvc3xwdrkvqe" path="res://addons/input_prompts/resources/keyboard_textures.gd" id="110_5t8ur"]
 
 [resource]
 script = ExtResource("110_5t8ur")

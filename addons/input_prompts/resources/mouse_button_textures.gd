@@ -42,4 +42,4 @@ func get_texture(event: InputEvent) -> Texture2D:
 		return null
 	var mouse_event := event as InputEventMouseButton
 	var button := mouse_event.button_index
-	return get("button_" + str(button))
+	return get("button_%d" % button)

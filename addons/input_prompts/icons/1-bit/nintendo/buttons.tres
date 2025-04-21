@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://g8nx7if1tppj" path="res://addons/input_prompts/icons/1-bit/nintendo/left_stick.png" id="14_5drao"]
 [ext_resource type="Texture2D" uid="uid://c6uyklugk6v1l" path="res://addons/input_prompts/icons/1-bit/nintendo/right_stick.png" id="15_vvalf"]
 [ext_resource type="Texture2D" uid="uid://c8g11bisclhqy" path="res://addons/input_prompts/icons/1-bit/nintendo/l.png" id="16_37efb"]
-[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_button_textures.gd" id="17_cl3sw"]
+[ext_resource type="Script" uid="uid://b3ylq55vdeel1" path="res://addons/input_prompts/resources/joypad_button_textures.gd" id="17_cl3sw"]
 
 [resource]
 script = ExtResource("17_cl3sw")

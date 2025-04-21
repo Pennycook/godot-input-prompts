@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://5yrn064g7krw" path="res://addons/input_prompts/icons/default/sony/playstation_stick_side_l.png" id="15_jg8nb"]
 [ext_resource type="Texture2D" uid="uid://rpfex13h2hks" path="res://addons/input_prompts/icons/default/sony/playstation_stick_side_r.png" id="16_xu4rl"]
 [ext_resource type="Texture2D" uid="uid://var4hq8mpj7g" path="res://addons/input_prompts/icons/default/sony/playstation_trigger_l1.png" id="17_8v454"]
-[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_button_textures.gd" id="18_3eum3"]
+[ext_resource type="Script" uid="uid://b3ylq55vdeel1" path="res://addons/input_prompts/resources/joypad_button_textures.gd" id="18_3eum3"]
 
 [resource]
 script = ExtResource("18_3eum3")

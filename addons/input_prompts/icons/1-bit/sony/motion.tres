@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c627d5cr3vpcs" path="res://addons/input_prompts/icons/1-bit/sony/right_stick_down.png" id="8_n5mat"]
 [ext_resource type="Texture2D" uid="uid://c5145wnnpon8g" path="res://addons/input_prompts/icons/1-bit/sony/l2.png" id="9_y0h7w"]
 [ext_resource type="Texture2D" uid="uid://drkwatctxg70m" path="res://addons/input_prompts/icons/1-bit/sony/r2.png" id="10_rj5d0"]
-[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="11_08c6i"]
+[ext_resource type="Script" uid="uid://bcoj3xsasfeuv" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="11_08c6i"]
 
 [resource]
 script = ExtResource("11_08c6i")

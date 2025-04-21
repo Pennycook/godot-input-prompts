@@ -42,7 +42,7 @@ var preferred_icons := InputPrompt.Icons.AUTOMATIC:
 			icons = InputPrompt.Icons.XBOX
 		else:
 			icons = value
-		emit_signal("icons_changed")
+		icons_changed.emit()
 
 ## The deadzone value used to detect joypad activity. The default value is determined by the
 ## "addons/input_prompts/joypad_detection_deadzone" setting in [ProjectSettings].
@@ -74,15 +74,19 @@ var _xbox_motion_textures: JoypadMotionTextures = _get_joypad_textures("xbox", "
 
 
 func _get_textures(setting: StringName, resource: StringName) -> Resource:
-	if ProjectSettings.get_setting(setting):
-		return load(ProjectSettings.get_setting(setting))
-	var path: String = "res://addons/input_prompts/icons/" + _icon_style.to_lower() + "/" + resource
+	var default_path := "res://addons/input_prompts/icons/%s/%s" % [_icon_style.to_lower(), resource]
+	var path: String = ProjectSettings.get_setting(
+		setting,
+		default_path
+	)
+	if Engine.is_editor_hint() and not FileAccess.file_exists(path):
+		path = default_path
 	return load(path)
 
 
 func _get_joypad_textures(icons: StringName, kind: StringName) -> Resource:
 	return _get_textures(
-		"addons/input_prompts/icons/joypad_" + kind + "/" + icons, icons + "/" + kind + ".tres"
+		"addons/input_prompts/icons/joypad_%s/%s" % [kind, icons], "%s/%s.tres" % [icons, kind]
 	)
 
 
@@ -110,7 +114,7 @@ func _reload_textures() -> void:
 	refresh()
 
 
-func _ready():
+func _ready() -> void:
 	if Engine.is_editor_hint():
 		ProjectSettings.settings_changed.connect(_reload_textures)
 
@@ -168,13 +172,13 @@ func get_joypad_motion_textures(icons: int) -> JoypadMotionTextures:
 # Monitor InputEvents and emit icons_changed if:
 # 1) The user has not expressed an icon preference
 # 2) The type of InputEvent is different to last time
-func _input(event: InputEvent):
+func _input(event: InputEvent) -> void:
 	if not (preferred_icons == null or preferred_icons == InputPrompt.Icons.AUTOMATIC):
 		return
 	if event is InputEventKey or event is InputEventMouse:
 		if icons != InputPrompt.Icons.KEYBOARD:
 			icons = InputPrompt.Icons.KEYBOARD
-			emit_signal("icons_changed")
+			icons_changed.emit()
 	if event is InputEventJoypadButton or event is InputEventJoypadMotion:
 		# Do not detect Joypad unless value exceeds deadzone
 		if event is InputEventJoypadMotion and absf(event.axis_value) < joypad_detection_deadzone:
@@ -192,4 +196,4 @@ func _input(event: InputEvent):
 			joy_icons = InputPrompt.Icons.XBOX
 		if icons != joy_icons:
 			icons = joy_icons
-			emit_signal("icons_changed")
+			icons_changed.emit()

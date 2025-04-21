@@ -23,21 +23,21 @@ enum Icons {
 @export var events: Array[InputEvent] = []
 
 
-func _init():
+func _init() -> void:
 	texture = null
 	stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 
 
-func _update_icon():
+func _update_icon() -> void:
 	pass
 
 
-func _refresh():
+func _refresh() -> void:
 	_update_icon()
 
 
-func _input(event: InputEvent):
-	if not events.any(func(e): return event.is_match(e)):
+func _input(event: InputEvent) -> void:
+	if not events.any(event.is_match):
 		return
 	if not event.is_pressed():
 		return
@@ -46,12 +46,12 @@ func _input(event: InputEvent):
 	emit_signal("pressed")
 
 
-func _enter_tree():
+func _enter_tree() -> void:
 	PromptManager.icons_changed.connect(_update_icon)
 	add_to_group("_input_prompts")
 
 
-func _exit_tree():
+func _exit_tree() -> void:
 	remove_from_group("_input_prompts")
 
 
@@ -59,5 +59,5 @@ func _exit_tree():
 ## Must be called if the [InputMap] is changed.
 ## [br][br]
 ## [b]Note[/b]: Use [InputPromptManager] to refresh all nodes at once.
-func refresh():
+func refresh() -> void:
 	_refresh()

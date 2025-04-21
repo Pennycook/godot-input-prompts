@@ -20,61 +20,55 @@ var action := "ui_accept":
 ## Automatic (0), Xbox (1), Sony (2), Nintendo (3), Keyboard (4).
 ## When set to "Automatic", the prompt automatically adjusts to match the most
 ## recent input device.
-var icon: int = Icons.AUTOMATIC:
+var icon := Icons.AUTOMATIC:
 	set = _set_icon
 
 
-func _ready():
+func _ready() -> void:
 	ProjectSettings.settings_changed.connect(_update_events)
 	_update_events()
 	_update_icon()
 
 
-func _set_action(new_action: String):
+func _set_action(new_action: String) -> void:
 	action = new_action
 	_update_events()
 	_update_icon()
 
 
-func _set_icon(new_icon):
+func _set_icon(new_icon) -> void:
 	icon = new_icon
 	_update_icon()
 
 
-func _update_events():
+func _update_events() -> void:
 	# In the Editor, InputMap reflects Editor settings
 	# Read the list of actions from ProjectSettings instead
-	# TODO: Find a cleaner way to cast these values
-	var tmp: Array = []
 	if Engine.is_editor_hint():
-		tmp = ProjectSettings.get_setting("input/" + action)["events"]
+		events.assign(ProjectSettings.get_setting("input/%s" % action)["events"])
 	else:
-		tmp = InputMap.action_get_events(action)
-	events = []
-	for ev in tmp:
-		events.append(ev)
+		events.assign(InputMap.action_get_events(action))
 	update_configuration_warnings()
 
 
-func _find_event(list: Array, types: Array):
-	for candidate in list:
-		for type in types:
-			if is_instance_of(candidate, type):
-				return candidate
+func _find_event(list: Array[InputEvent], types: Array) -> InputEvent:
+	for candidate: InputEvent in list:
+		if types.any(func(type) -> bool: return is_instance_of(candidate, type)):
+			return candidate
 	return null
 
 
-func _update_icon():
+func _update_icon() -> void:
 	# If icon is set to AUTOMATIC, first determine which icon to display
-	var display_icon: int = icon
+	var display_icon := icon
 	if icon == Icons.AUTOMATIC:
 		display_icon = PromptManager.icons
 
 	# Choose the atlas and region associated with the InputEvent
 	# If the InputMap contains multiple events, choose the first
 	if display_icon == Icons.KEYBOARD:
-		var types = [InputEventKey, InputEventMouseButton]
-		var ev = _find_event(events, types)
+		var types := [InputEventKey, InputEventMouseButton]
+		var ev := _find_event(events, types)
 		if ev is InputEventKey:
 			var textures := PromptManager.get_keyboard_textures()
 			texture = textures.get_texture(ev)
@@ -82,8 +76,8 @@ func _update_icon():
 			var textures := PromptManager.get_mouse_textures()
 			texture = textures.get_texture(ev)
 	else:
-		var types = [InputEventJoypadButton, InputEventJoypadMotion]
-		var ev = _find_event(events, types)
+		var types := [InputEventJoypadButton, InputEventJoypadMotion]
+		var ev := _find_event(events, types)
 		if ev is InputEventJoypadButton:
 			var textures := PromptManager.get_joypad_button_textures(display_icon)
 			texture = textures.get_texture(ev)
@@ -93,19 +87,19 @@ func _update_icon():
 	queue_redraw()
 
 
-func _refresh():
+func _refresh() -> void:
 	_update_events()
 	_update_icon()
 
 
-func _input(event: InputEvent):
+func _input(event: InputEvent) -> void:
 	if not event.is_action_pressed(action):
 		return
-	emit_signal("pressed")
+	pressed.emit()
 
 
-func _get_property_list():
-	var properties = []
+func _get_property_list() -> Array[Dictionary]:
+	var properties: Array[Dictionary] = []
 	properties.append(
 		{
 			name = "ActionPrompt",
@@ -115,15 +109,19 @@ func _get_property_list():
 	)
 	# In the Editor, InputMap reflects Editor settings
 	# Read the list of actions from ProjectSettings instead
-	var actions: String = ""
-	for property in ProjectSettings.get_property_list():
-		var name = property["name"]
-		if name.begins_with("input/"):
-			if actions != "":
-				actions += ","
-			actions += name.trim_prefix("input/")
+	var actions := ",".join(
+		ProjectSettings.get_property_list()
+			.map(func(property: Dictionary) -> String: return property["name"])
+			.filter(func(property_name: String) -> bool: return property_name.begins_with("input/"))
+			.map(func(property_name: String) -> String: return property_name.substr(6))
+	)
 	properties.append(
-		{name = "action", type = TYPE_STRING, hint = PROPERTY_HINT_ENUM, hint_string = actions}
+		{
+			name = "action",
+			type = TYPE_STRING,
+			hint = PROPERTY_HINT_ENUM,
+			hint_string = actions
+		}
 	)
 	properties.append(
 		{
@@ -141,16 +139,16 @@ func _get_configuration_warnings() -> PackedStringArray:
 
 	# Check that the action is associated with Keyboard/Mouse in the InputMap
 	if icon == Icons.AUTOMATIC or icon == Icons.KEYBOARD:
-		var types = [InputEventKey, InputEventMouseButton]
-		var ev = _find_event(events, types)
-		if not (ev is InputEventKey or ev is InputEventMouseButton):
+		var types := [InputEventKey, InputEventMouseButton]
+		var ev := _find_event(events, types)
+		if ev == null:
 			warnings.append("No Key/Mouse input for " + action + " in InputMap.")
 
 	# Check that the action is associated with Joypad in the InputMap
 	if icon == Icons.AUTOMATIC or icon != Icons.KEYBOARD:
 		var types = [InputEventJoypadButton, InputEventJoypadMotion]
 		var ev = _find_event(events, types)
-		if not (ev is InputEventJoypadButton or ev is InputEventJoypadMotion):
+		if ev == null:
 			warnings.append("No Joypad input for " + action + " in InputMap.")
 
 	return warnings

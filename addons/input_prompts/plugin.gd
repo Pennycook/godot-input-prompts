@@ -3,10 +3,10 @@
 @tool
 extends EditorPlugin
 
-var inspector_plugin = preload("res://addons/input_prompts/inspector_plugin.gd").new()
+var inspector_plugin: EditorInspectorPlugin = preload("res://addons/input_prompts/inspector_plugin.gd").new()
 
 
-func _enter_tree():
+func _enter_tree() -> void:
 	if Engine.is_editor_hint():
 		var deadzone_setting := "addons/input_prompts/joypad_detection_deadzone"
 		if not ProjectSettings.has_setting(deadzone_setting):
@@ -36,7 +36,7 @@ func _enter_tree():
 			}
 		)
 
-		var icon_settings = [
+		var icon_settings: PackedStringArray = [
 			"addons/input_prompts/icons/keyboard",
 			"addons/input_prompts/icons/mouse_buttons",
 			"addons/input_prompts/icons/joypad_buttons/nintendo",
@@ -46,7 +46,7 @@ func _enter_tree():
 			"addons/input_prompts/icons/joypad_motion/sony",
 			"addons/input_prompts/icons/joypad_motion/xbox",
 		]
-		for setting in icon_settings:
+		for setting: String in icon_settings:
 			if not ProjectSettings.has_setting(setting):
 				ProjectSettings.set_setting(setting, "")
 			ProjectSettings.set_initial_value(setting, "")

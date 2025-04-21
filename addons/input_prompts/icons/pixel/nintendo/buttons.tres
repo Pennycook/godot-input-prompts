@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="JoypadButtonTextures" load_steps=18 format=3 uid="uid://kabm3n1g8bqg"]
 
-[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_button_textures.gd" id="1_25grt"]
+[ext_resource type="Script" uid="uid://b3ylq55vdeel1" path="res://addons/input_prompts/resources/joypad_button_textures.gd" id="1_25grt"]
 [ext_resource type="Texture2D" uid="uid://bdhuy2yjfgaqo" path="res://addons/input_prompts/icons/pixel/nintendo/b.png" id="1_xaja3"]
 [ext_resource type="Texture2D" uid="uid://kqpiteswedha" path="res://addons/input_prompts/icons/pixel/nintendo/a.png" id="2_fukqt"]
 [ext_resource type="Texture2D" uid="uid://t6b3hdkex5sn" path="res://addons/input_prompts/icons/pixel/nintendo/r.png" id="3_dpsw2"]

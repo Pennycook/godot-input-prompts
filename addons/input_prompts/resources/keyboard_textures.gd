@@ -10,12 +10,7 @@ extends Resource
 
 ## A mapping from keyboard strings (as returned by
 ## [method OS.get_keycode_string]) to textures.
-var textures: Dictionary = {}
-
-
-func _init():
-	for k in KeyPrompt._KEYS:
-		textures[OS.get_keycode_string(k)] = null
+var textures: Dictionary[StringName, Texture2D] = {}
 
 
 ## Return the [Texture2D] associated with the specified [InputEvent], or null.
@@ -29,22 +24,23 @@ func get_texture(event: InputEvent) -> Texture2D:
 	return textures[OS.get_keycode_string(scancode)]
 
 
-func _get(property):
-	if property in textures.keys():
-		return textures[property]
-	return null
+func _get(property: StringName):
+	return textures.get(property)
 
 
-func _set(property, value):
-	if property in textures.keys():
+func _set(property: StringName, value) -> bool:
+	if OS.find_keycode_from_string(property) not in KeyPrompt._KEYS:
+		return false
+	if value == null:
+		textures.erase(property)
+	else:
 		textures[property] = value
-		return true
-	return false
+	return true
 
 
-func _get_property_list():
-	var properties = []
-	for k in KeyPrompt._KEYS:
+func _get_property_list() -> Array[Dictionary]:
+	var properties: Array[Dictionary] = []
+	for k: int in KeyPrompt._KEYS:
 		properties.append(
 			{
 				name = OS.get_keycode_string(k),

@@ -50,7 +50,7 @@ func get_texture(event: InputEvent) -> Texture2D:
 	if not event is InputEventJoypadMotion:
 		return null
 	var motion_event := event as InputEventJoypadMotion
-	var axis = motion_event.axis
-	var axis_value = motion_event.axis_value
-	var suffix := "_minus" if axis_value == -1 else "_plus"
-	return get("axis_" + str(axis) + suffix)
+	var axis := motion_event.axis
+	var axis_value := motion_event.axis_value
+	var suffix := "minus" if axis_value == -1 else "plus"
+	return get("_".join(["axis", axis, suffix]))

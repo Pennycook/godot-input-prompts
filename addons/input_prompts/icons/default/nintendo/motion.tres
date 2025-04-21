@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://nulj2up82d5" path="res://addons/input_prompts/icons/default/nintendo/switch_stick_r_down.png" id="8_7327f"]
 [ext_resource type="Texture2D" uid="uid://go44vicp553f" path="res://addons/input_prompts/icons/default/nintendo/switch_button_zl.png" id="9_c6pau"]
 [ext_resource type="Texture2D" uid="uid://cqtuny6qwy43s" path="res://addons/input_prompts/icons/default/nintendo/switch_button_zr.png" id="10_tma6r"]
-[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="11_ookh4"]
+[ext_resource type="Script" uid="uid://bcoj3xsasfeuv" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="11_ookh4"]
 
 [resource]
 script = ExtResource("11_ookh4")
