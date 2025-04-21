@@ -132,11 +132,11 @@ var key := KEY_EXCLAM:
 	set = _set_key
 
 
-func _ready():
+func _ready() -> void:
 	_update_icon()
 
 
-func _set_key(scancode: int):
+func _set_key(scancode: int) -> void:
 	key = scancode
 	var event := InputEventKey.new()
 	event.keycode = scancode
@@ -144,14 +144,14 @@ func _set_key(scancode: int):
 	_update_icon()
 
 
-func _update_icon():
+func _update_icon() -> void:
 	var textures := PromptManager.get_keyboard_textures()
 	texture = textures.get_texture(events[0])
 	queue_redraw()
 
 
-func _get_property_list():
-	var properties = []
+func _get_property_list() -> Array[Dictionary]:
+	var properties: Array[Dictionary] = []
 	properties.append(
 		{
 			name = "KeyPrompt",
@@ -159,12 +159,17 @@ func _get_property_list():
 			usage = PROPERTY_USAGE_CATEGORY | PROPERTY_USAGE_SCRIPT_VARIABLE
 		}
 	)
-	var keys: String = ""
-	for k in _KEYS:
-		if keys != "":
-			keys += ","
-		keys += "{0}:{1}".format([OS.get_keycode_string(k), k])
+	var keys := ",".join(
+		_KEYS.map(func(k: int) -> String:
+			return "%s:%s" % [OS.get_keycode_string(k), k]
+			)
+	)
 	properties.append(
-		{name = "key", type = TYPE_INT, hint = PROPERTY_HINT_ENUM, hint_string = keys}
+		{
+			name = "key",
+			type = TYPE_INT,
+			hint = PROPERTY_HINT_ENUM,
+			hint_string = keys
+		}
 	)
 	return properties
