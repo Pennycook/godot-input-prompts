@@ -74,10 +74,13 @@ var _xbox_motion_textures: JoypadMotionTextures = _get_joypad_textures("xbox", "
 
 
 func _get_textures(setting: StringName, resource: StringName) -> Resource:
+	var default_path := "res://addons/input_prompts/icons/%s/%s" % [_icon_style.to_lower(), resource]
 	var path: String = ProjectSettings.get_setting(
 		setting,
-		"res://addons/input_prompts/icons/%s/%s" % [_icon_style.to_lower(), resource]
+		default_path
 	)
+	if Engine.is_editor_hint() and not FileAccess.file_exists(path):
+		path = default_path
 	return load(path)
 
 
