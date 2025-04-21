@@ -60,7 +60,7 @@ func _find_event(list: Array[InputEvent], types: Array) -> InputEvent:
 
 func _update_icon() -> void:
 	# If icon is set to AUTOMATIC, first determine which icon to display
-	var display_icon: int = icon
+	var display_icon := icon
 	if icon == Icons.AUTOMATIC:
 		display_icon = PromptManager.icons
 

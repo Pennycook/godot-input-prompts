@@ -23,15 +23,15 @@ var button := 0:
 ## Automatic (0), Xbox (1), Sony (2), Nintendo (3).
 ## When set to "Automatic", the prompt automatically adjusts to match the most
 ## recent joypad device.
-var icon: int = Icons.AUTOMATIC:
+var icon := Icons.AUTOMATIC:
 	set = _set_icon
 
 
-func _ready():
+func _ready() -> void:
 	_update_icon()
 
 
-func _set_button(index: int):
+func _set_button(index: int) -> void:
 	button = index
 	var event := InputEventJoypadButton.new()
 	event.button_index = button
@@ -39,19 +39,19 @@ func _set_button(index: int):
 	_update_icon()
 
 
-func _set_icon(new_icon):
+func _set_icon(new_icon) -> void:
 	icon = new_icon
 	_update_icon()
 
 
-func _update_icon():
+func _update_icon() -> void:
 	var textures := PromptManager.get_joypad_button_textures(icon)
 	texture = textures.get_texture(events[0])
 	queue_redraw()
 
 
-func _get_property_list():
-	var properties = []
+func _get_property_list() -> Array[Dictionary]:
+	var properties: Array[Dictionary] = []
 	properties.append(
 		{
 			name = "JoypadButtonPrompt",
@@ -60,7 +60,12 @@ func _get_property_list():
 		}
 	)
 	properties.append(
-		{name = "button", type = TYPE_INT, hint = PROPERTY_HINT_RANGE, hint_string = "0,22"}
+		{
+			name = "button",
+			type = TYPE_INT,
+			hint = PROPERTY_HINT_RANGE,
+			hint_string = "0,22"
+		}
 	)
 	properties.append(
 		{
