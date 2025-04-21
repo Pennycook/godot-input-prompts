@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="JoypadButtonTextures" load_steps=18 format=3 uid="uid://bna13e4khhqlk"]
 
 [ext_resource type="Texture2D" uid="uid://b1e23gj3k1klg" path="res://addons/input_prompts/icons/pixel/xbox/a.png" id="1_7vxu0"]
-[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_button_textures.gd" id="1_m8ac2"]
+[ext_resource type="Script" uid="uid://b3ylq55vdeel1" path="res://addons/input_prompts/resources/joypad_button_textures.gd" id="1_m8ac2"]
 [ext_resource type="Texture2D" uid="uid://dv0r0pf7dwijj" path="res://addons/input_prompts/icons/pixel/xbox/b.png" id="2_jxa0r"]
 [ext_resource type="Texture2D" uid="uid://dndwl60yt3u8o" path="res://addons/input_prompts/icons/pixel/xbox/right_bumper.png" id="3_gsdox"]
 [ext_resource type="Texture2D" uid="uid://c6b88da2bl26p" path="res://addons/input_prompts/icons/pixel/xbox/up.png" id="4_rrm24"]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="JoypadMotionTextures" load_steps=12 format=3 uid="uid://dhnof34diuflj"]
 
-[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="1_1t4om"]
+[ext_resource type="Script" uid="uid://bcoj3xsasfeuv" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="1_1t4om"]
 [ext_resource type="Texture2D" uid="uid://da31wttes8ivy" path="res://addons/input_prompts/icons/pixel/xbox/left_stick_left.png" id="1_u1ybx"]
 [ext_resource type="Texture2D" uid="uid://di22retw8uo1x" path="res://addons/input_prompts/icons/pixel/xbox/left_stick_right.png" id="2_ag34s"]
 [ext_resource type="Texture2D" uid="uid://c5mosanv2dr1f" path="res://addons/input_prompts/icons/pixel/xbox/left_stick_up.png" id="3_40gyh"]

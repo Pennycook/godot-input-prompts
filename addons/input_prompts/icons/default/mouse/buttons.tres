@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="MouseButtonTextures" load_steps=9 format=3 uid="uid://ba6wpilfyoyos"]
 
 [ext_resource type="Texture2D" uid="uid://bcnibf8l1yo4s" path="res://addons/input_prompts/icons/default/mouse/mouse_left.png" id="1_6ije0"]
-[ext_resource type="Script" path="res://addons/input_prompts/resources/mouse_button_textures.gd" id="1_n1vb8"]
+[ext_resource type="Script" uid="uid://dq1vdooh5kyvn" path="res://addons/input_prompts/resources/mouse_button_textures.gd" id="1_n1vb8"]
 [ext_resource type="Texture2D" uid="uid://ddnuqvq0qdsvf" path="res://addons/input_prompts/icons/default/mouse/mouse_right.png" id="2_ihn4e"]
 [ext_resource type="Texture2D" uid="uid://b4uu07rk3n0l3" path="res://addons/input_prompts/icons/default/mouse/mouse_scroll.png" id="3_waibx"]
 [ext_resource type="Texture2D" uid="uid://ci87lq46d8wcm" path="res://addons/input_prompts/icons/default/mouse/mouse_scroll_up.png" id="4_k2lnp"]

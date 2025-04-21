@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ei5tpuh570dp" path="res://addons/input_prompts/icons/pixel/keyboard/esc.png" id="1_rf0mg"]
 [ext_resource type="Texture2D" uid="uid://bvodyh3h4lf23" path="res://addons/input_prompts/icons/pixel/keyboard/0.png" id="1_s15vc"]
 [ext_resource type="Texture2D" uid="uid://riaj57l1jlqv" path="res://addons/input_prompts/icons/pixel/keyboard/f1.png" id="1_tqv76"]
-[ext_resource type="Script" path="res://addons/input_prompts/resources/keyboard_textures.gd" id="1_uojqg"]
+[ext_resource type="Script" uid="uid://fvc3xwdrkvqe" path="res://addons/input_prompts/resources/keyboard_textures.gd" id="1_uojqg"]
 [ext_resource type="Texture2D" uid="uid://dshgdv8b1s4yx" path="res://addons/input_prompts/icons/pixel/keyboard/1.png" id="2_xp6pc"]
 [ext_resource type="Texture2D" uid="uid://boer02ea1703" path="res://addons/input_prompts/icons/pixel/keyboard/f2.png" id="3_8nrvw"]
 [ext_resource type="Texture2D" uid="uid://dmlsiso1q4lfb" path="res://addons/input_prompts/icons/pixel/keyboard/2.png" id="3_jltf0"]

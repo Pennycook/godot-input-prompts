@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://yy8cxdfivmej" path="res://addons/input_prompts/icons/1-bit/mouse/wheel_down.png" id="5_ovvul"]
 [ext_resource type="Texture2D" uid="uid://5uwocwsbyvku" path="res://addons/input_prompts/icons/1-bit/mouse/wheel_left.png" id="6_8bckg"]
 [ext_resource type="Texture2D" uid="uid://cwjlmty8mfqpr" path="res://addons/input_prompts/icons/1-bit/mouse/wheel_right.png" id="7_su6g4"]
-[ext_resource type="Script" path="res://addons/input_prompts/resources/mouse_button_textures.gd" id="8_bt618"]
+[ext_resource type="Script" uid="uid://dq1vdooh5kyvn" path="res://addons/input_prompts/resources/mouse_button_textures.gd" id="8_bt618"]
 
 [resource]
 script = ExtResource("8_bt618")

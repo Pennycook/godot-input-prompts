@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cakchjlbxwhk2" path="res://addons/input_prompts/icons/default/xbox/xbox_stick_r_down.png" id="8_oblml"]
 [ext_resource type="Texture2D" uid="uid://sph0m0shfith" path="res://addons/input_prompts/icons/default/xbox/xbox_lt.png" id="9_p00rq"]
 [ext_resource type="Texture2D" uid="uid://b8miq8qjw4p4h" path="res://addons/input_prompts/icons/default/xbox/xbox_rt.png" id="10_av6ye"]
-[ext_resource type="Script" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="11_orq88"]
+[ext_resource type="Script" uid="uid://bcoj3xsasfeuv" path="res://addons/input_prompts/resources/joypad_motion_textures.gd" id="11_orq88"]
 
 [resource]
 script = ExtResource("11_orq88")

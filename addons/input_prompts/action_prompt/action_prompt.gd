@@ -45,7 +45,7 @@ func _update_events() -> void:
 	# In the Editor, InputMap reflects Editor settings
 	# Read the list of actions from ProjectSettings instead
 	if Engine.is_editor_hint():
-		events.assign(ProjectSettings.get_setting("input/" + action)["events"])
+		events.assign(ProjectSettings.get_setting("input/%s" % action)["events"])
 	else:
 		events.assign(InputMap.action_get_events(action))
 	update_configuration_warnings()
@@ -53,9 +53,8 @@ func _update_events() -> void:
 
 func _find_event(list: Array[InputEvent], types: Array) -> InputEvent:
 	for candidate: InputEvent in list:
-		for type in types:
-			if is_instance_of(candidate, type):
-				return candidate
+		if types.any(func(type) -> bool: return is_instance_of(candidate, type)):
+			return candidate
 	return null
 
 
@@ -96,7 +95,7 @@ func _refresh() -> void:
 func _input(event: InputEvent) -> void:
 	if not event.is_action_pressed(action):
 		return
-	emit_signal("pressed")
+	pressed.emit()
 
 
 func _get_property_list() -> Array[Dictionary]:
@@ -140,16 +139,16 @@ func _get_configuration_warnings() -> PackedStringArray:
 
 	# Check that the action is associated with Keyboard/Mouse in the InputMap
 	if icon == Icons.AUTOMATIC or icon == Icons.KEYBOARD:
-		var types = [InputEventKey, InputEventMouseButton]
-		var ev = _find_event(events, types)
-		if not (ev is InputEventKey or ev is InputEventMouseButton):
+		var types := [InputEventKey, InputEventMouseButton]
+		var ev := _find_event(events, types)
+		if ev == null:
 			warnings.append("No Key/Mouse input for " + action + " in InputMap.")
 
 	# Check that the action is associated with Joypad in the InputMap
 	if icon == Icons.AUTOMATIC or icon != Icons.KEYBOARD:
 		var types = [InputEventJoypadButton, InputEventJoypadMotion]
 		var ev = _find_event(events, types)
-		if not (ev is InputEventJoypadButton or ev is InputEventJoypadMotion):
+		if ev == null:
 			warnings.append("No Joypad input for " + action + " in InputMap.")
 
 	return warnings
