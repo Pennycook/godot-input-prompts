@@ -74,15 +74,16 @@ var _xbox_motion_textures: JoypadMotionTextures = _get_joypad_textures("xbox", "
 
 
 func _get_textures(setting: StringName, resource: StringName) -> Resource:
-	if ProjectSettings.get_setting(setting):
-		return load(ProjectSettings.get_setting(setting))
-	var path: String = "res://addons/input_prompts/icons/" + _icon_style.to_lower() + "/" + resource
+	var path: String = ProjectSettings.get_setting(
+		setting,
+		"res://addons/input_prompts/icons/%s/%s" % [_icon_style.to_lower(), resource]
+	)
 	return load(path)
 
 
 func _get_joypad_textures(icons: StringName, kind: StringName) -> Resource:
 	return _get_textures(
-		"addons/input_prompts/icons/joypad_" + kind + "/" + icons, icons + "/" + kind + ".tres"
+		"addons/input_prompts/icons/joypad_%s/%s" % [kind, icons], "%s/%s.tres" % [icons, kind]
 	)
 
 
