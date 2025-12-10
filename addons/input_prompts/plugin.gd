@@ -17,7 +17,7 @@ func _enter_tree():
 			{
 				"name": deadzone_setting,
 				"type": TYPE_FLOAT,
-				"hint": PROPERTY_HINT_RANGE,
+				"hint":  PROPERTY_HINT_RANGE,
 				"hint_string": "0,1"
 			}
 		)
@@ -30,7 +30,7 @@ func _enter_tree():
 		ProjectSettings.add_property_info(
 			{
 				"name": style_setting,
-				"type": TYPE_STRING,
+				"type":  TYPE_STRING,
 				"hint": PROPERTY_HINT_ENUM,
 				"hint_string": "Default,1-bit,Pixel"
 			}
@@ -42,9 +42,13 @@ func _enter_tree():
 			"addons/input_prompts/icons/joypad_buttons/nintendo",
 			"addons/input_prompts/icons/joypad_buttons/sony",
 			"addons/input_prompts/icons/joypad_buttons/xbox",
+			"addons/input_prompts/icons/joypad_buttons/generic",
+			"addons/input_prompts/icons/joypad_buttons/steam_deck",
 			"addons/input_prompts/icons/joypad_motion/nintendo",
 			"addons/input_prompts/icons/joypad_motion/sony",
 			"addons/input_prompts/icons/joypad_motion/xbox",
+			"addons/input_prompts/icons/joypad_motion/generic",
+			"addons/input_prompts/icons/joypad_motion/steam_deck",
 		]
 		for setting in icon_settings:
 			if not ProjectSettings.has_setting(setting):
@@ -55,7 +59,7 @@ func _enter_tree():
 					"name": setting,
 					"type": TYPE_STRING,
 					"hint": PROPERTY_HINT_FILE,
-					"hint_string": "*.tres,*.res"
+					"hint_string":  "*. tres,*.res"
 				}
 			)
 

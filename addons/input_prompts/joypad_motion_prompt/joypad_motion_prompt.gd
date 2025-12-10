@@ -9,25 +9,25 @@ extends "res://addons/input_prompts/input_prompt.gd"
 ## Displays a prompt based on a joypad axis and value.
 ## The texture used for the prompt is determined by an icon preference. When
 ## the icon preference is set to "Automatic", the prompt automatically adjusts
-## to match the most recent joypad device.
+## to match the most recent joypad device. 
 ## [br][br]
 ## [b]Note[/b]: A [JoypadMotionPrompt] will never show keyboard or mouse
 ## prompts. To automatically reflect the most recent input device, use
 ## [ActionPrompt] instead.
 
-## A joypad axis index, such as [constant @GlobalScope.JOY_AXIS_LEFT_X].
+## A joypad axis, such as [constant @GlobalScope. JOY_AXIS_LEFT_X].
 var axis := 0:
 	set = _set_axis
 
-## A joypad axis value (positive or negative).
-var axis_value := -1:
+## The value of the axis, either -1.0 (minus) or 1.0 (plus).
+var axis_value := 1.0:
 	set = _set_axis_value
 
 ## The icon preference for this prompt:
-## Automatic (0), Xbox (1), Sony (2), Nintendo (3).
+## Automatic (0), Xbox (1), Sony (2), Nintendo (3), Generic (4), Steam Deck (5).
 ## When set to "Automatic", the prompt automatically adjusts to match the most
 ## recent joypad device.
-var icon: int = Icons.AUTOMATIC:
+var icon: int = Icons.AUTOMATIC: 
 	set = _set_icon
 
 
@@ -37,25 +37,26 @@ func _ready():
 
 func _set_axis(new_axis: int):
 	axis = new_axis
-	var event := InputEventJoypadMotion.new()
-	event.axis = axis
-	event.axis_value = axis_value
-	events = [event]
+	_update_event()
 	_update_icon()
 
 
-func _set_axis_value(new_value: int):
-	axis_value = new_value
-	var event := InputEventJoypadMotion.new()
-	event.axis = axis
-	event.axis_value = axis_value
-	events = [event]
+func _set_axis_value(new_axis_value: float):
+	axis_value = new_axis_value
+	_update_event()
 	_update_icon()
 
 
 func _set_icon(new_icon):
 	icon = new_icon
 	_update_icon()
+
+
+func _update_event():
+	var event := InputEventJoypadMotion.new()
+	event.axis = axis
+	event.axis_value = axis_value
+	events = [event]
 
 
 func _update_icon():
@@ -73,23 +74,15 @@ func _get_property_list():
 			usage = PROPERTY_USAGE_CATEGORY | PROPERTY_USAGE_SCRIPT_VARIABLE
 		}
 	)
-	const AXIS_HINT := (
-		"Left Horizontal:0,"
-		+ "Left Vertical:1,"
-		+ "Right Horizontal:2,"
-		+ "Right Vertical:3,"
-		+ "Left Trigger:4,"
-		+ "Right Trigger:5"
-	)
 	properties.append(
-		{name = "axis", type = TYPE_INT, hint = PROPERTY_HINT_ENUM, hint_string = AXIS_HINT}
+		{name = "axis", type = TYPE_INT, hint = PROPERTY_HINT_RANGE, hint_string = "0,5"}
 	)
 	properties.append(
 		{
 			name = "axis_value",
-			type = TYPE_INT,
+			type = TYPE_FLOAT,
 			hint = PROPERTY_HINT_ENUM,
-			hint_string = "Negative:-1,Positive:1"
+			hint_string = "-1.0,-1.0,1.0,1.0"
 		}
 	)
 	properties.append(
@@ -97,7 +90,7 @@ func _get_property_list():
 			name = "icon",
 			type = TYPE_INT,
 			hint = PROPERTY_HINT_ENUM,
-			hint_string = "Automatic,Xbox,Sony,Nintendo"
+			hint_string = "Automatic,Xbox,Sony,Nintendo,Generic,Steam Deck"
 		}
 	)
 	return properties

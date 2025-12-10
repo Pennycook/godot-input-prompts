@@ -4,23 +4,23 @@
 @icon("res://addons/input_prompts/action_prompt/icon.svg")
 class_name ActionPrompt
 extends "res://addons/input_prompts/input_prompt.gd"
-## Displays a prompt based on an action registered in the [InputMap].
+## Displays a prompt based on an action registered in the [InputMap]. 
 ##
 ## Displays a prompt based on an action registered in the [InputMap].
 ## The texture used for the prompt is determined automatically, based on the
-## contents of the [InputMap] and an icon preference. When the icon preference
+## contents of the [InputMap] and an icon preference.  When the icon preference
 ## is set to "Automatic", the prompt automatically adjusts to match the most
-## recent input device.
+## recent input device. 
 
 ## The name of an action registered in the [InputMap].
-var action := "ui_accept":
+var action := "ui_accept": 
 	set = _set_action
 
-## The icon preference for this prompt:
-## Automatic (0), Xbox (1), Sony (2), Nintendo (3), Keyboard (4).
+## The icon preference for this prompt: 
+## Automatic (0), Xbox (1), Sony (2), Nintendo (3), Generic (4), Steam Deck (5), Keyboard (6).
 ## When set to "Automatic", the prompt automatically adjusts to match the most
 ## recent input device.
-var icon: int = Icons.AUTOMATIC:
+var icon:  int = Icons.AUTOMATIC:
 	set = _set_icon
 
 
@@ -45,7 +45,7 @@ func _update_events():
 	# In the Editor, InputMap reflects Editor settings
 	# Read the list of actions from ProjectSettings instead
 	# TODO: Find a cleaner way to cast these values
-	var tmp: Array = []
+	var tmp:  Array = []
 	if Engine.is_editor_hint():
 		tmp = ProjectSettings.get_setting("input/" + action)["events"]
 	else:
@@ -79,7 +79,7 @@ func _update_icon():
 			var textures := PromptManager.get_keyboard_textures()
 			texture = textures.get_texture(ev)
 		elif ev is InputEventMouseButton:
-			var textures := PromptManager.get_mouse_textures()
+			var textures := PromptManager. get_mouse_textures()
 			texture = textures.get_texture(ev)
 	else:
 		var types = [InputEventJoypadButton, InputEventJoypadMotion]
@@ -87,7 +87,7 @@ func _update_icon():
 		if ev is InputEventJoypadButton:
 			var textures := PromptManager.get_joypad_button_textures(display_icon)
 			texture = textures.get_texture(ev)
-		elif ev is InputEventJoypadMotion:
+		elif ev is InputEventJoypadMotion: 
 			var textures := PromptManager.get_joypad_motion_textures(display_icon)
 			texture = textures.get_texture(ev)
 	queue_redraw()
@@ -106,7 +106,7 @@ func _input(event: InputEvent):
 
 func _get_property_list():
 	var properties = []
-	properties.append(
+	properties. append(
 		{
 			name = "ActionPrompt",
 			type = TYPE_NIL,
@@ -119,7 +119,7 @@ func _get_property_list():
 	for property in ProjectSettings.get_property_list():
 		var name = property["name"]
 		if name.begins_with("input/"):
-			if actions != "":
+			if actions != "": 
 				actions += ","
 			actions += name.trim_prefix("input/")
 	properties.append(
@@ -130,7 +130,7 @@ func _get_property_list():
 			name = "icon",
 			type = TYPE_INT,
 			hint = PROPERTY_HINT_ENUM,
-			hint_string = "Automatic,Xbox,Sony,Nintendo,Keyboard"
+			hint_string = "Automatic,Xbox,Sony,Nintendo,Generic,Steam Deck,Keyboard"
 		}
 	)
 	return properties
