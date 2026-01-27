@@ -76,19 +76,19 @@ func _update_icon():
 		var types = [InputEventKey, InputEventMouseButton]
 		var ev = _find_event(events, types)
 		if ev is InputEventKey:
-			var textures := PromptManager.get_keyboard_textures()
+			var textures : KeyboardTextures = PromptManager.get_keyboard_textures()
 			texture = textures.get_texture(ev)
 		elif ev is InputEventMouseButton:
-			var textures := PromptManager.get_mouse_textures()
+			var textures : MouseButtonTextures = PromptManager.get_mouse_textures()
 			texture = textures.get_texture(ev)
 	else:
 		var types = [InputEventJoypadButton, InputEventJoypadMotion]
 		var ev = _find_event(events, types)
 		if ev is InputEventJoypadButton:
-			var textures := PromptManager.get_joypad_button_textures(display_icon)
+			var textures : JoypadButtonTextures = PromptManager.get_joypad_button_textures(display_icon)
 			texture = textures.get_texture(ev)
 		elif ev is InputEventJoypadMotion:
-			var textures := PromptManager.get_joypad_motion_textures(display_icon)
+			var textures : JoypadMotionTextures = PromptManager.get_joypad_motion_textures(display_icon)
 			texture = textures.get_texture(ev)
 	queue_redraw()
 
